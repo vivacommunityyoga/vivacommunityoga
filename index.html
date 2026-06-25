@@ -18,128 +18,137 @@
     --texto-suave: #777777;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--crema); color: var(--texto); overflow-x: hidden; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--crema); color: var(--texto); overflow-x: hidden; font-size: 18px; }
 
+  /* HERO */
   .hero { position: relative; height: 100svh; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 56px; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
   .hero-ov { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,35,38,0.55) 0%, rgba(10,35,38,0.2) 40%, rgba(10,35,38,0.75) 80%, rgba(10,35,38,0.92) 100%); }
-  .hero-logo { position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 100px; z-index: 2; filter: drop-shadow(0 2px 12px rgba(0,0,0,0.3)); }
+  .hero-logo { position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 110px; z-index: 2; filter: drop-shadow(0 2px 12px rgba(0,0,0,0.3)); }
   .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 24px; }
-  .hero-eyebrow { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: var(--arena); margin-bottom: 16px; font-weight: 400; display: block; }
-  .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(36px, 8vw, 60px); font-weight: 700; color: var(--blanco); line-height: 1.1; margin-bottom: 20px; }
-  .hero-sub { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.78); line-height: 1.7; max-width: 380px; margin: 0 auto 32px; letter-spacing: 0.3px; }
-  .btn-primary { display: inline-block; background: var(--turquesa); color: var(--blanco); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 14px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 14px 36px; border-radius: 2px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+  .hero-eyebrow { font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: var(--arena); margin-bottom: 16px; font-weight: 400; display: block; }
+  .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(38px, 8vw, 64px); font-weight: 700; color: var(--blanco); line-height: 1.1; margin-bottom: 20px; }
+  .hero-sub { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.7; max-width: 420px; margin: 0 auto 32px; }
+  .btn-primary { display: inline-block; background: var(--turquesa); color: var(--blanco); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 15px 38px; border-radius: 2px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
   .btn-primary:hover { background: var(--turquesa-oscuro); transform: translateY(-1px); }
   .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 2; }
 
-  section { padding: 72px 24px; }
-  .container { max-width: 680px; margin: 0 auto; }
-  .eyebrow { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--turquesa); margin-bottom: 12px; font-weight: 600; display: block; }
-  .section-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(26px, 5vw, 38px); font-weight: 700; color: var(--turquesa-oscuro); line-height: 1.2; margin-bottom: 20px; }
-  .section-body { font-size: 17px; font-weight: 300; line-height: 1.85; color: var(--texto); }
-  .sand-line { width: 48px; height: 1.5px; background: var(--arena); margin: 24px 0; }
+  /* SECCIONES */
+  section { padding: 80px 28px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .eyebrow { font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--turquesa); margin-bottom: 14px; font-weight: 600; display: block; }
+  .section-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: var(--turquesa-oscuro); line-height: 1.2; margin-bottom: 20px; }
+  .section-body { font-size: 18px; font-weight: 300; line-height: 1.9; color: var(--texto); }
+  .sand-line { width: 48px; height: 1.5px; background: var(--arena); margin: 26px 0; }
 
+  /* FILOSOFÍA */
   .filosofia { background: var(--crema); }
   .filosofia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 40px; border: 1px solid rgba(196,168,130,0.3); }
   .filo-item { padding: 32px 28px; border-bottom: 1px solid rgba(196,168,130,0.3); border-right: 1px solid rgba(196,168,130,0.3); }
   .filo-item:nth-child(2n) { border-right: none; }
   .filo-item:nth-last-child(-n+2) { border-bottom: none; }
-  .filo-no { font-size: 13px; font-weight: 300; color: var(--texto-suave); letter-spacing: 1px; margin-bottom: 6px; font-style: italic; }
-  .filo-si { font-size: 16px; font-weight: 600; color: var(--turquesa-oscuro); }
+  .filo-no { font-size: 15px; font-weight: 300; color: var(--texto-suave); letter-spacing: 0.5px; margin-bottom: 8px; font-style: italic; }
+  .filo-si { font-size: 17px; font-weight: 600; color: var(--turquesa-oscuro); }
 
+  /* PARA QUIÉN */
   .para-quien { background: var(--turquesa-oscuro); }
   .para-quien .eyebrow { color: rgba(255,255,255,0.55); }
   .para-quien .section-title { color: var(--blanco); }
   .para-quien .sand-line { background: rgba(255,255,255,0.25); }
   .quien-list { list-style: none; margin-top: 32px; }
-  .quien-list li { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.5; display: flex; align-items: flex-start; gap: 14px; }
+  .quien-list li { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.5; display: flex; align-items: flex-start; gap: 16px; }
   .quien-list li:last-child { border-bottom: none; }
-  .quien-list li::before { content: '~'; color: rgba(255,255,255,0.4); flex-shrink: 0; font-size: 20px; line-height: 1.3; }
+  .quien-list li::before { content: '~'; color: rgba(255,255,255,0.4); flex-shrink: 0; font-size: 22px; line-height: 1.3; }
 
-  .equipo { background: var(--crema); padding: 0; position: relative; overflow: hidden; }
-  .equipo-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
+  /* EQUIPO */
+  .equipo { background: var(--crema); padding: 0; overflow: hidden; }
+  .equipo-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
   .equipo-foto { position: relative; overflow: hidden; }
   .equipo-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
-  .equipo-texto { background: var(--turquesa); padding: 56px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .equipo-texto { background: var(--turquesa); padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; }
   .equipo-texto .eyebrow { color: rgba(255,255,255,0.55); }
   .equipo-texto .section-title { color: var(--blanco); }
   .equipo-texto .sand-line { background: rgba(255,255,255,0.25); }
-  .equipo-texto .section-body { color: rgba(255,255,255,0.85); font-size: 16px; }
+  .equipo-texto .section-body { color: rgba(255,255,255,0.85); font-size: 17px; }
 
+  /* HORARIOS */
   .horarios { background: var(--crema); }
-  .horarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
-  .horario-card { background: var(--blanco); border: 1px solid rgba(196,168,130,0.3); padding: 28px 24px; border-radius: 2px; }
-  .horario-dia { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--turquesa); margin-bottom: 8px; }
-  .horario-hora { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--turquesa-oscuro); margin-bottom: 4px; }
-  .horario-info { font-size: 13px; font-weight: 300; color: var(--texto-suave); }
+  .horarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+  .horario-card { background: var(--blanco); border: 1px solid rgba(196,168,130,0.3); padding: 30px 26px; border-radius: 2px; }
+  .horario-dia { font-size: 12px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--turquesa); margin-bottom: 10px; }
+  .horario-hora { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--turquesa-oscuro); margin-bottom: 6px; }
+  .horario-info { font-size: 15px; font-weight: 300; color: var(--texto-suave); }
 
-  .mapa-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--turquesa-oscuro); color: var(--blanco); font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; padding: 14px 28px; border-radius: 2px; text-decoration: none; transition: background 0.2s, transform 0.15s; margin-top: 32px; }
+  /* MAPA */
+  .mapa-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--turquesa-oscuro); color: var(--blanco); font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; padding: 15px 30px; border-radius: 2px; text-decoration: none; transition: background 0.2s, transform 0.15s; margin-top: 36px; display: inline-flex; }
   .mapa-btn:hover { background: var(--turquesa); transform: translateY(-1px); }
-  .mapa-nota { font-size: 13px; font-weight: 300; color: var(--texto-suave); margin-top: 10px; font-style: italic; }
+  .mapa-nota { font-size: 15px; font-weight: 300; color: var(--texto-suave); margin-top: 12px; font-style: italic; }
 
-  .precios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
-  .precio-card { text-align: center; padding: 28px 16px; border: 1px solid rgba(196,168,130,0.4); border-radius: 2px; background: var(--blanco); }
+  /* PRECIOS */
+  .precios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
+  .precio-card { text-align: center; padding: 32px 18px; border: 1px solid rgba(196,168,130,0.4); border-radius: 2px; background: var(--blanco); }
   .precio-card.featured { background: var(--turquesa); border-color: var(--turquesa); }
-  .precio-label { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 12px; }
+  .precio-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 14px; }
   .precio-card.featured .precio-label { color: rgba(255,255,255,0.65); }
-  .precio-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: var(--turquesa-oscuro); line-height: 1; margin-bottom: 4px; }
+  .precio-num { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: var(--turquesa-oscuro); line-height: 1; margin-bottom: 6px; }
   .precio-card.featured .precio-num { color: var(--blanco); }
-  .precio-unit { font-size: 13px; font-weight: 300; color: var(--texto-suave); }
+  .precio-unit { font-size: 15px; font-weight: 300; color: var(--texto-suave); }
   .precio-card.featured .precio-unit { color: rgba(255,255,255,0.65); }
-  .precio-sub { font-size: 12px; font-weight: 300; color: var(--arena); margin-top: 8px; font-style: italic; }
+  .precio-sub { font-size: 13px; font-weight: 300; color: var(--arena); margin-top: 10px; font-style: italic; }
   .precio-card.featured .precio-sub { color: rgba(255,255,255,0.55); }
-  .precio-nota { margin-top: 20px; background: var(--blanco); border: 1px solid rgba(196,168,130,0.3); border-radius: 2px; padding: 16px 20px; }
-  .precio-nota p { font-size: 14px; font-weight: 300; color: var(--texto); line-height: 1.7; }
+  .precio-nota { margin-top: 22px; background: var(--blanco); border: 1px solid rgba(196,168,130,0.3); border-radius: 2px; padding: 18px 22px; }
+  .precio-nota p { font-size: 16px; font-weight: 300; color: var(--texto); line-height: 1.7; }
   .precio-nota strong { font-weight: 600; color: var(--turquesa-oscuro); }
 
+  /* RESERVA */
   .reserva { background: var(--turquesa-oscuro); }
   .reserva .eyebrow { color: rgba(255,255,255,0.55); }
   .reserva .section-title { color: var(--blanco); }
-  .reserva .section-body { color: rgba(255,255,255,0.75); margin-bottom: 32px; }
+  .reserva .section-body { color: rgba(255,255,255,0.75); margin-bottom: 32px; font-size: 18px; }
   .reserva .sand-line { background: rgba(255,255,255,0.25); }
-
   .badges { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
-  .badge { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 7px 14px; border-radius: 2px; }
-
-  .prueba { background: rgba(255,255,255,0.06); border-left: 2px solid rgba(255,255,255,0.2); padding: 20px 24px; margin-bottom: 28px; border-radius: 0 2px 2px 0; }
-  .prueba-texto { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.8); font-style: italic; line-height: 1.6; margin-bottom: 8px; }
-  .prueba-meta { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
-
-  .form-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 36px 32px; }
-  .form-group { margin-bottom: 20px; }
-  .form-group label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
-  .form-group input, .form-group select { width: 100%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 2px; padding: 13px 16px; font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 300; color: var(--blanco); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
+  .badge { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 8px 16px; border-radius: 2px; }
+  .prueba { background: rgba(255,255,255,0.06); border-left: 2px solid rgba(255,255,255,0.2); padding: 22px 26px; margin-bottom: 28px; border-radius: 0 2px 2px 0; }
+  .prueba-texto { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.85); font-style: italic; line-height: 1.6; margin-bottom: 8px; }
+  .prueba-meta { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+  .form-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 40px 36px; }
+  .form-group { margin-bottom: 22px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
+  .form-group input, .form-group select { width: 100%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 2px; padding: 14px 18px; font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; color: var(--blanco); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
   .form-group input::placeholder { color: rgba(255,255,255,0.3); }
   .form-group input:focus, .form-group select:focus { border-color: var(--turquesa); }
   .form-group select option { background: var(--turquesa-oscuro); color: var(--blanco); }
-  .cancelacion-nota { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.45); margin: 16px 0; font-style: italic; padding: 12px 16px; background: rgba(255,255,255,0.04); border-radius: 2px; line-height: 1.6; }
-  .btn-submit { width: 100%; background: var(--turquesa); color: var(--blanco); border: none; cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 16px; border-radius: 2px; margin-top: 4px; transition: background 0.2s, transform 0.15s; }
+  .cancelacion-nota { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.45); margin: 18px 0; font-style: italic; padding: 14px 18px; background: rgba(255,255,255,0.04); border-radius: 2px; line-height: 1.6; }
+  .btn-submit { width: 100%; background: var(--turquesa); color: var(--blanco); border: none; cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 18px; border-radius: 2px; margin-top: 6px; transition: background 0.2s, transform 0.15s; }
   .btn-submit:hover { background: #2da0a0; transform: translateY(-1px); }
-  .confirmacion { display: none; text-align: center; padding: 48px 24px; }
-  .confirmacion .check { font-size: 48px; color: var(--turquesa); margin-bottom: 20px; }
-  .confirmacion h3 { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--blanco); margin-bottom: 12px; }
-  .confirmacion p { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.7; }
+  .confirmacion { display: none; text-align: center; padding: 56px 24px; }
+  .confirmacion .check { font-size: 52px; color: var(--turquesa); margin-bottom: 20px; }
+  .confirmacion h3 { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--blanco); margin-bottom: 14px; }
+  .confirmacion p { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.7; }
 
-  footer { background: var(--negro); padding: 56px 24px; text-align: center; }
-  footer img { width: 88px; margin-bottom: 24px; opacity: 0.9; }
-  .footer-nombre { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 8px; }
-  .footer-direccion { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.5); letter-spacing: 1px; margin-bottom: 6px; }
-  .footer-temporada { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.35); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+  /* FOOTER */
+  footer { background: var(--negro); padding: 64px 28px; text-align: center; }
+  footer img { width: 96px; margin-bottom: 26px; opacity: 0.9; }
+  .footer-nombre { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: rgba(255,255,255,0.88); letter-spacing: 2px; margin-bottom: 10px; }
+  .footer-direccion { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.55); letter-spacing: 1px; margin-bottom: 8px; }
+  .footer-temporada { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.35); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 26px; }
   .footer-links { display: flex; justify-content: center; gap: 24px; }
-  .footer-links a { font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; letter-spacing: 1.5px; transition: color 0.2s; }
+  .footer-links a { font-size: 15px; color: rgba(255,255,255,0.45); text-decoration: none; letter-spacing: 1.5px; transition: color 0.2s; }
   .footer-links a:hover { color: var(--turquesa); }
 
+  /* RESPONSIVE */
   @media (max-width: 600px) {
+    body { font-size: 17px; }
     .filosofia-grid { grid-template-columns: 1fr; }
     .filo-item { border-right: none; }
     .filo-item:nth-last-child(-n+2) { border-bottom: 1px solid rgba(196,168,130,0.3); }
     .filo-item:last-child { border-bottom: none; }
     .equipo-inner { grid-template-columns: 1fr; }
-    .equipo-foto { height: 280px; }
-    .equipo-texto { padding: 40px 24px; }
+    .equipo-foto { height: 300px; }
+    .equipo-texto { padding: 44px 28px; }
     .horarios-grid { grid-template-columns: 1fr; }
     .precios-grid { grid-template-columns: 1fr; }
-    .form-wrap { padding: 28px 20px; }
+    .form-wrap { padding: 30px 22px; }
     .badges { gap: 8px; }
   }
 </style>
@@ -225,7 +234,7 @@
     </a>
     <p class="mapa-nota">Los Baños Sunshine · Carrer Riu Grande 12, Dénia</p>
 
-    <div style="margin-top:64px;">
+    <div style="margin-top:72px;">
       <span class="eyebrow">Precios</span>
       <div class="precios-grid">
         <div class="precio-card">
@@ -262,18 +271,15 @@
     <h2 class="section-title">Elige tu clase y asegura tu plaza.</h2>
     <div class="sand-line"></div>
     <p class="section-body">Grupos pequeños y plazas limitadas. Rellena el formulario y te confirmamos en menos de 24h. El pago se hace en persona el día de la clase.</p>
-
     <div class="badges">
       <span class="badge">Grupos reducidos</span>
       <span class="badge">Plazas limitadas</span>
       <span class="badge">Todos los niveles</span>
     </div>
-
     <div class="prueba">
-      <p class="prueba-texto">"Era el mejor momento del día."</p>
-      <p class="prueba-meta">Lo que nos dicen al salir de clase.</p>
+      <p class="prueba-texto">"Ha sido lo mejor del día — y lo que ha hecho que el resto del día sea aún mejor."</p>
+      <p class="prueba-meta">Es lo que queremos que digas al salir.</p>
     </div>
-
     <div class="form-wrap" id="form-wrap">
       <div class="form-group">
         <label for="nombre">Nombre</label>
@@ -316,7 +322,6 @@
       <div class="cancelacion-nota">⚠️ Cancelaciones con menos de 24h de antelación tienen un coste de 20€.</div>
       <button type="button" class="btn-submit" onclick="handleReserva()">Reservar plaza</button>
     </div>
-
     <div class="confirmacion" id="confirmacion">
       <div class="check">~</div>
       <h3>Plaza reservada.</h3>
@@ -351,7 +356,7 @@ function handleReserva() {
   //   headers: { 'accept': 'application/json', 'api-key': 'TU_API_KEY_AQUI', 'content-type': 'application/json' },
   //   body: JSON.stringify({
   //     sender: { name: 'Viva Community Yoga', email: 'TU_EMAIL_AQUI' },
-  //     to: [{ email: 'EMAIL_ERIKA_AQUI' }],
+  //     to: [{ email: 'EMAIL_NATI_AQUI' }],
   //     subject: 'Nueva reserva — ' + clase,
   //     htmlContent: '<p><b>Nombre:</b> ' + nombre + '</p><p><b>Email:</b> ' + email + '</p><p><b>Clase:</b> ' + clase + '</p><p><b>Bono:</b> ' + bono + '</p>'
   //   })
