@@ -17,14 +17,14 @@
   body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cr); color: var(--tx); overflow-x: hidden; font-size: var(--min); line-height: 1.7; }
 
   /* HERO */
-  .hero { position: relative; height: 100vh; min-height: 560px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px 0; }
   .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
   .hero-ov { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,35,38,0.6) 0%, rgba(10,35,38,0.22) 35%, rgba(10,35,38,0.75) 75%, rgba(10,35,38,0.96) 100%); }
-  .hero-logo { width: 140px; margin-bottom: 20px; position: relative; z-index: 2; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
-  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 40px; display: flex; flex-direction: column; align-items: center; }
-  .hero-eyebrow { font-size: 14px; letter-spacing: 7px; text-transform: uppercase; color: var(--a); margin-bottom: 16px; font-weight: 400; }
-  .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(52px, 6vw, 84px); font-weight: 700; color: var(--w); line-height: 1.1; margin-bottom: 20px; }
-  .hero-sub { font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.7; max-width: 560px; margin-bottom: 36px; }
+  .hero-logo { width: 140px; margin-bottom: 16px; position: relative; z-index: 2; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
+  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 32px; display: flex; flex-direction: column; align-items: center; }
+  .hero-eyebrow { font-size: 14px; letter-spacing: 7px; text-transform: uppercase; color: var(--a); margin-bottom: 12px; font-weight: 400; }
+  .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(40px, 6vw, 84px); font-weight: 700; color: var(--w); line-height: 1.1; margin-bottom: 16px; }
+  .hero-sub { font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.6; max-width: 560px; margin-bottom: 28px; }
   .btn { display: inline-block; background: var(--t); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 48px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
   .btn:hover { background: var(--td); }
   .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 2; }
@@ -128,8 +128,11 @@
   footer a:hover { color: var(--t); }
 
   @media (max-width: 720px) {
-    body { font-size: 22px; }
     section { padding: 56px 24px; }
+    .hero-logo { width: 72px; margin-bottom: 8px; }
+    .hero-h1 { font-size: 36px; margin-bottom: 12px; }
+    .hero-sub { font-size: 20px; line-height: 1.55; margin-bottom: 20px; }
+    .btn { padding: 14px 32px; }
     .filo-grid { grid-template-columns: 1fr; }
     .filo-item { border-right: none !important; }
     .filo-item:not(:last-child) { border-bottom: 1px solid rgba(196,168,130,0.3) !important; }
