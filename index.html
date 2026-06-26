@@ -312,14 +312,74 @@
 </footer>
 
 <script>
-function handleReserva() {
+async function handleReserva() {
   var n = document.getElementById('nombre').value.trim();
   var e = document.getElementById('email').value.trim();
+  var t = document.getElementById('telefono').value.trim();
   var c = document.getElementById('clase').value;
   var b = document.getElementById('bono').value;
   if (!n || !e || !c) { alert('Por favor completa nombre, email y clase.'); return; }
-  document.getElementById('form-wrap').style.display = 'none';
-  document.getElementById('confirm').style.display = 'block';
+
+  var btn = document.querySelector('.btn-submit');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  var BREVO_API_KEY = 'TU_API_KEY_AQUI'; // ← pega aquí tu nueva API key de Brevo
+
+  try {
+    // Email a Nati con los datos de la reserva
+    await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'accept': 'application/json',
+        'api-key': BREVO_API_KEY,
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        sender: { name: 'Viva Community Yoga', email: 'info@naylinnunez.com' },
+        to: [{ email: 'natidepratiyoga@gmail.com', name: 'Nati' }],
+        subject: 'Nueva reserva — ' + c,
+        htmlContent: '<h2>Nueva reserva</h2>' +
+          '<p><b>Nombre:</b> ' + n + '</p>' +
+          '<p><b>Email:</b> ' + e + '</p>' +
+          '<p><b>Teléfono:</b> ' + (t || 'No indicado') + '</p>' +
+          '<p><b>Clase:</b> ' + c + '</p>' +
+          '<p><b>Tipo de reserva:</b> ' + b + '</p>'
+      })
+    });
+
+    // Email de confirmación al cliente
+    await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'accept': 'application/json',
+        'api-key': BREVO_API_KEY,
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        sender: { name: 'Viva Community Yoga', email: 'info@naylinnunez.com' },
+        to: [{ email: e, name: n }],
+        subject: 'Tu plaza está reservada · Viva Community Yoga',
+        htmlContent: '<p>Hola ' + n + ',</p>' +
+          '<p>Tu plaza está reservada. Te confirmamos los detalles:</p>' +
+          '<p><b>Clase:</b> ' + c + '</p>' +
+          '<p><b>Tipo de reserva:</b> ' + b + '</p>' +
+          '<p><b>Lugar:</b> Los Baños Sunshine · Carrer Riu Grande 12, Dénia</p>' +
+          '<p>El pago se realiza en persona el día de la clase.</p>' +
+          '<p>Recuerda que las cancelaciones con menos de 24h tienen un coste de 20€.</p>' +
+          '<br><p>Nos vemos pronto frente al mar.</p>' +
+          '<p>Viva Community Yoga</p>'
+      })
+    });
+
+    document.getElementById('form-wrap').style.display = 'none';
+    document.getElementById('confirm').style.display = 'block';
+
+  } catch(err) {
+    btn.textContent = 'Reservar plaza';
+    btn.disabled = false;
+    alert('Ha habido un error. Por favor escríbenos directamente a info@naylinnunez.com');
+  }
 }
 </script>
 </body>
