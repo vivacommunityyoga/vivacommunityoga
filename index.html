@@ -8,7 +8,10 @@
 <title>Yoga en la Playa en Dénia | Viva Community Yoga · Los Baños Sunshine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"></noscript>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -46,7 +49,7 @@
   .filo-item { padding: 38px 36px; border-bottom: 1px solid rgba(196,168,130,0.3); border-right: 1px solid rgba(196,168,130,0.3); }
   .filo-item:nth-child(2n) { border-right: none; }
   .filo-item:nth-last-child(-n+2) { border-bottom: none; }
-  .filo-no { font-size: 20px; font-weight: 300; color: var(--ts); margin-bottom: 10px; font-style: italic; }
+  .filo-no { font-size: 20px; font-weight: 300; color: #666; margin-bottom: 10px; font-style: italic; }
   .filo-si { font-size: 26px; font-weight: 600; color: var(--td); }
 
   /* PARA QUIÉN */
@@ -74,21 +77,21 @@
   .hor-card { background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 32px 30px; border-radius: 2px; }
   .hor-dia { font-size: 13px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--t); margin-bottom: 10px; }
   .hor-hora { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--td); margin-bottom: 6px; }
-  .hor-info { font-size: 20px; font-weight: 300; color: var(--ts); }
+  .hor-info { font-size: 20px; font-weight: 300; color: #666; }
 
   .mapa-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--td); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 18px 36px; border-radius: 2px; text-decoration: none; margin-top: 30px; transition: background 0.2s; }
   .mapa-btn:hover { background: var(--t); }
-  .mapa-nota { font-size: 20px; color: var(--ts); margin-top: 12px; font-style: italic; }
+  .mapa-nota { font-size: 20px; color: #666; margin-top: 12px; font-style: italic; }
 
   /* PRECIOS */
   .prec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; }
   .prec-card { text-align: center; padding: 40px 20px; border: 1px solid rgba(196,168,130,0.4); border-radius: 2px; background: var(--w); }
   .prec-card.feat { background: var(--t); border-color: var(--t); }
-  .prec-label { font-size: 18px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--ts); margin-bottom: 14px; }
+  .prec-label { font-size: 18px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 14px; }
   .prec-card.feat .prec-label { color: rgba(255,255,255,0.55); }
   .prec-num { font-family: 'Playfair Display', serif; font-size: 84px; font-weight: 700; color: var(--td); line-height: 1; margin-bottom: 8px; }
   .prec-card.feat .prec-num { color: var(--w); }
-  .prec-unit { font-size: 24px; color: var(--ts); }
+  .prec-unit { font-size: 24px; color: #666; }
   .prec-card.feat .prec-unit { color: rgba(255,255,255,0.55); }
   .prec-sub { font-size: 22px; color: var(--a); margin-top: 12px; font-style: italic; }
   .prec-card.feat .prec-sub { color: rgba(255,255,255,0.5); }
@@ -580,12 +583,17 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       <div id="campos-privada" style="display:none;">
         <div class="fg">
           <label for="personas-privada">Número de personas</label>
-          <select id="personas-privada">
-            <option value="1">1 persona · 65€</option>
-            <option value="2">2 personas · 80€</option>
-            <option value="3">3 personas · 95€</option>
-            <option value="4">4 personas · 110€</option>
+          <select id="personas-privada" onchange="actualizarPrecioPrivada()">
+            <option value="1" data-precio="65" data-stripe="https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t">1 persona · 65€</option>
+            <option value="2" data-precio="80" data-stripe="https://buy.stripe.com/dRm4gAcTi5TxaQScpYdZ60u">2 personas · 80€</option>
+            <option value="mas" data-precio="" data-stripe="">Más de 2 personas</option>
           </select>
+        </div>
+        <div id="precio-privada-info" style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#3DBBBB;text-align:center;margin:8px 0 16px;">
+          Total: 65€
+        </div>
+        <div id="aviso-mas-personas" style="display:none;background:rgba(61,187,187,0.12);border:1px solid rgba(61,187,187,0.3);color:rgba(255,255,255,0.85);padding:14px 18px;border-radius:2px;font-size:18px;line-height:1.65;margin-bottom:8px;">
+          Para grupos de más de 2 personas escríbenos por WhatsApp y te damos precio. 👉 <a href="https://wa.me/34666660411?text=Hola%2C%20me%20interesa%20una%20clase%20privada%20para%20más%20de%202%20personas." target="_blank" style="color:#3DBBBB;">Escríbenos aquí</a>
         </div>
         <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;margin:8px 0 16px;">
           Tras el pago te contactamos por WhatsApp para coordinar el horario y el lugar.
@@ -598,7 +606,7 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
 
       <div class="cancel-nota">⚠️ Cancelaciones con menos de 24h de antelación: 15€.<br>Las reservas deben hacerse con al menos 12 horas de antelación.</div>
 
-      <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:16px;">🔒 Pago seguro · Confirmación inmediata · Cancelación gratuita hasta 24h antes</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.75);text-align:center;margin-bottom:16px;">🔒 Pago seguro · Confirmación inmediata · Cancelación gratuita hasta 24h antes</p>
 
       <button id="sub-btn" onclick="procesarReserva()" style="width:100%;background:#3DBBBB;color:#fff;border:none;border-radius:2px;padding:18px 32px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:3px;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:background 0.2s;" onmouseover="this.style.background='#2da0a0'" onmouseout="this.style.background='#3DBBBB'">Pagar y reservar plaza →</button>
     </div>
@@ -632,17 +640,18 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
   function actualizarHoras() {
     var fechaVal = document.getElementById('fecha').value;
     var horaSelect = document.getElementById('hora');
-    horaSelect.innerHTML = '';
+    horaSelect.innerHTML = '<option value="">Elige un horario...</option>';
     if (!fechaVal) return;
     var dia = new Date(fechaVal + 'T00:00:00').getDay();
     var horas = HORARIOS[dia];
     if (!horas) {
-      horaSelect.innerHTML = '<option value="">No hay clase este día</option>';
+      horaSelect.innerHTML = '<option value="">No hay clase este día — elige jueves, viernes, sábado o domingo</option>';
       return;
     }
+    var labels = { '7:30h': '🌅 7:30h — clase de mañana', '19:30h': '🌅 19:30h — clase de tarde' };
     horas.forEach(function(h) {
       var opt = document.createElement('option');
-      opt.value = h; opt.textContent = h;
+      opt.value = h; opt.textContent = labels[h] || h;
       horaSelect.appendChild(opt);
     });
   }
@@ -651,6 +660,21 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     var hm = horaStr.replace('h','').split(':');
     var claseDate = new Date(fechaStr + 'T' + hm[0].padStart(2,'0') + ':' + (hm[1]||'00') + ':00');
     return (claseDate - new Date()) / 3600000 >= 12;
+  }
+
+  function actualizarPrecioPrivada() {
+    var sel = document.getElementById('personas-privada');
+    var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
+    var aviso = document.getElementById('aviso-mas-personas');
+    var info = document.getElementById('precio-privada-info');
+    if (sel.value === 'mas') {
+      aviso.style.display = 'block';
+      info.style.display = 'none';
+    } else {
+      aviso.style.display = 'none';
+      info.style.display = 'block';
+      info.textContent = 'Total: ' + precio + '€';
+    }
   }
 
   function procesarReserva() {
@@ -668,9 +692,15 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       var ref = encodeURIComponent(tel + ' | ' + fecha + ' ' + hora);
       window.location.href = STRIPE[bono] + '?client_reference_id=' + ref;
     } else {
-      var personas = document.getElementById('personas-privada').value;
-      var ref = encodeURIComponent(tel + ' | clase privada ' + personas + 'p');
-      window.location.href = STRIPE.privada + '?client_reference_id=' + ref;
+      var sel = document.getElementById('personas-privada');
+      if (sel.value === 'mas') {
+        alert('Para grupos de más de 2 personas escríbenos por WhatsApp.');
+        return;
+      }
+      var stripeUrl = sel.options[sel.selectedIndex].getAttribute('data-stripe');
+      var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
+      var ref = encodeURIComponent(tel + ' | clase privada ' + sel.value + 'p ' + precio + 'EUR');
+      window.location.href = stripeUrl + '?client_reference_id=' + ref;
     }
   }
 </script>
