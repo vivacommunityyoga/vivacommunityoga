@@ -537,22 +537,10 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     </div>
 
     <div class="form-wrap" id="form-wrap">
-      <div class="fg">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" placeholder="Nombre" required/>
-      </div>
-      <div class="fg">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="tu@email.com" required/>
-      </div>
-      <div class="fg">
-        <label for="telefono">Teléfono (opcional)</label>
-        <input type="tel" id="telefono" placeholder="600 000 000"/>
-      </div>
 
-      <!-- Tipo de reserva -->
+      <!-- Tipo -->
       <div class="fg">
-        <label for="tipo">Tipo de reserva</label>
+        <label for="tipo">¿Qué tipo de clase?</label>
         <select id="tipo" required onchange="mostrarCampos()">
           <option value="">Elige...</option>
           <option value="grupal">Clase grupal · desde 15€</option>
@@ -560,14 +548,20 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
         </select>
       </div>
 
+      <!-- Teléfono -->
+      <div class="fg">
+        <label for="telefono">Tu WhatsApp</label>
+        <input type="tel" id="telefono" placeholder="600 000 000" required/>
+      </div>
+
       <!-- Campos clase grupal -->
       <div id="campos-grupal" style="display:none;">
         <div class="fg">
-          <label for="fecha">Fecha</label>
+          <label for="fecha">¿Qué día quieres venir?</label>
           <input type="date" id="fecha" onchange="actualizarHoras()"/>
         </div>
         <div class="fg">
-          <label for="hora">Hora</label>
+          <label for="hora">Horario</label>
           <select id="hora">
             <option value="">Primero elige una fecha...</option>
           </select>
@@ -594,29 +588,19 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
           </select>
         </div>
         <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;margin:8px 0 16px;">
-          Tras el pago te contactamos por WhatsApp para coordinar el horario y el lugar (en casa o en la playa).
+          Tras el pago te contactamos por WhatsApp para coordinar el horario y el lugar.
         </p>
       </div>
-
-      <div class="fg">
-        <label for="personas">Número de personas</label>
-        <select id="personas" required>
-          <option value="1" selected>1 persona</option>
-          <option value="2">2 personas</option>
-          <option value="3">3 personas</option>
-          <option value="4">4 personas</option>
-          <option value="5">5 personas</option>
-          <option value="6">6 personas</option>
-        </select>
-      </div>
-
-      <div class="cancel-nota">⚠️ Cancelaciones con menos de 24h de antelación: 15€.<br>Las reservas deben hacerse con al menos 12 horas de antelación (una reserva a las 22h no es válida para la clase de las 7:30h del día siguiente).</div>
 
       <div id="error-12h" style="display:none;background:rgba(220,53,69,0.15);border:1px solid rgba(220,53,69,0.4);color:#ff6b7a;padding:14px 18px;border-radius:2px;font-size:17px;margin-bottom:16px;">
         ⚠️ Esta clase empieza en menos de 12 horas. Por favor elige otra fecha o escríbenos directamente por WhatsApp.
       </div>
 
-      <button class="sub-btn" id="sub-btn" onclick="procesarReserva()">Continuar al pago →</button>
+      <div class="cancel-nota">⚠️ Cancelaciones con menos de 24h de antelación: 15€.<br>Las reservas deben hacerse con al menos 12 horas de antelación.</div>
+
+      <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:16px;">🔒 Pago seguro · Confirmación inmediata · Cancelación gratuita hasta 24h antes</p>
+
+      <button id="sub-btn" onclick="procesarReserva()" style="width:100%;background:#3DBBBB;color:#fff;border:none;border-radius:2px;padding:18px 32px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:3px;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:background 0.2s;" onmouseover="this.style.background='#2da0a0'" onmouseout="this.style.background='#3DBBBB'">Pagar y reservar plaza →</button>
     </div>
 
     <div id="form-ok" style="display:none;text-align:center;padding:48px 0;">
@@ -633,28 +617,15 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     bono5:  'https://buy.stripe.com/8x2dRa06w6XB9MOblUdZ60s',
     privada:'https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t'
   };
-
-  // Días con clase: 4=jueves, 5=viernes, 6=sábado, 0=domingo
-  var HORARIOS = {
-    4: ['7:30h', '19:30h'],
-    5: ['7:30h', '19:30h'],
-    6: ['7:30h'],
-    0: ['7:30h']
-  };
+  var HORARIOS = { 4:['7:30h','19:30h'], 5:['7:30h','19:30h'], 6:['7:30h'], 0:['7:30h'] };
 
   function mostrarCampos() {
     var tipo = document.getElementById('tipo').value;
     document.getElementById('campos-grupal').style.display = tipo === 'grupal' ? 'block' : 'none';
     document.getElementById('campos-privada').style.display = tipo === 'privada' ? 'block' : 'none';
-    // Ocultar el select de personas general para privada (tiene el suyo)
-    document.querySelector('[for="personas"]').parentElement.style.display = tipo === 'privada' ? 'none' : 'block';
-
-    // Set min date for grupal
     if (tipo === 'grupal') {
-      var input = document.getElementById('fecha');
       var hoy = new Date();
-      hoy.setDate(hoy.getDate());
-      input.min = hoy.toISOString().split('T')[0];
+      document.getElementById('fecha').min = hoy.toISOString().split('T')[0];
     }
   }
 
@@ -663,71 +634,46 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     var horaSelect = document.getElementById('hora');
     horaSelect.innerHTML = '';
     if (!fechaVal) return;
-
-    var fecha = new Date(fechaVal + 'T00:00:00');
-    var dia = fecha.getDay();
+    var dia = new Date(fechaVal + 'T00:00:00').getDay();
     var horas = HORARIOS[dia];
-
     if (!horas) {
       horaSelect.innerHTML = '<option value="">No hay clase este día</option>';
       return;
     }
-
     horas.forEach(function(h) {
       var opt = document.createElement('option');
-      opt.value = h;
-      opt.textContent = h;
+      opt.value = h; opt.textContent = h;
       horaSelect.appendChild(opt);
     });
   }
 
   function validar12h(fechaStr, horaStr) {
-    if (!fechaStr || !horaStr) return true;
     var hm = horaStr.replace('h','').split(':');
     var claseDate = new Date(fechaStr + 'T' + hm[0].padStart(2,'0') + ':' + (hm[1]||'00') + ':00');
-    var ahora = new Date();
-    var diffH = (claseDate - ahora) / 3600000;
-    return diffH >= 12;
+    return (claseDate - new Date()) / 3600000 >= 12;
   }
 
   function procesarReserva() {
-    var nombre = document.getElementById('nombre').value.trim();
-    var email = document.getElementById('email').value.trim();
     var tipo = document.getElementById('tipo').value;
-
-    if (!nombre || !email || !tipo) {
-      alert('Por favor rellena al menos tu nombre, email y tipo de reserva.');
-      return;
-    }
+    var tel = document.getElementById('telefono').value.trim();
+    if (!tipo || !tel) { alert('Por favor elige el tipo de clase e indica tu WhatsApp.'); return; }
 
     if (tipo === 'grupal') {
       var fecha = document.getElementById('fecha').value;
       var hora = document.getElementById('hora').value;
       var bono = document.getElementById('bono').value;
-
-      if (!fecha || !hora || hora === '' || hora.indexOf('Primero') > -1) {
-        alert('Por favor elige una fecha y hora válidas.');
-        return;
-      }
-
-      if (!validar12h(fecha, hora)) {
-        document.getElementById('error-12h').style.display = 'block';
-        return;
-      }
+      if (!fecha || !hora || hora.indexOf('Primero') > -1 || hora === '') { alert('Por favor elige una fecha y hora válidas.'); return; }
+      if (!validar12h(fecha, hora)) { document.getElementById('error-12h').style.display = 'block'; return; }
       document.getElementById('error-12h').style.display = 'none';
-
-      // Build prefilled Stripe URL with client_reference_id
-      var ref = encodeURIComponent(nombre + ' | ' + email + ' | ' + fecha + ' ' + hora);
-      var url = STRIPE[bono] + '?prefilled_email=' + encodeURIComponent(email) + '&client_reference_id=' + ref;
-      window.location.href = url;
-
-    } else if (tipo === 'privada') {
-      var ref = encodeURIComponent(nombre + ' | ' + email + ' | clase privada');
-      var url = STRIPE.privada + '?prefilled_email=' + encodeURIComponent(email) + '&client_reference_id=' + ref;
-      window.location.href = url;
+      var ref = encodeURIComponent(tel + ' | ' + fecha + ' ' + hora);
+      window.location.href = STRIPE[bono] + '?client_reference_id=' + ref;
+    } else {
+      var personas = document.getElementById('personas-privada').value;
+      var ref = encodeURIComponent(tel + ' | clase privada ' + personas + 'p');
+      window.location.href = STRIPE.privada + '?client_reference_id=' + ref;
     }
   }
-  </script>
+</script>
 </section>
 
 <footer>
