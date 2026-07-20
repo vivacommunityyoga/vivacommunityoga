@@ -529,42 +529,205 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     <span class="ey">Reserva</span>
     <h2 class="h2">Elige tu clase y asegura tu plaza.</h2>
     <div class="line"></div>
-    <p class="body">Rellena el formulario y te confirmamos en menos de 24h. El pago se hace en persona el día de la clase.</p>
+    <p class="body">Elige tu clase, paga online y tu plaza queda confirmada al instante.</p>
 
     <div class="prueba">
       <p class="prueba-t">"Ha sido lo mejor del día — y lo que ha hecho que el resto del día sea aún mejor."</p>
       <p class="prueba-m">Es lo que queremos que digas al salir.</p>
     </div>
+
     <div class="form-wrap" id="form-wrap">
-      <div class="fg"><label for="nombre">Nombre</label><input type="text" id="nombre" placeholder="Nombre" required/></div>
-      <div class="fg"><label for="email">Email</label><input type="email" id="email" placeholder="tu@email.com" required/></div>
-      <div class="fg"><label for="telefono">Teléfono (opcional)</label><input type="tel" id="telefono" placeholder="600 000 000"/></div>
       <div class="fg">
-        <label for="clase">Clase</label>
-        <select id="clase" required>
-          <option value="">Elige una clase...</option>
-          <optgroup label="Jueves"><option value="Jueves 7:30h">Jueves · 7:30h</option><option value="Jueves 19:30h">Jueves · 19:30h</option></optgroup>
-          <optgroup label="Viernes"><option value="Viernes 7:30h">Viernes · 7:30h</option><option value="Viernes 19:30h">Viernes · 19:30h</option></optgroup>
-          <optgroup label="Fin de semana"><option value="Sábado 7:30h">Sábado · 7:30h</option><option value="Domingo 7:30h">Domingo · 7:30h</option></optgroup>
-        </select>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Nombre" required/>
       </div>
       <div class="fg">
-        <label for="bono">Tipo de reserva</label>
-        <select id="bono">
-          <option value="Clase suelta (15€)">Clase suelta · 15€</option>
-          <option value="Bono 3 clases (40€)">Bono 3 clases · 40€</option>
-          <option value="Bono 5 clases (60€)">Bono 5 clases · 60€</option>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="tu@email.com" required/>
+      </div>
+      <div class="fg">
+        <label for="telefono">Teléfono (opcional)</label>
+        <input type="tel" id="telefono" placeholder="600 000 000"/>
+      </div>
+
+      <!-- Tipo de reserva -->
+      <div class="fg">
+        <label for="tipo">Tipo de reserva</label>
+        <select id="tipo" required onchange="mostrarCampos()">
+          <option value="">Elige...</option>
+          <option value="grupal">Clase grupal · desde 15€</option>
+          <option value="privada">Clase privada · desde 65€</option>
         </select>
       </div>
-      <div class="cancel-nota">⚠️ Cancelaciones con menos de 24h de antelación: 15€.</div>
-      <button type="button" class="btn-submit" onclick="handleReserva()">Reservar plaza</button>
+
+      <!-- Campos clase grupal -->
+      <div id="campos-grupal" style="display:none;">
+        <div class="fg">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" onchange="actualizarHoras()"/>
+        </div>
+        <div class="fg">
+          <label for="hora">Hora</label>
+          <select id="hora">
+            <option value="">Primero elige una fecha...</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="bono">Precio</label>
+          <select id="bono">
+            <option value="suelta">Clase suelta · 15€</option>
+            <option value="bono3">Bono 3 clases · 40€</option>
+            <option value="bono5">Bono 5 clases · 60€</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Campos clase privada -->
+      <div id="campos-privada" style="display:none;">
+        <div class="fg">
+          <label for="personas-privada">Número de personas</label>
+          <select id="personas-privada">
+            <option value="1">1 persona · 65€</option>
+            <option value="2">2 personas · 80€</option>
+            <option value="3">3 personas · 95€</option>
+            <option value="4">4 personas · 110€</option>
+          </select>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;margin:8px 0 16px;">
+          Tras el pago te contactamos por WhatsApp para coordinar el horario y el lugar (en casa o en la playa).
+        </p>
+      </div>
+
+      <div class="fg">
+        <label for="personas">Número de personas</label>
+        <select id="personas" required>
+          <option value="1" selected>1 persona</option>
+          <option value="2">2 personas</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+          <option value="5">5 personas</option>
+          <option value="6">6 personas</option>
+        </select>
+      </div>
+
+      <div class="cancel-nota">⚠️ Cancelaciones con menos de 24h de antelación: 15€.<br>Las reservas deben hacerse con al menos 12 horas de antelación (una reserva a las 22h no es válida para la clase de las 7:30h del día siguiente).</div>
+
+      <div id="error-12h" style="display:none;background:rgba(220,53,69,0.15);border:1px solid rgba(220,53,69,0.4);color:#ff6b7a;padding:14px 18px;border-radius:2px;font-size:17px;margin-bottom:16px;">
+        ⚠️ Esta clase empieza en menos de 12 horas. Por favor elige otra fecha o escríbenos directamente por WhatsApp.
+      </div>
+
+      <button class="sub-btn" id="sub-btn" onclick="procesarReserva()">Continuar al pago →</button>
     </div>
-    <div class="confirm" id="confirm">
-      <div class="check">~</div>
-      <h3>Plaza reservada.</h3>
-      <p>Gracias. Te escribimos en menos de 24 horas.<br>Nos vemos pronto frente al mar.</p>
+
+    <div id="form-ok" style="display:none;text-align:center;padding:48px 0;">
+      <div style="font-size:48px;margin-bottom:16px;">🌊</div>
+      <p style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;margin-bottom:8px;">¡Plaza reservada!</p>
+      <p style="font-size:18px;color:rgba(255,255,255,0.7);">Te hemos enviado la confirmación por email.</p>
     </div>
   </div>
+
+  <script>
+  var STRIPE = {
+    suelta: 'https://buy.stripe.com/00w28s3iIgyb9MOey6dZ60q',
+    bono3:  'https://buy.stripe.com/00weVe06w3Lpf78blUdZ60r',
+    bono5:  'https://buy.stripe.com/8x2dRa06w6XB9MOblUdZ60s',
+    privada:'https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t'
+  };
+
+  // Días con clase: 4=jueves, 5=viernes, 6=sábado, 0=domingo
+  var HORARIOS = {
+    4: ['7:30h', '19:30h'],
+    5: ['7:30h', '19:30h'],
+    6: ['7:30h'],
+    0: ['7:30h']
+  };
+
+  function mostrarCampos() {
+    var tipo = document.getElementById('tipo').value;
+    document.getElementById('campos-grupal').style.display = tipo === 'grupal' ? 'block' : 'none';
+    document.getElementById('campos-privada').style.display = tipo === 'privada' ? 'block' : 'none';
+    // Ocultar el select de personas general para privada (tiene el suyo)
+    document.querySelector('[for="personas"]').parentElement.style.display = tipo === 'privada' ? 'none' : 'block';
+
+    // Set min date for grupal
+    if (tipo === 'grupal') {
+      var input = document.getElementById('fecha');
+      var hoy = new Date();
+      hoy.setDate(hoy.getDate());
+      input.min = hoy.toISOString().split('T')[0];
+    }
+  }
+
+  function actualizarHoras() {
+    var fechaVal = document.getElementById('fecha').value;
+    var horaSelect = document.getElementById('hora');
+    horaSelect.innerHTML = '';
+    if (!fechaVal) return;
+
+    var fecha = new Date(fechaVal + 'T00:00:00');
+    var dia = fecha.getDay();
+    var horas = HORARIOS[dia];
+
+    if (!horas) {
+      horaSelect.innerHTML = '<option value="">No hay clase este día</option>';
+      return;
+    }
+
+    horas.forEach(function(h) {
+      var opt = document.createElement('option');
+      opt.value = h;
+      opt.textContent = h;
+      horaSelect.appendChild(opt);
+    });
+  }
+
+  function validar12h(fechaStr, horaStr) {
+    if (!fechaStr || !horaStr) return true;
+    var hm = horaStr.replace('h','').split(':');
+    var claseDate = new Date(fechaStr + 'T' + hm[0].padStart(2,'0') + ':' + (hm[1]||'00') + ':00');
+    var ahora = new Date();
+    var diffH = (claseDate - ahora) / 3600000;
+    return diffH >= 12;
+  }
+
+  function procesarReserva() {
+    var nombre = document.getElementById('nombre').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var tipo = document.getElementById('tipo').value;
+
+    if (!nombre || !email || !tipo) {
+      alert('Por favor rellena al menos tu nombre, email y tipo de reserva.');
+      return;
+    }
+
+    if (tipo === 'grupal') {
+      var fecha = document.getElementById('fecha').value;
+      var hora = document.getElementById('hora').value;
+      var bono = document.getElementById('bono').value;
+
+      if (!fecha || !hora || hora === '' || hora.indexOf('Primero') > -1) {
+        alert('Por favor elige una fecha y hora válidas.');
+        return;
+      }
+
+      if (!validar12h(fecha, hora)) {
+        document.getElementById('error-12h').style.display = 'block';
+        return;
+      }
+      document.getElementById('error-12h').style.display = 'none';
+
+      // Build prefilled Stripe URL with client_reference_id
+      var ref = encodeURIComponent(nombre + ' | ' + email + ' | ' + fecha + ' ' + hora);
+      var url = STRIPE[bono] + '?prefilled_email=' + encodeURIComponent(email) + '&client_reference_id=' + ref;
+      window.location.href = url;
+
+    } else if (tipo === 'privada') {
+      var ref = encodeURIComponent(nombre + ' | ' + email + ' | clase privada');
+      var url = STRIPE.privada + '?prefilled_email=' + encodeURIComponent(email) + '&client_reference_id=' + ref;
+      window.location.href = url;
+    }
+  }
+  </script>
 </section>
 
 <footer>
