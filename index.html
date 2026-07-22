@@ -549,6 +549,12 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
         </select>
       </div>
 
+      <!-- Nombre -->
+      <div class="fg">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" placeholder="Nombre" required/>
+      </div>
+
       <!-- Teléfono -->
       <div class="fg">
         <label for="telefono">Tu WhatsApp</label>
@@ -677,8 +683,9 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
 
   function procesarReserva() {
     var tipo = document.getElementById('tipo').value;
+    var nombre = document.getElementById('nombre').value.trim();
     var tel = document.getElementById('telefono').value.trim();
-    if (!tipo || !tel) { alert('Por favor elige el tipo de clase e indica tu WhatsApp.'); return; }
+    if (!tipo || !nombre || !tel) { alert('Por favor indica tu nombre, WhatsApp y tipo de clase.'); return; }
 
     var stripeUrl, resumen;
 
@@ -690,14 +697,14 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       if (!validar12h(fecha, hora)) { document.getElementById('error-12h').style.display = 'block'; return; }
       document.getElementById('error-12h').style.display = 'none';
       var bonoLabel = {'suelta':'Clase suelta 15€','bono3':'Bono 3 clases 40€','bono5':'Bono 5 clases 60€'}[bono];
-      resumen = tel + ' | ' + fecha + ' ' + hora + ' | ' + bonoLabel;
+      resumen = nombre + ' | ' + tel + ' | ' + fecha + ' ' + hora + ' | ' + bonoLabel;
       stripeUrl = STRIPE[bono] + '?client_reference_id=' + encodeURIComponent(resumen);
     } else {
       var sel = document.getElementById('personas-privada');
       if (sel.value === 'mas') { alert('Para grupos de más de 2 personas escríbenos por WhatsApp.'); return; }
       var stripeLink = sel.options[sel.selectedIndex].getAttribute('data-stripe');
       var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
-      resumen = tel + ' | clase privada ' + sel.value + ' persona(s) ' + precio + '€';
+      resumen = nombre + ' | ' + tel + ' | clase privada ' + sel.value + ' persona(s) ' + precio + '€';
       stripeUrl = stripeLink + '?client_reference_id=' + encodeURIComponent(resumen);
     }
 
@@ -706,8 +713,9 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
       body: JSON.stringify({
-        reserva: resumen,
+        nombre: nombre,
         telefono: tel,
+        reserva: resumen,
         tipo: tipo
       })
     }).catch(function(){});
