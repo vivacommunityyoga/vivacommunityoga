@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga Privado en Dénia | Clase Individual o en Pareja · Viva Community Yoga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --t: #3DBBBB; --td: #1E4A52; --a: #C4A882;
+    --cr: #F5EFE4; --w: #FFFFFF; --n: #111111;
+    --tx: #333333; --ts: #888888;
+    --min: 26px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cr); color: var(--tx); overflow-x: hidden; font-size: var(--min); line-height: 1.7; }
+
+  /* HERO */
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px 0; }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+  .hero-ov { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,35,38,0.6) 0%, rgba(10,35,38,0.22) 35%, rgba(10,35,38,0.75) 75%, rgba(10,35,38,0.96) 100%); }
+  .hero-logo { width: 140px; height: 140px; object-fit: contain; margin-bottom: 16px; position: relative; z-index: 2; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
+  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 32px; display: flex; flex-direction: column; align-items: center; }
+  .hero-eyebrow { font-size: 14px; letter-spacing: 7px; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 12px; font-weight: 400; }
+  .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(40px, 6vw, 84px); font-weight: 700; color: var(--w); line-height: 1.1; margin-bottom: 16px; }
+  .hero-sub { font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.6; max-width: 560px; margin-bottom: 28px; }
+  .btn { display: inline-block; background: var(--t); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 48px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .btn:hover { background: var(--td); }
+  .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 2; }
+
+  /* SECCIONES */
+  section { padding: 72px 48px; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .ey { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--t); margin-bottom: 14px; font-weight: 600; display: block; }
+  .h2 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 700; color: var(--td); line-height: 1.15; margin-bottom: 20px; }
+  .body { font-size: 26px; font-weight: 300; line-height: 1.8; color: var(--tx); }
+  .line { width: 52px; height: 1.5px; background: var(--a); margin: 26px 0; }
+
+  /* FILOSOFÍA */
+  .filo-grid { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; border: 1px solid rgba(196,168,130,0.3); }
+  .filo-item { padding: 38px 36px; border-bottom: 1px solid rgba(196,168,130,0.3); border-right: 1px solid rgba(196,168,130,0.3); }
+  .filo-item:nth-child(2n) { border-right: none; }
+  .filo-item:nth-last-child(-n+2) { border-bottom: none; }
+  .filo-no { font-size: 20px; font-weight: 300; color: #666; margin-bottom: 10px; font-style: italic; }
+  .filo-si { font-size: 26px; font-weight: 600; color: var(--td); }
+
+  /* PARA QUIÉN */
+  .pq { background: var(--td); }
+  .pq .ey { color: rgba(255,255,255,0.4); }
+  .pq .h2 { color: var(--w); }
+  .pq .line { background: rgba(255,255,255,0.2); }
+  .pq-list { list-style: none; margin-top: 28px; }
+  .pq-list li { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.55; display: flex; gap: 20px; }
+  .pq-list li:last-child { border-bottom: none; }
+  .pq-list li::before { content: '~'; color: rgba(255,255,255,0.3); flex-shrink: 0; font-size: 28px; }
+
+  /* EQUIPO */
+  .equipo { padding: 0; overflow: hidden; }
+  .eq-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
+  .eq-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+  .eq-texto { background: var(--t); padding: 60px 52px; display: flex; flex-direction: column; justify-content: center; }
+  .eq-texto .ey { color: rgba(255,255,255,0.4); }
+  .eq-texto .h2 { color: var(--w); }
+  .eq-texto .line { background: rgba(255,255,255,0.2); }
+  .eq-texto .body { color: rgba(255,255,255,0.85); font-size: 24px; }
+
+  /* DÓNDE Y CUÁNDO */
+  .info-box { background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 36px 40px; border-radius: 2px; margin-top: 30px; }
+  .info-box p { font-size: 24px; font-weight: 300; color: var(--tx); line-height: 1.8; }
+  .info-box strong { color: var(--td); font-weight: 600; }
+
+  .mapa-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--td); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 18px 36px; border-radius: 2px; text-decoration: none; margin-top: 30px; transition: background 0.2s; }
+  .mapa-btn:hover { background: var(--t); }
+
+  /* PRECIOS */
+  .prec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 32px; }
+  .prec-card { text-align: center; padding: 40px 20px; border: 1px solid rgba(196,168,130,0.4); border-radius: 2px; background: var(--w); }
+  .prec-card.feat { background: var(--t); border-color: var(--t); }
+  .prec-label { font-size: 18px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 14px; }
+  .prec-card.feat .prec-label { color: rgba(255,255,255,0.55); }
+  .prec-num { font-family: 'Playfair Display', serif; font-size: 84px; font-weight: 700; color: var(--td); line-height: 1; margin-bottom: 8px; }
+  .prec-card.feat .prec-num { color: var(--w); }
+  .prec-unit { font-size: 24px; color: #666; }
+  .prec-card.feat .prec-unit { color: rgba(255,255,255,0.55); }
+  .prec-sub { font-size: 22px; color: #7a6a52; margin-top: 12px; font-style: italic; }
+  .prec-card.feat .prec-sub { color: rgba(255,255,255,0.5); }
+  .prec-nota { margin-top: 18px; background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 24px 28px; border-radius: 2px; }
+  .prec-nota p { font-size: 22px; font-weight: 300; color: var(--tx); line-height: 1.8; }
+  .prec-nota strong { font-weight: 600; color: var(--td); }
+  .prec-mas { margin-top: 18px; background: rgba(61,187,187,0.1); border: 1px solid rgba(61,187,187,0.3); padding: 22px 26px; border-radius: 2px; text-align: center; }
+  .prec-mas p { font-size: 21px; font-weight: 300; color: var(--td); }
+  .prec-mas a { color: var(--t); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--t); }
+
+  /* TESTIMONIOS */
+  .test-card { max-width: 760px; margin: 0 auto 24px; background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 20px rgba(30,74,82,0.08); display: grid; grid-template-columns: 200px 1fr; }
+  .test-card img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .test-body { padding: 28px 32px; }
+  .test-stars { color: #3DBBBB; font-size: 18px; letter-spacing: 3px; margin-bottom: 10px; }
+  .test-quote { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 14px; }
+  .test-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: #1E4A52; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* RESERVA */
+  .reserva { background: var(--td); }
+  .reserva .ey { color: rgba(255,255,255,0.4); }
+  .reserva .h2 { color: var(--w); }
+  .reserva .body { color: rgba(255,255,255,0.72); margin-bottom: 28px; }
+  .reserva .line { background: rgba(255,255,255,0.2); }
+  .cancel-nota { font-size: 20px; color: rgba(255,255,255,0.9); margin: 20px 0; font-style: italic; padding: 16px 20px; background: rgba(255,255,255,0.1); border-radius: 2px; line-height: 1.65; }
+  .form-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 44px 48px; }
+  .fg { margin-bottom: 24px; }
+  .fg label { display: block; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 12px; }
+  .fg input, .fg select { width: 100%; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); border-radius: 2px; padding: 18px 22px; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--w); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
+  .fg input::placeholder { color: rgba(255,255,255,0.6); }
+  .fg input:focus, .fg select:focus { border-color: var(--t); }
+  .fg select option { background: var(--td); color: var(--w); }
+  .btn-submit { width: 100%; background: var(--t); color: var(--w); border: none; cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 22px; border-radius: 2px; transition: background 0.2s; }
+  .btn-submit:hover { background: #2da0a0; }
+
+  /* FOOTER */
+  footer { background: var(--n); padding: 64px 48px; text-align: center; }
+  footer img { width: 96px; height: 96px; object-fit: contain; margin-bottom: 24px; opacity: 0.9; }
+  .fn { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 10px; }
+  .fd { font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.48); margin-bottom: 8px; }
+  .ft { font-size: 14px; color: rgba(255,255,255,0.8); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
+  footer a { font-size: 20px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 2px; transition: color 0.2s; }
+  footer a:hover { color: var(--t); }
+
+  @media (max-width: 720px) {
+    section { padding: 56px 24px; }
+    .hero-logo { width: 100px; height: 100px; margin-bottom: 10px; }
+    .hero-eyebrow { font-size: 13px; letter-spacing: 4px; margin-bottom: 10px; color: rgba(255,255,255,0.85); }
+    .hero-h1 { font-size: 36px; margin-bottom: 14px; }
+    .hero-sub { font-size: 20px; line-height: 1.55; margin-bottom: 22px; }
+    .btn { padding: 15px 34px; }
+    .filo-grid { grid-template-columns: 1fr; }
+    .filo-item { border-right: none !important; }
+    .filo-item:not(:last-child) { border-bottom: 1px solid rgba(196,168,130,0.3) !important; }
+    .eq-inner { grid-template-columns: 1fr; }
+    .eq-foto { height: 300px; }
+    .eq-texto { padding: 44px 28px; }
+    .prec-grid { grid-template-columns: 1fr; }
+    .test-card { grid-template-columns: 1fr; }
+    .test-card img { height: 220px; }
+    .form-wrap { padding: 30px 24px; }
+  }
+</style>
+
+<!-- SEO -->
+<meta name="description" content="Yoga privado en Dénia, en tu alojamiento, tu urbanización o la playa que elijas. Clase individual o en pareja, adaptada a ti. Desde 65€.">
+<meta name="keywords" content="yoga privado Dénia, clases de yoga individuales Dénia, yoga a domicilio Dénia, yoga en pareja Dénia, yoga Dénia, yoga en Dénia">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Viva Community Yoga">
+<link rel="canonical" href="https://vivacommunityyoga.com/privadas.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Yoga Privado en Dénia · Viva Community Yoga">
+<meta property="og:description" content="Una clase de yoga hecha a tu medida, donde tú decidas: tu alojamiento, tu urbanización o la playa. Individual o en pareja, desde 65€.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vivacommunityyoga.com/privadas.html">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Viva Community Yoga">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yoga Privado en Dénia · Viva Community Yoga">
+<meta name="twitter:description" content="Clase de yoga individual o en pareja, donde tú decidas en Dénia. Desde 65€.">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Yoga privado en Dénia",
+  "description": "Clases de yoga privadas, individuales o en pareja, en el alojamiento, urbanización o playa que el cliente elija en Dénia.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Viva Community Yoga",
+    "telephone": "+34666660411",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer Riu Grande 12",
+      "addressLocality": "Dénia",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "areaServed": "Dénia",
+  "offers": [
+    { "@type": "Offer", "price": "65", "priceCurrency": "EUR", "description": "Clase privada, 1 persona" },
+    { "@type": "Offer", "price": "80", "priceCurrency": "EUR", "description": "Clase privada, 2 personas" }
+  ]
+}
+</script>
+
+<!-- Meta Pixel Code (deferred hasta después de cargar la página) -->
+<script>
+window.addEventListener('load', function() {
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1148864329659008');
+fbq('track', 'PageView');
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<section class="hero">
+  <img class="hero-bg" src="images/hero-bg.jpg" width="1000" height="1333" alt="Yoga privado en Dénia" fetchpriority="high"/>
+  <div class="hero-ov"></div>
+  <svg class="hero-wave" viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none">
+    <path d="M0 20 Q180 0 360 20 Q540 40 720 20 Q900 0 1080 20 Q1260 40 1440 20 L1440 40 L0 40 Z" fill="#F5EFE4"/>
+  </svg>
+  <div class="hero-content">
+    <img class="hero-logo" src="images/logo.png" width="300" height="300" alt="Viva Community Yoga" fetchpriority="high"/>
+    <span class="hero-eyebrow">Dénia · Donde tú prefieras</span>
+    <h1 class="hero-h1">Una clase entera,<br>pensada solo para ti.</h1>
+    <p class="hero-eyebrow" style="margin-top:8px;">Yoga privado en Dénia · Individual o en pareja</p>
+    <p class="hero-sub">En tu alojamiento, tu urbanización o la playa que elijas. Sin compartir esterilla con nadie más, a tu ritmo.</p>
+    <a href="#reserva" class="btn">Reservar mi clase</a>
+    <a href="https://wa.me/34666660411?text=Hola%2C%20me%20interesa%20una%20clase%20de%20yoga%20privada%20en%20D%C3%A9nia." target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1ea84e;color:#fff;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;border-radius:2px;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent;white-space:nowrap;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+<section style="background:var(--cr)">
+  <div class="container">
+    <span class="ey">Una filosofía</span>
+    <h2 class="h2">No venimos a repetir una clase igual para todos.</h2>
+    <div class="line"></div>
+    <p class="body">Una clase privada no es la misma clase de siempre en un horario distinto. Es otra cosa: se construye alrededor de ti, de tu cuerpo, de lo que necesitas ese día.</p>
+    <div class="filo-grid">
+      <div class="filo-item"><div class="filo-no">No es una clase genérica.</div><div class="filo-si">Es una clase pensada para ti.</div></div>
+      <div class="filo-item"><div class="filo-no">No tienes que venir a nosotras.</div><div class="filo-si">Vamos donde tú estés.</div></div>
+      <div class="filo-item"><div class="filo-no">No hay un horario fijo.</div><div class="filo-si">Buscamos juntas el momento que mejor te venga.</div></div>
+      <div class="filo-item"><div class="filo-no">No hace falta experiencia previa.</div><div class="filo-si">Solo hace falta curiosidad.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pq">
+  <div class="container">
+    <span class="ey">¿Para quién?</span>
+    <h2 class="h2">Para quien quiere un espacio solo suyo.</h2>
+    <div class="line"></div>
+    <ul class="pq-list">
+      <li>Para quienes prefieren practicar sin compartir el espacio con nadie más.</li>
+      <li>Para parejas que buscan un momento propio dentro de sus vacaciones.</li>
+      <li>Para quienes tienen alguna molestia o lesión y necesitan una práctica adaptada a su cuerpo.</li>
+      <li>Para quienes se alojan lejos de Los Baños Sunshine y prefieren que la clase venga a ellos.</li>
+      <li>Para quienes nunca han probado el yoga y prefieren empezar en un espacio íntimo antes que en grupo.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="equipo">
+  <div class="eq-inner">
+    <div class="eq-foto"><img src="images/equipo.jpg" width="700" height="933" alt="Nati y Naylín, profesoras de Viva Community Yoga" loading="lazy" decoding="async"/></div>
+    <div class="eq-texto">
+      <span class="ey">Quiénes somos</span>
+      <h2 class="h2">Dos profesoras.<br>Una clase para ti.</h2>
+      <div class="line"></div>
+      <p class="body">Somos Nati y Naylín. Llevamos más de una década enseñando yoga, formadas en India y en España, con nuestras propias escuelas a la espalda. En una clase privada tienes toda esa experiencia puesta al servicio de una sola persona: tú. Sin nadie más en la esterilla, sin nada que no sea lo que necesites ese día.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cr)">
+  <div class="container">
+    <span class="ey">Cuándo y dónde</span>
+    <h2 class="h2">Sin casilla fija de horario.</h2>
+    <div class="line"></div>
+    <div class="info-box">
+      <p>No tenemos un horario cerrado para las clases privadas — <strong>buscamos juntas el mejor momento para ti</strong>, con un mínimo de 12 horas de antelación para poder prepararlo bien.</p>
+      <p style="margin-top:16px;">El lugar también lo eliges tú: <strong>tu urbanización, tu casa, o la playa que prefieras</strong> en Dénia.</p>
+    </div>
+    <a href="https://wa.me/34666660411?text=Hola%2C%20me%20interesa%20una%20clase%20de%20yoga%20privada%20en%20D%C3%A9nia." target="_blank" class="mapa-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Cuadrar horario y lugar
+    </a>
+
+    <div style="margin-top:60px;">
+      <span class="ey">Precios</span>
+      <div class="prec-grid">
+        <div class="prec-card"><div class="prec-label">1 persona</div><div class="prec-num">65€</div><div class="prec-unit">por sesión</div><div class="prec-sub">Clase individual</div></div>
+        <div class="prec-card feat"><div class="prec-label">2 personas</div><div class="prec-num">80€</div><div class="prec-unit">por sesión</div><div class="prec-sub">Ideal para parejas o amigas</div></div>
+      </div>
+      <div class="prec-mas">
+        <p>¿Sois más de 2 personas? <a href="https://wa.me/34666660411?text=Hola%2C%20me%20interesa%20una%20clase%20privada%20para%20más%20de%202%20personas.">Escríbenos por WhatsApp</a> y armamos la sesión a medida.</p>
+      </div>
+      <div class="prec-nota">
+        <p>Pago en persona el día de la clase.<br>Cancelaciones con menos de 24h de antelación: 15€.<br>Las reservas deben hacerse con al menos 12 horas de antelación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#F5EFE4;">
+  <div class="container" style="text-align:center;margin-bottom:16px;">
+    <span class="ey">Lo que dicen</span>
+    <h2 class="h2">Así se sienten quienes ya practicaron con nosotras.</h2>
+    <div class="line" style="margin:0 auto;"></div>
+  </div>
+  <div class="test-card">
+    <img src="images/testimonio-sara.jpg.png" alt="Sara en clase de yoga en Dénia" width="200" height="260" loading="lazy" decoding="async"/>
+    <div class="test-body">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">Empezar el día de esta manera, con uno mismo, sin nada más… llena de paz y calma que se convierte en energía para todo el día. Una experiencia maravillosa. 💚</p>
+      <div class="test-name">Sara</div>
+    </div>
+  </div>
+  <div class="test-card">
+    <img src="images/testimonio-david.jpg.png" alt="David Busto en clase de yoga en Dénia" width="200" height="260" loading="lazy" decoding="async"/>
+    <div class="test-body">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">Gracias a la clase de yoga consigo soltar todo lo que se va acumulando durante la semana en el cuerpo y en la mente. Me ayuda a despejar la mente para volver a mi propósito con energía renovada.</p>
+      <div class="test-name">David Busto</div>
+    </div>
+  </div>
+</section>
+
+<section class="reserva" id="reserva">
+  <div class="container">
+    <span class="ey">Reserva</span>
+    <h2 class="h2">Cuéntanos y te contactamos.</h2>
+    <div class="line"></div>
+    <p class="body">Déjanos tu nombre y tu WhatsApp. Elige el número de personas, paga la sesión, y te escribimos para cuadrar el día, la hora y el lugar.</p>
+
+    <div class="form-wrap" id="form-wrap">
+      <div class="fg">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" placeholder="¿Cómo te llamas?"/>
+      </div>
+      <div class="fg">
+        <label for="telefono">Tu WhatsApp</label>
+        <input type="tel" id="telefono" placeholder="+34 ..."/>
+      </div>
+      <div class="fg">
+        <label for="personas-privada">Número de personas</label>
+        <select id="personas-privada" onchange="actualizarPrecioPrivada()">
+          <option value="1" data-precio="65" data-stripe="https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t">1 persona · 65€</option>
+          <option value="2" data-precio="80" data-stripe="https://buy.stripe.com/dRm4gAcTi5TxaQScpYdZ60u">2 personas · 80€</option>
+          <option value="mas" data-precio="" data-stripe="">Más de 2 personas</option>
+        </select>
+      </div>
+      <div id="precio-privada-info" style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#3DBBBB;text-align:center;margin:8px 0 16px;">
+        Total: 65€
+      </div>
+      <div id="aviso-mas-personas" style="display:none;background:rgba(61,187,187,0.12);border:1px solid rgba(61,187,187,0.3);color:rgba(255,255,255,0.85);padding:14px 18px;border-radius:2px;font-size:18px;line-height:1.65;margin-bottom:8px;">
+        Para grupos de más de 2 personas escríbenos por WhatsApp y te damos precio. 👉 <a href="https://wa.me/34666660411?text=Hola%2C%20me%20interesa%20una%20clase%20privada%20para%20más%20de%202%20personas." target="_blank" style="color:#3DBBBB;">Escríbenos aquí</a>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;margin:8px 0 16px;">
+        Tras el pago te contactamos por WhatsApp para coordinar el horario y el lugar — con al menos 12h de margen.
+      </p>
+
+      <div class="cancel-nota">⚠️ Cancelaciones con menos de 24h de antelación: 15€.<br>Las reservas deben hacerse con al menos 12 horas de antelación.</div>
+
+      <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.75);text-align:center;margin-bottom:16px;">🔒 Pago seguro · Confirmación inmediata</p>
+
+      <button class="btn-submit" onclick="procesarReservaPrivada()">Pagar y reservar mi clase →</button>
+    </div>
+
+    <div id="form-ok" style="display:none;text-align:center;padding:48px 0;">
+      <div style="font-size:48px;margin-bottom:16px;">🌊</div>
+      <p style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;margin-bottom:8px;">¡Sesión reservada!</p>
+      <p style="font-size:18px;color:rgba(255,255,255,0.7);">Te escribimos por WhatsApp para cuadrar día, hora y lugar.</p>
+    </div>
+  </div>
+
+  <script>
+  function actualizarPrecioPrivada() {
+    var sel = document.getElementById('personas-privada');
+    var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
+    var aviso = document.getElementById('aviso-mas-personas');
+    var info = document.getElementById('precio-privada-info');
+    if (sel.value === 'mas') {
+      aviso.style.display = 'block';
+      info.style.display = 'none';
+    } else {
+      aviso.style.display = 'none';
+      info.style.display = 'block';
+      info.textContent = 'Total: ' + precio + '€';
+    }
+  }
+
+  function procesarReservaPrivada() {
+    var nombre = document.getElementById('nombre').value.trim();
+    var tel = document.getElementById('telefono').value.trim();
+    var sel = document.getElementById('personas-privada');
+    if (!nombre || !tel) { alert('Por favor indica tu nombre y tu WhatsApp.'); return; }
+    if (sel.value === 'mas') { alert('Para grupos de más de 2 personas escríbenos por WhatsApp.'); return; }
+
+    var stripeLink = sel.options[sel.selectedIndex].getAttribute('data-stripe');
+    var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
+    var resumen = nombre + ' | ' + tel + ' | clase privada ' + sel.value + ' persona(s) ' + precio + '€';
+    var stripeUrl = stripeLink + '?client_reference_id=' + encodeURIComponent(resumen);
+
+    fetch('https://formspree.io/f/mwvdlgyv', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({ nombre: nombre, telefono: tel, reserva: resumen, tipo: 'privada' })
+    }).catch(function(){});
+
+    window.location.href = stripeUrl;
+  }
+  </script>
+</section>
+
+<footer>
+  <img src="images/logo.png" width="96" height="96" alt="Viva Community Yoga" loading="lazy" decoding="async"/>
+  <div class="fn">Viva Community Yoga</div>
+  <div class="fd">Yoga privado · Dónde tú prefieras en Dénia</div>
+  <div class="ft">Verano 2026 · Julio — Septiembre</div>
+  <a href="https://instagram.com/vivacommunityoga" target="_blank">@vivacommunityoga</a>
+  <div style="margin-top:16px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+    <a href="/index.html" style="font-size:14px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:2px;">Clases grupales</a>
+    <a href="/faq.html" style="font-size:14px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:2px;">Preguntas frecuentes</a>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/34666660411?text=Hola%2C%20me%20interesa%20una%20clase%20de%20yoga%20privada%20en%20D%C3%A9nia."
+   target="_blank"
+   style="position:fixed;bottom:20px;right:20px;width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);z-index:999999;text-decoration:none;-webkit-tap-highlight-color:transparent;"
+>
+  <svg width="34" height="34" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+</body>
+</html>
