@@ -680,6 +680,8 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     var tel = document.getElementById('telefono').value.trim();
     if (!tipo || !tel) { alert('Por favor elige el tipo de clase e indica tu WhatsApp.'); return; }
 
+    var stripeUrl, resumen;
+
     if (tipo === 'grupal') {
       var fecha = document.getElementById('fecha').value;
       var hora = document.getElementById('hora').value;
@@ -687,19 +689,31 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       if (!fecha || !hora || hora.indexOf('Primero') > -1 || hora === '') { alert('Por favor elige una fecha y hora válidas.'); return; }
       if (!validar12h(fecha, hora)) { document.getElementById('error-12h').style.display = 'block'; return; }
       document.getElementById('error-12h').style.display = 'none';
-      var ref = encodeURIComponent(tel + ' | ' + fecha + ' ' + hora);
-      window.location.href = STRIPE[bono] + '?client_reference_id=' + ref;
+      var bonoLabel = {'suelta':'Clase suelta 15€','bono3':'Bono 3 clases 40€','bono5':'Bono 5 clases 60€'}[bono];
+      resumen = tel + ' | ' + fecha + ' ' + hora + ' | ' + bonoLabel;
+      stripeUrl = STRIPE[bono] + '?client_reference_id=' + encodeURIComponent(resumen);
     } else {
       var sel = document.getElementById('personas-privada');
-      if (sel.value === 'mas') {
-        alert('Para grupos de más de 2 personas escríbenos por WhatsApp.');
-        return;
-      }
-      var stripeUrl = sel.options[sel.selectedIndex].getAttribute('data-stripe');
+      if (sel.value === 'mas') { alert('Para grupos de más de 2 personas escríbenos por WhatsApp.'); return; }
+      var stripeLink = sel.options[sel.selectedIndex].getAttribute('data-stripe');
       var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
-      var ref = encodeURIComponent(tel + ' | clase privada ' + sel.value + 'p ' + precio + 'EUR');
-      window.location.href = stripeUrl + '?client_reference_id=' + ref;
+      resumen = tel + ' | clase privada ' + sel.value + ' persona(s) ' + precio + '€';
+      stripeUrl = stripeLink + '?client_reference_id=' + encodeURIComponent(resumen);
     }
+
+    // Enviar a Formspree en segundo plano (sin esperar respuesta)
+    fetch('https://formspree.io/f/mwvdlgyv', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({
+        reserva: resumen,
+        telefono: tel,
+        tipo: tipo
+      })
+    }).catch(function(){});
+
+    // Redirigir a Stripe inmediatamente
+    window.location.href = stripeUrl;
   }
 </script>
 </section>
