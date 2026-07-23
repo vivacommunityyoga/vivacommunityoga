@@ -708,7 +708,7 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       stripeUrl = stripeLink + '?client_reference_id=' + encodeURIComponent(resumen);
     }
 
-    // Enviar a Formspree en segundo plano (sin esperar respuesta)
+    // Enviar a Formspree y redirigir tras breve espera
     fetch('https://formspree.io/f/mwvdlgyv', {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
@@ -718,10 +718,14 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
         reserva: resumen,
         tipo: tipo
       })
-    }).catch(function(){});
+    }).catch(function(){}).finally(function() {
+      window.location.href = stripeUrl;
+    });
 
-    // Redirigir a Stripe inmediatamente
-    window.location.href = stripeUrl;
+    // Fallback: si Formspree tarda más de 1.5s, redirigir igualmente
+    setTimeout(function() {
+      window.location.href = stripeUrl;
+    }, 1500);
   }
 </script>
 </section>
