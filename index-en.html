@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beach Yoga in Dénia, Spain | Viva Community Yoga · Los Baños Sunshine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --t: #3DBBBB; --td: #1E4A52; --a: #C4A882;
+    --cr: #F5EFE4; --w: #FFFFFF; --n: #111111;
+    --tx: #333333; --ts: #888888;
+    --min: 26px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cr); color: var(--tx); overflow-x: hidden; font-size: var(--min); line-height: 1.7; }
+
+  /* HERO */
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px 0; }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+  .hero-ov { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,35,38,0.6) 0%, rgba(10,35,38,0.22) 35%, rgba(10,35,38,0.75) 75%, rgba(10,35,38,0.96) 100%); }
+  .hero-logo { width: 140px; height: 140px; object-fit: contain; margin-bottom: 16px; position: relative; z-index: 2; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
+  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 32px; display: flex; flex-direction: column; align-items: center; }
+  .hero-eyebrow { font-size: 14px; letter-spacing: 7px; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 12px; font-weight: 400; }
+  .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(40px, 6vw, 84px); font-weight: 700; color: var(--w); line-height: 1.1; margin-bottom: 16px; }
+  .hero-sub { font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.6; max-width: 560px; margin-bottom: 28px; }
+  .btn { display: inline-block; background: var(--t); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 48px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .btn:hover { background: var(--td); }
+  .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 2; }
+
+  /* SECCIONES */
+  section { padding: 72px 48px; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .ey { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--t); margin-bottom: 14px; font-weight: 600; display: block; }
+  .h2 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 700; color: var(--td); line-height: 1.15; margin-bottom: 20px; }
+  .body { font-size: 26px; font-weight: 300; line-height: 1.8; color: var(--tx); }
+  .line { width: 52px; height: 1.5px; background: var(--a); margin: 26px 0; }
+
+  /* FILOSOFÍA */
+  .filo-grid { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; border: 1px solid rgba(196,168,130,0.3); }
+  .filo-item { padding: 38px 36px; border-bottom: 1px solid rgba(196,168,130,0.3); border-right: 1px solid rgba(196,168,130,0.3); }
+  .filo-item:nth-child(2n) { border-right: none; }
+  .filo-item:nth-last-child(-n+2) { border-bottom: none; }
+  .filo-no { font-size: 20px; font-weight: 300; color: #666; margin-bottom: 10px; font-style: italic; }
+  .filo-si { font-size: 26px; font-weight: 600; color: var(--td); }
+
+  /* PARA QUIÉN */
+  .pq { background: var(--td); }
+  .pq .ey { color: rgba(255,255,255,0.4); }
+  .pq .h2 { color: var(--w); }
+  .pq .line { background: rgba(255,255,255,0.2); }
+  .pq-list { list-style: none; margin-top: 28px; }
+  .pq-list li { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.55; display: flex; gap: 20px; }
+  .pq-list li:last-child { border-bottom: none; }
+  .pq-list li::before { content: '~'; color: rgba(255,255,255,0.3); flex-shrink: 0; font-size: 28px; }
+
+  /* EQUIPO */
+  .equipo { padding: 0; overflow: hidden; }
+  .eq-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
+  .eq-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+  .eq-texto { background: var(--t); padding: 60px 52px; display: flex; flex-direction: column; justify-content: center; }
+  .eq-texto .ey { color: rgba(255,255,255,0.4); }
+  .eq-texto .h2 { color: var(--w); }
+  .eq-texto .line { background: rgba(255,255,255,0.2); }
+  .eq-texto .body { color: rgba(255,255,255,0.85); font-size: 24px; }
+
+  /* HORARIOS */
+  .hor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+  .hor-card { background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 32px 30px; border-radius: 2px; }
+  .hor-dia { font-size: 13px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--t); margin-bottom: 10px; }
+  .hor-hora { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--td); margin-bottom: 6px; }
+  .hor-info { font-size: 20px; font-weight: 300; color: #666; }
+
+  .mapa-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--td); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 18px 36px; border-radius: 2px; text-decoration: none; margin-top: 30px; transition: background 0.2s; }
+  .mapa-btn:hover { background: var(--t); }
+  .mapa-nota { font-size: 20px; color: #666; margin-top: 12px; font-style: italic; }
+
+  /* PRECIOS */
+  .prec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; }
+  .prec-card { text-align: center; padding: 40px 20px; border: 1px solid rgba(196,168,130,0.4); border-radius: 2px; background: var(--w); }
+  .prec-card.feat { background: var(--t); border-color: var(--t); }
+  .prec-label { font-size: 18px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 14px; }
+  .prec-card.feat .prec-label { color: rgba(255,255,255,0.55); }
+  .prec-num { font-family: 'Playfair Display', serif; font-size: 84px; font-weight: 700; color: var(--td); line-height: 1; margin-bottom: 8px; }
+  .prec-card.feat .prec-num { color: var(--w); }
+  .prec-unit { font-size: 24px; color: #666; }
+  .prec-card.feat .prec-unit { color: rgba(255,255,255,0.55); }
+  .prec-sub { font-size: 22px; color: #7a6a52; margin-top: 12px; font-style: italic; }
+  .prec-card.feat .prec-sub { color: rgba(255,255,255,0.5); }
+  .prec-nota { margin-top: 18px; background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 24px 28px; border-radius: 2px; }
+  .prec-nota p { font-size: 22px; font-weight: 300; color: var(--tx); line-height: 1.8; }
+  .prec-nota strong { font-weight: 600; color: var(--td); }
+
+  /* RESERVA */
+  .reserva { background: var(--td); }
+  .reserva .ey { color: rgba(255,255,255,0.4); }
+  .reserva .h2 { color: var(--w); }
+  .reserva .body { color: rgba(255,255,255,0.72); margin-bottom: 28px; }
+  .reserva .line { background: rgba(255,255,255,0.2); }
+  .badges { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+  .badge { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); padding: 10px 18px; border-radius: 2px; }
+  .prueba { background: rgba(255,255,255,0.06); border-left: 2px solid rgba(255,255,255,0.2); padding: 26px 30px; margin-bottom: 24px; }
+  .prueba-t { font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.88); font-style: italic; line-height: 1.6; margin-bottom: 10px; }
+  .prueba-m { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+  .form-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 44px 48px; }
+  .fg { margin-bottom: 24px; }
+  .fg label { display: block; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 12px; }
+  .fg input, .fg select { width: 100%; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); border-radius: 2px; padding: 18px 22px; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--w); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
+  .fg input::placeholder { color: rgba(255,255,255,0.6); }
+  .fg input:focus, .fg select:focus { border-color: var(--t); }
+  .fg select option { background: var(--td); color: var(--w); }
+  .cancel-nota { font-size: 20px; color: rgba(255,255,255,0.9); margin: 20px 0; font-style: italic; padding: 16px 20px; background: rgba(255,255,255,0.1); border-radius: 2px; line-height: 1.65; }
+  .btn-submit { width: 100%; background: var(--t); color: var(--w); border: none; cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 22px; border-radius: 2px; transition: background 0.2s; }
+  .btn-submit:hover { background: #2da0a0; }
+  .confirm { display: none; text-align: center; padding: 60px 24px; }
+  .confirm .check { font-size: 60px; color: var(--t); margin-bottom: 20px; }
+  .confirm h3 { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--w); margin-bottom: 16px; }
+  .confirm p { font-size: 24px; font-weight: 300; color: rgba(255,255,255,0.68); line-height: 1.75; }
+
+  /* FOOTER */
+  footer { background: var(--n); padding: 64px 48px; text-align: center; }
+  footer img { width: 96px; height: 96px; object-fit: contain; margin-bottom: 24px; opacity: 0.9; }
+  .fn { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 10px; }
+  .fd { font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.48); margin-bottom: 8px; }
+  .ft { font-size: 14px; color: rgba(255,255,255,0.8); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
+  footer a { font-size: 20px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 2px; transition: color 0.2s; }
+  footer a:hover { color: var(--t); }
+
+  @media (max-width: 720px) {
+    section { padding: 56px 24px; }
+    .hero-logo { width: 100px; height: 100px; margin-bottom: 10px; }
+    .hero-eyebrow { font-size: 13px; letter-spacing: 4px; margin-bottom: 10px; color: rgba(255,255,255,0.85); }
+    .hero-h1 { font-size: 38px; margin-bottom: 14px; }
+    .hero-sub { font-size: 20px; line-height: 1.55; margin-bottom: 22px; }
+    .btn { padding: 15px 34px; }
+    .filo-grid { grid-template-columns: 1fr; }
+    .filo-item { border-right: none !important; }
+    .filo-item:not(:last-child) { border-bottom: 1px solid rgba(196,168,130,0.3) !important; }
+    .eq-inner { grid-template-columns: 1fr; }
+    .eq-foto { height: 300px; }
+    .eq-texto { padding: 44px 28px; }
+    .hor-grid { grid-template-columns: 1fr; }
+    .prec-grid { grid-template-columns: 1fr; }
+    .form-wrap { padding: 30px 24px; }
+  }
+</style>
+
+  <!-- SEO -->
+  <meta name="google-site-verification" content="g1k3jGIfjvrv2o0xOlAYyPJcsqfuTXhWI1szzVGploQ">
+  <meta name="description" content="Beach yoga classes in Dénia, Spain. Yoga by the sea at Los Baños Sunshine, Thursday to Sunday. All levels welcome. From 15€. Book your spot online.">
+  <meta name="keywords" content="yoga Dénia, clases de yoga Dénia, yoga playa Dénia, yoga en la playa Dénia, yoga Los Baños Sunshine, yoga verano Dénia, clases yoga costa blanca">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Viva Community Yoga">
+  <link rel="canonical" href="https://vivacommunityyoga.com/en/">
+<link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/">
+<link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Viva Community Yoga · Yoga en la playa en Dénia">
+  <meta property="og:description" content="Yoga classes by the sea at Los Baños Sunshine, Dénia. Jueves a domingo, mañana y tarde. Todos los niveles. Desde 15€.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vivacommunityyoga.com">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Viva Community Yoga">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Viva Community Yoga · Yoga en la playa en Dénia">
+  <meta name="twitter:description" content="Yoga classes by the sea at Los Baños Sunshine, Dénia. Desde 15€. Reserva online.">
+
+  <!-- Structured Data — Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Viva Community Yoga",
+    "description": "Clases de yoga en la playa en Dénia. Yoga frente al mar en Los Baños Sunshine, jueves a domingo, para todos los niveles.",
+    "url": "https://vivacommunityyoga.com",
+    "telephone": "+34666660411",
+    "email": "vivacommunityyoga@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer Riu Grande 12",
+      "addressLocality": "Dénia",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.8417,
+      "longitude": 0.1097
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Thursday", "Friday"],
+        "opens": "07:30",
+        "closes": "08:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Thursday", "Friday"],
+        "opens": "19:30",
+        "closes": "20:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "07:30",
+        "closes": "08:30"
+      }
+    ],
+    "priceRange": "15€ - 60€",
+    "sameAs": [
+      "https://www.instagram.com/vivacommunityoga"
+    ],
+    "image": "https://vivacommunityyoga.com/og-image.jpg"
+  }
+  </script>
+<!-- Meta Pixel Code (deferred until after page load so it doesn't compete with content for load time) -->
+<script>
+window.addEventListener('load', function() {
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1148864329659008');
+fbq('track', 'PageView');
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+
+<!-- AVISOS -->
+<div style="background:#1E4A52;border-left:5px solid #3DBBBB;padding:20px 32px;margin:0;">
+  <div style="max-width:900px;margin:0 auto;display:flex;gap:16px;align-items:flex-start;">
+    <span style="font-size:28px;flex-shrink:0;">📢</span>
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#3DBBBB;margin-bottom:8px;font-weight:600;">Schedule updates</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#FFFFFF;line-height:1.7;margin:0;">
+        🕖 <strong>This Sunday</strong> the morning class starts at <strong>7:00h</strong> (instead of the usual 7:30h).
+        <br>
+        📅 From <strong>Tuesday 11 August</strong>, we are adding a <strong>Tuesday 19:30h class</strong>, replacing the Friday evening session.
+      </p>
+    </div>
+  </div>
+</div><section class="hero">
+  <img class="hero-bg" src="images/hero-bg.jpg" width="1000" height="1333" alt="Yoga frente al mar en Dénia" fetchpriority="high"/>
+  <div class="hero-ov"></div>
+  <svg class="hero-wave" viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none">
+    <path d="M0 20 Q180 0 360 20 Q540 40 720 20 Q900 0 1080 20 Q1260 40 1440 20 L1440 40 L0 40 Z" fill="#F5EFE4"/>
+  </svg>
+  <div class="hero-content">
+    <img class="hero-logo" src="images/logo.png" width="300" height="300" alt="Viva Community Yoga" fetchpriority="high"/>
+    <span class="hero-eyebrow">Dénia · Los Baños Sunshine</span>
+    <h1 class="hero-h1">One hour that changes<br>the rest of your day.</h1>
+    <p class="hero-eyebrow" style="margin-top:8px;">Clases de yoga en la playa · Dénia</p>
+    <p class="hero-sub">Yoga frente al mar para disfrutar más profundamente de tus vacaciones. Todos los niveles, desde julio.</p>
+    <a href="#reserva" class="btn">Book your spot</a>
+    <a href="https://wa.me/666660411?text=Hi%2C%20I%27m%20interested%20in%20joining%20a%20yoga%20class%20at%20Los%20Ba%C3%B1os%20Sunshine.%20Do%20you%20have%20spots%20available%3F" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1ea84e;color:#fff;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;border-radius:2px;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent;white-space:nowrap;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+<section style="background:var(--cr)">
+  <div class="container">
+    <span class="ey">Our philosophy</span>
+    <h2 class="h2">We're not here to be perfect.</h2>
+    <div class="line"></div>
+    <p class="body">One different hour in the middle of your holiday. Sin esfuerzo, sin competir, sin presión. Solo tú, el mar y la respiración.</p>
+    <div class="filo-grid">
+      <div class="filo-item"><div class="filo-no">No venimos a competir.</div><div class="filo-si">Venimos a respirar.</div></div>
+      <div class="filo-item"><div class="filo-no">No vienes a hacer yoga.</div><div class="filo-si">Vienes a sentirte diferente cuando termina la clase.</div></div>
+      <div class="filo-item"><div class="filo-no">No venimos a rendir más.</div><div class="filo-si">Venimos a disfrutar más.</div></div>
+      <div class="filo-item"><div class="filo-no">No hace falta experiencia previa.</div><div class="filo-si">Solo hace falta curiosidad.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pq">
+  <div class="container">
+    <span class="ey">Who is it for?</span>
+    <h2 class="h2">For those who want a real holiday.</h2>
+    <div class="line"></div>
+    <ul class="pq-list">
+      <li>Para quienes quieren añadir algo especial a sus días en Dénia.</li>
+      <li>Para quienes disfrutan empezar el día con energía y calma antes de ir a la playa.</li>
+      <li>Para quienes viajan solos o en pareja y buscan un momento propio.</li>
+      <li>Para quienes practican yoga en casa y quieren mantener su práctica este verano.</li>
+      <li>Para quienes nunca han probado el yoga pero siempre han tenido curiosidad.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="equipo">
+  <div class="eq-inner">
+    <div class="eq-foto"><img src="images/equipo.jpg" width="700" height="933" alt="Nati y Naylín, profesoras de Viva Community Yoga" loading="lazy" decoding="async"/></div>
+    <div class="eq-texto">
+      <span class="ey">About us</span>
+      <h2 class="h2">Two teachers.<br>One shared space.</h2>
+      <div class="line"></div>
+      <p class="body">We are Nati and Naylín. We have been teaching yoga for over a decade and this summer we are sharing it here, by the sea. We trained in India and Spain and have taught in our own schools, at conferences, in very different places. And this — a mat, the sea in front of us, sharing it with you — is what we love most. It brings us back to the simple things, to the origin. If you come, even just once, you will already be part of our family, this Community that wants to enjoy that hour without demands, without phones, without rush.</p>
+    </div>
+  </div>
+</section>
+
+
+<section style="background:var(--n);padding:0;overflow:hidden;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:480px;">
+    <div style="position:relative;overflow:hidden;">
+      <img src="images/losbanos-1.jpg" width="800" height="533" alt="Terraza Los Baños Sunshine frente al mar" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" decoding="async"/>
+    </div>
+    <div style="position:relative;overflow:hidden;">
+      <img src="images/losbanos-2.jpg" width="800" height="560" alt="Desayuno saludable Los Baños Sunshine" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" loading="lazy" decoding="async"/>
+    </div>
+  </div>
+  <div style="background:var(--n);padding:52px 48px;text-align:center;">
+    <span style="font-size:13px;letter-spacing:6px;text-transform:uppercase;color:var(--t);font-weight:600;display:block;margin-bottom:16px;">Después de la clase</span>
+    <p style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--w);line-height:1.2;max-width:680px;margin:0 auto 16px;">Y después de la clase,<br>la mesa está puesta.</p>
+    <p style="font-size:22px;font-weight:300;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto;line-height:1.75;">Los Baños Sunshine te espera con desayuno frente al mar. Porque la experiencia no termina cuando se enrolla la esterilla.</p><p style="font-size:18px;font-weight:300;color:rgba(255,255,255,0.55);max-width:560px;margin:16px auto 0;line-height:1.7;">Must be booked the day before. Price: 15€ per pack.</p>
+
+  <div style="display:flex;gap:24px;max-width:900px;margin:32px auto 0;flex-wrap:wrap;justify-content:center;">
+    <!-- Sweet Pack -->
+    <div style="flex:1;min-width:240px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:28px 24px;">
+      <div style="font-family:Georgia,serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:12px;">Sweet Pack</div>
+      <div style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:#FFFFFF;margin-bottom:16px;">Açaí Bowl</div>
+      <ul style="list-style:none;margin:0 0 20px;padding:0;">
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Açaí Green &amp; Berry</li>
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Café o té</li>
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;">Zumo de naranja</li>
+      </ul>
+      <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#C4A882;">15€</div>
+    </div>
+    <!-- Savoury Pack -->
+    <div style="flex:1;min-width:240px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:28px 24px;">
+      <div style="font-family:Georgia,serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:12px;">Savoury Pack</div>
+      <div style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:#FFFFFF;margin-bottom:16px;">Mollete Mediterráneo</div>
+      <ul style="list-style:none;margin:0 0 20px;padding:0;">
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Jamón bellota, tomate y aceite de oliva</li>
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Café o té</li>
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;">Zumo de naranja</li>
+      </ul>
+      <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#C4A882;">15€</div>
+    </div>
+    <!-- Pack Vegetariano -->
+    <div style="flex:1;min-width:240px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:28px 24px;">
+      <div style="font-family:Georgia,serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:12px;">Pack Vegetariano</div>
+      <div style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:#FFFFFF;margin-bottom:16px;">Huevos Revueltos</div>
+      <ul style="list-style:none;margin:0 0 20px;padding:0;">
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Con tostada, tomate y aceite de oliva</li>
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Café o té</li>
+        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;">Zumo de naranja</li>
+      </ul>
+      <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#C4A882;">15€</div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section style="background:var(--cr)">
+  <div class="container">
+    <span class="ey">When</span>
+    <h2 class="h2">Class schedule.</h2>
+    <div class="line"></div>
+    <div class="hor-grid">
+      <div class="hor-card"><div class="hor-dia">Thursday</div><div class="hor-hora">7:30h</div><div class="hor-info">Morning class</div></div>
+      <div class="hor-card"><div class="hor-dia">Thursday</div><div class="hor-hora">19:30h</div><div class="hor-info">Evening class</div></div>
+      <div class="hor-card"><div class="hor-dia">Friday</div><div class="hor-hora">7:30h</div><div class="hor-info">Morning class</div></div>
+      <div class="hor-card"><div class="hor-dia">Friday</div><div class="hor-hora">19:30h</div><div class="hor-info">Evening class</div></div>
+      <div class="hor-card"><div class="hor-dia">Saturday</div><div class="hor-hora">7:30h</div><div class="hor-info">Morning class</div></div>
+      <div class="hor-card"><div class="hor-dia">Sunday</div><div class="hor-hora">7:30h</div><div class="hor-info">Morning class</div></div>
+    </div>
+    <a href="https://maps.google.com/?q=Los+Baños+Sunshine+Denia+Carrer+Riu+Grande+12" target="_blank" class="mapa-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Cómo llegar
+    </a>
+    <p class="mapa-nota">Los Baños Sunshine · Carrer Riu Grande 12, Dénia</p>
+    <div style="margin-top:60px;">
+      <span class="ey">Pricing</span>
+      <div class="prec-grid">
+        <div class="prec-card"><div class="prec-label">Drop-in class</div><div class="prec-num">15€</div><div class="prec-unit">per class</div><div class="prec-sub">First time or short stay</div></div>
+        <div class="prec-card feat"><div class="prec-label">Bono 3 clases</div><div class="prec-num">40€</div><div class="prec-unit">13€ / clase</div><div class="prec-sub">One week stay</div></div>
+        <div class="prec-card"><div class="prec-label">Bono 5 clases</div><div class="prec-num">60€</div><div class="prec-unit">12€ / clase</div><div class="prec-sub">Longer stay or returning</div></div>
+      </div>
+      <div style="margin-top:24px;background:#1E4A52;border-radius:4px;padding:28px 32px;color:#fff;">
+        <a href="/privadas.html" style="font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:8px;text-decoration:none;display:block;">Private class · See details →</a>
+        <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#fff;line-height:1;">65€</div>
+        <div style="font-size:18px;color:rgba(255,255,255,0.6);margin:6px 0 16px;">per person · +15€ each additional person</div>
+        <div style="font-size:19px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.7;">At your accommodation or on the beach. We adapt the class to your level, your body and what you need that day.</div>
+      </div>
+      <div class="prec-nota">
+<p>Cancelación gratuita si avisas con más de 24h de antelación.<br>Las reservas deben hacerse con al menos 12 horas de antelación (una reserva a las 22h no es válida para la clase de las 7:30h del día siguiente).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="test-section" style="background:#F5EFE4;padding:80px 0;">
+  <div class="container" style="text-align:center;margin-bottom:48px;">
+    <span class="ey">What they say</span>
+    <h2 class="h2">They've already been here.</h2>
+    <div class="line" style="margin:0 auto;"></div>
+  </div>
+
+  <div style="position:relative;overflow:hidden;max-width:100%;">
+    <div id="carousel" style="display:flex;transition:transform 0.4s ease;will-change:transform;">
+
+      <!-- Sara -->
+      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
+        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
+          <img src="images/testimonio-sara.jpg.png" alt="Sara en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <div style="padding:32px 36px 36px;">
+            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Empezar el día de esta manera, junto al mar, con uno mismo, sin nada más… llena de paz y calma que se convierte en energía para todo el día. Una experiencia maravillosa. 💚</p>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Sara</div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Caroline -->
+      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
+        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
+          <img src="images/testimonio-caroline.jpg.png" alt="Caroline en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <div style="padding:32px 36px 36px;">
+            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Tenía dolores cada día y necesitaba calmarme. La sesión me permitió descomprimir de verdad porque la profesora tuvo en cuenta mis rigideces y me invitó a soltar sin ninguna presión, simplemente a disfrutar de un momento de bienestar.</p>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Caroline</div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Bea -->
+      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
+        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
+          <img src="images/testimonio-bea.jpg.png" alt="Bea en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <div style="padding:32px 36px 36px;">
+            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Un espacio para sentirse acogida y cuidada. Cada encuentro es una invitación a dejarlo todo fuera y volver a habitar el momento presente.</p>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Bea</div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Emma -->
+      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
+        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
+          <img src="images/testimonio-emma.jpg.png" alt="Emma en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <div style="padding:32px 36px 36px;">
+            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">The morning yoga session was lovely! Strength to both your body and mind. You can join as an experienced practitioner or as a complete beginner. The finishing relaxation left you energized for the rest of the day. Strongly recommend!</p>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Emma</div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Alice -->
+      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
+        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
+          <img src="images/testimonio-alice.jpg.png" alt="Alice en clase de yoga en la playa de Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <div style="padding:32px 36px 36px;">
+            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">I joined the 07:30 sunrise yoga session at Los Baños Sunshine, and it is honestly one of the highlights of my stay in Dénia. Starting the day with the sound of the waves, the sea breeze, and the soft sun created such a peaceful atmosphere. The class was welcoming, relaxing, and suitable for every level. I left feeling completely refreshed and full of positive energy. If you're visiting Dénia, I can highly recommend this experience.</p>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Alice</div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- David -->
+      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
+        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
+          <img src="images/testimonio-david.jpg.png" alt="David Busto en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <div style="padding:32px 36px 36px;">
+            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Gracias a la clase de yoga consigo soltar todo lo que se va acumulando durante la semana en el cuerpo y en la mente. La clase se pasa muy rápido y me ayuda a despejar la mente para volver a mi propósito con energía renovada.</p>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">David Busto</div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button onclick="moveCarousel(-1)" style="position:absolute;left:8px;top:45%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:10;">‹</button>
+    <button onclick="moveCarousel(1)" style="position:absolute;right:8px;top:45%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:10;">›</button>
+  </div>
+
+  <div style="text-align:center;margin-top:24px;display:flex;justify-content:center;gap:8px;" id="dots">
+    <span onclick="goTo(0)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#3DBBBB;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
+    <span onclick="goTo(1)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
+    <span onclick="goTo(2)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
+    <span onclick="goTo(3)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
+    <span onclick="goTo(4)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
+    <span onclick="goTo(5)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
+  </div>
+
+  <script>
+    var cur = 0, total = 6;
+    function updateCarousel() {
+      document.getElementById('carousel').style.transform = 'translateX(-' + (cur * 100) + '%)';
+      document.querySelectorAll('.dot').forEach(function(d, i) {
+        d.style.background = i === cur ? '#3DBBBB' : '#ccc';
+      });
+    }
+    function moveCarousel(dir) { cur = (cur + dir + total) % total; updateCarousel(); }
+    function goTo(i) { cur = i; updateCarousel(); }
+    var startX = 0;
+    document.getElementById('carousel').addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive:true});
+    document.getElementById('carousel').addEventListener('touchend', function(e) {
+      if (Math.abs(startX - e.changedTouches[0].clientX) > 50) moveCarousel(startX > e.changedTouches[0].clientX ? 1 : -1);
+    }, {passive:true});
+  </script>
+</section>
+<section style="background:var(--cr);padding:32px 48px;text-align:center;">
+  <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--ts);">
+    Any questions before booking? Check our 
+    <a href="/faq.html" style="color:var(--t);text-decoration:none;border-bottom:1px solid rgba(61,187,187,0.4);">FAQ</a>.
+  </p>
+</section>
+<section class="reserva" id="reserva">
+  <div class="container">
+    <span class="ey">Book</span>
+    <h2 class="h2">Choose your class and secure your spot.</h2>
+    <div class="line"></div>
+    <p class="body">Choose your class, pay online and your spot is confirmed instantly.</p>
+
+    <div class="prueba">
+      <p class="prueba-t">"It was the highlight of my day — and what made the rest of the day even better."</p>
+      <p class="prueba-m">That's what we want you to say when you leave.</p>
+    </div>
+
+    <div class="form-wrap" id="form-wrap">
+
+      <!-- Tipo -->
+      <div class="fg">
+        <label for="tipo">Type of class</label>
+        <select id="tipo" required onchange="mostrarCampos()">
+          <option value="">Choose...</option>
+          <option value="grupal">Group class · from 15€</option>
+          <option value="privada">Private class · from 65€</option>
+        </select>
+      </div>
+
+      <!-- Nombre -->
+      <div class="fg">
+        <label for="nombre">Your name</label>
+        <input type="text" id="nombre" placeholder="Nombre" required/>
+      </div>
+
+      <!-- Teléfono -->
+      <div class="fg">
+        <label for="telefono">Your WhatsApp</label>
+        <input type="tel" id="telefono" placeholder="600 000 000" required/>
+      </div>
+
+      <!-- Campos clase grupal -->
+      <div id="campos-grupal" style="display:none;">
+        <div class="fg">
+          <label for="fecha">What day would you like to come? <span style="font-weight:300;font-style:italic;opacity:0.7;">(classes Thursday to Sunday)</span></label>
+          <input type="date" id="fecha" onchange="actualizarHoras()"/>
+        </div>
+        <div class="fg">
+          <label for="hora">Horario</label>
+          <select id="hora">
+            <option value="">First choose a date...</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="bono">Precio</label>
+          <select id="bono">
+            <option value="suelta">Drop-in class · 15€</option>
+            <option value="bono3">3-class pass · 40€</option>
+            <option value="bono5">5-class pass · 60€</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Campos clase privada -->
+      <div id="campos-privada" style="display:none;">
+        <div class="fg">
+          <label for="personas-privada">Número de personas</label>
+          <select id="personas-privada" onchange="actualizarPrecioPrivada()">
+            <option value="1" data-precio="65" data-stripe="https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t">1 person · 65€</option>
+            <option value="2" data-precio="80" data-stripe="https://buy.stripe.com/dRm4gAcTi5TxaQScpYdZ60u">2 people · 80€</option>
+            <option value="mas" data-precio="" data-stripe="">More than 2 people</option>
+          </select>
+        </div>
+        <div id="precio-privada-info" style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#3DBBBB;text-align:center;margin:8px 0 16px;">
+          Total: 65€
+        </div>
+        <div id="aviso-mas-personas" style="display:none;background:rgba(61,187,187,0.12);border:1px solid rgba(61,187,187,0.3);color:rgba(255,255,255,0.85);padding:14px 18px;border-radius:2px;font-size:18px;line-height:1.65;margin-bottom:8px;">
+          For groups of more than 2 people, message us on WhatsApp for pricing. 👉 <a href="https://wa.me/666660411?text=Hola%2C%20me%20interesa%20una%20clase%20privada%20para%20más%20de%202%20personas." target="_blank" style="color:#3DBBBB;">Message us here</a>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;margin:8px 0 16px;">
+          After payment we will contact you on WhatsApp to arrange the time and location.
+        </p>
+      </div>
+
+      <div id="error-12h" style="display:none;background:rgba(220,53,69,0.15);border:1px solid rgba(220,53,69,0.4);color:#ff6b7a;padding:14px 18px;border-radius:2px;font-size:17px;margin-bottom:16px;">
+        ⚠️ This class starts in less than 12 hours. Please choose another date or message us directly on WhatsApp.
+      </div>
+
+      <div class="cancel-nota">⚠️ Free cancellation with more than 24h notice.<br>Bookings must be made at least 12 hours in advance.</div>
+
+      <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.75);text-align:center;margin-bottom:16px;">🔒 Secure payment · Instant confirmation · Free cancellation up to 24h before</p>
+
+      <button id="sub-btn" onclick="procesarReserva()" style="width:100%;background:#3DBBBB;color:#fff;border:none;border-radius:2px;padding:18px 32px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:3px;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:background 0.2s;" onmouseover="this.style.background='#2da0a0'" onmouseout="this.style.background='#3DBBBB'">Pay and book your spot →</button>
+    </div>
+
+    <div id="form-ok" style="display:none;text-align:center;padding:48px 0;">
+      <div style="font-size:48px;margin-bottom:16px;">🌊</div>
+      <p style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;margin-bottom:8px;">¡Plaza reservada!</p>
+      <p style="font-size:18px;color:rgba(255,255,255,0.7);">Te hemos enviado la confirmación por email.</p>
+    </div>
+  </div>
+
+  <script>
+  var STRIPE = {
+    suelta: 'https://buy.stripe.com/00w28s3iIgyb9MOey6dZ60q',
+    bono3:  'https://buy.stripe.com/00weVe06w3Lpf78blUdZ60r',
+    bono5:  'https://buy.stripe.com/8x2dRa06w6XB9MOblUdZ60s',
+    privada:'https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t'
+  };
+  var HORARIOS = { 4:['7:30h','19:30h'], 5:['7:30h','19:30h'], 6:['7:30h'], 0:['7:00h'] };
+
+  function mostrarCampos() {
+    var tipo = document.getElementById('tipo').value;
+    document.getElementById('campos-grupal').style.display = tipo === 'grupal' ? 'block' : 'none';
+    document.getElementById('campos-privada').style.display = tipo === 'privada' ? 'block' : 'none';
+    if (tipo === 'grupal') {
+      var hoy = new Date();
+      document.getElementById('fecha').min = hoy.toISOString().split('T')[0];
+    }
+  }
+
+  function actualizarHoras() {
+    var fechaVal = document.getElementById('fecha').value;
+    var horaSelect = document.getElementById('hora');
+    horaSelect.innerHTML = '<option value="">Choose a time...</option>';
+    if (!fechaVal) return;
+    var dia = new Date(fechaVal + 'T00:00:00').getDay();
+    var horas = HORARIOS[dia];
+    if (!horas) {
+      horaSelect.innerHTML = '<option value="">No class on this day — choose Thursday, Friday, Saturday or Sunday</option>';
+      return;
+    }
+    var labels = { '7:30h': '🌅 7:30h — morning class', '19:30h': '🌅 19:30h — evening class' };
+    horas.forEach(function(h) {
+      var opt = document.createElement('option');
+      opt.value = h; opt.textContent = labels[h] || h;
+      horaSelect.appendChild(opt);
+    });
+  }
+
+  function validar12h(fechaStr, horaStr) {
+    var hm = horaStr.replace('h','').split(':');
+    var claseDate = new Date(fechaStr + 'T' + hm[0].padStart(2,'0') + ':' + (hm[1]||'00') + ':00');
+    return (claseDate - new Date()) / 3600000 >= 12;
+  }
+
+  function actualizarPrecioPrivada() {
+    var sel = document.getElementById('personas-privada');
+    var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
+    var aviso = document.getElementById('aviso-mas-personas');
+    var info = document.getElementById('precio-privada-info');
+    if (sel.value === 'mas') {
+      aviso.style.display = 'block';
+      info.style.display = 'none';
+    } else {
+      aviso.style.display = 'none';
+      info.style.display = 'block';
+      info.textContent = 'Total: ' + precio + '€';
+    }
+  }
+
+  function procesarReserva() {
+    var tipo = document.getElementById('tipo').value;
+    var nombre = document.getElementById('nombre').value.trim();
+    var tel = document.getElementById('telefono').value.trim();
+    if (!tipo || !nombre || !tel) { alert('Por favor indica tu nombre, WhatsApp y tipo de clase.'); return; }
+
+    var stripeUrl, resumen;
+
+    if (tipo === 'grupal') {
+      var fecha = document.getElementById('fecha').value;
+      var hora = document.getElementById('hora').value;
+      var bono = document.getElementById('bono').value;
+      if (!fecha || !hora || hora.indexOf('Primero') > -1 || hora === '') { alert('Por favor elige una fecha y hora válidas.'); return; }
+      if (!validar12h(fecha, hora)) { document.getElementById('error-12h').style.display = 'block'; return; }
+      document.getElementById('error-12h').style.display = 'none';
+      var bonoLabel = {'suelta':'Drop-in class 15€','bono3':'3-class pass 40€','bono5':'5-class pass 60€'}[bono];
+      resumen = nombre + ' | ' + tel + ' | ' + fecha + ' ' + hora + ' | ' + bonoLabel;
+      stripeUrl = STRIPE[bono] + '?client_reference_id=' + encodeURIComponent(resumen);
+    } else {
+      var sel = document.getElementById('personas-privada');
+      if (sel.value === 'mas') { alert('Para grupos de más de 2 personas escríbenos por WhatsApp.'); return; }
+      var stripeLink = sel.options[sel.selectedIndex].getAttribute('data-stripe');
+      var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
+      resumen = nombre + ' | ' + tel + ' | clase privada ' + sel.value + ' persona(s) ' + precio + '€';
+      stripeUrl = stripeLink + '?client_reference_id=' + encodeURIComponent(resumen);
+    }
+
+    // Enviar a Formspree y redirigir tras breve espera
+    fetch('https://formspree.io/f/mwvdlgyv', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({
+        nombre: nombre,
+        telefono: tel,
+        reserva: resumen,
+        tipo: tipo
+      })
+    }).catch(function(){}).finally(function() {
+      window.location.href = stripeUrl;
+    });
+
+    // Fallback: si Formspree tarda más de 1.5s, redirigir igualmente
+    setTimeout(function() {
+      window.location.href = stripeUrl;
+    }, 1500);
+  }
+</script>
+</section>
+
+<footer>
+  <img src="images/logo.png" width="96" height="96" alt="Viva Community Yoga" loading="lazy" decoding="async"/>
+  <div class="fn">Viva Community Yoga</div>
+  <div class="fd">Los Baños Sunshine · Carrer Riu Grande 12 · Dénia</div>
+  <div class="ft">Summer 2026 · July — September</div>
+  <a href="https://instagram.com/vivacommunityoga" target="_blank">@vivacommunityoga</a>
+  <div style="margin-top:16px;">
+    <a href="/faq.html" style="font-size:14px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:2px;">Preguntas frecuentes</a>
+  </div>
+</footer>
+
+<script>
+async function handleReserva() {
+  var n = document.getElementById('nombre').value.trim();
+  var e = document.getElementById('email').value.trim();
+  var t = document.getElementById('telefono').value.trim();
+  var c = document.getElementById('clase').value;
+  var b = document.getElementById('bono').value;
+  if (!n || !e || !c) { alert('Por favor completa nombre, email y clase.'); return; }
+
+  var btn = document.querySelector('.btn-submit');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  try {
+    var res = await fetch('https://formspree.io/f/mwvdlgyv', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: n,
+        email: e,
+        telefono: t || 'No indicado',
+        clase: c,
+        tipo_reserva: b,
+        _subject: 'Nueva reserva — ' + c + ' · ' + n,
+        _replyto: e
+      })
+    });
+
+    if (res.ok) {
+      document.getElementById('form-wrap').style.display = 'none';
+      document.getElementById('confirm').style.display = 'block';
+    } else {
+      throw new Error('Error');
+    }
+  } catch(err) {
+    btn.textContent = 'Reservar plaza';
+    btn.disabled = false;
+    alert('Ha habido un error. Por favor escríbenos directamente a info@naylinnunez.com');
+  }
+}
+</script>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/666660411?text=Hi%2C%20I%27m%20interested%20in%20joining%20a%20yoga%20class%20at%20Los%20Ba%C3%B1os%20Sunshine.%20Do%20you%20have%20spots%20available%3F" 
+   target="_blank"
+   style="position:fixed;bottom:20px;right:20px;width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);z-index:999999;text-decoration:none;-webkit-tap-highlight-color:transparent;"
+>
+  <svg width="34" height="34" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+</body>
+</html>
