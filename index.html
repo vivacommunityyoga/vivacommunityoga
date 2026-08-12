@@ -371,7 +371,7 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     <span class="ey">Cuándo</span>
     <h2 class="h2">Horarios de clases.</h2>
     <div class="line"></div>
-    <div class="hor-grid"><div class="hor-card"><div class="hor-dia">Martes</div><div class="hor-hora">19:30h</div><div class="hor-info">Clase de tarde</div></div><div class="hor-card"><div class="hor-dia">Jueves</div><div class="hor-hora">7:30h</div><div class="hor-info">Clase de mañana</div></div><div class="hor-card"><div class="hor-dia">Jueves</div><div class="hor-hora">19:30h</div><div class="hor-info">Clase de tarde</div></div><div class="hor-card"><div class="hor-dia">Viernes</div><div class="hor-hora">7:30h</div><div class="hor-info">Clase de mañana</div></div><div class="hor-card"><div class="hor-dia">Sábado</div><div class="hor-hora">7:30h</div><div class="hor-info">Clase de mañana</div></div><div class="hor-card"><div class="hor-dia">Domingo</div><div class="hor-hora">7:30h</div><div class="hor-info">Clase de mañana</div></div></div>
+    <div class="hor-grid"><div class="hor-card"><div class="hor-dia">Martes</div><div class="hor-hora">7:30h</div><div class="hor-info">Clase de mañana</div></div><div class="hor-card"><div class="hor-dia">Martes</div><div class="hor-hora">19:30h</div><div class="hor-info">Clase de tarde</div></div><div class="hor-card"><div class="hor-dia">Jueves</div><div class="hor-hora">7:30h</div><div class="hor-info">Clase de mañana</div></div><div class="hor-card"><div class="hor-dia">Jueves</div><div class="hor-hora">19:30h</div><div class="hor-info">Clase de tarde</div></div><div class="hor-card"><div class="hor-dia">Sábado</div><div class="hor-hora">7:30h</div><div class="hor-info">Clase de mañana</div></div><div class="hor-card"><div class="hor-dia">Domingo</div><div class="hor-hora">7:30h</div><div class="hor-info">Clase de mañana</div></div></div>
     <a href="https://maps.google.com/?q=Los+Baños+Sunshine+Denia+Carrer+Riu+Grande+12" target="_blank" class="mapa-btn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Cómo llegar
@@ -565,7 +565,7 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       <!-- Campos clase grupal -->
       <div id="campos-grupal" style="display:none;">
         <div class="fg">
-          <label for="fecha">¿Qué día quieres venir? <span style="font-weight:300;font-style:italic;opacity:0.7;">(martes, jueves, viernes, sábado y domingo)</span></label>
+          <label for="fecha">¿Qué día quieres venir? <span style="font-weight:300;font-style:italic;opacity:0.7;">(martes, jueves, sábado y domingo)</span></label>
           <input type="date" id="fecha" onchange="actualizarHoras()"/>
         </div>
         <div class="fg">
@@ -630,7 +630,7 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     bono5:  'https://buy.stripe.com/8x2dRa06w6XB9MOblUdZ60s',
     privada:'https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t'
   };
-  var HORARIOS = { 2:['19:30h'], 4:['7:30h','19:30h'], 5:['7:30h'], 6:['7:30h'], 0:['7:30h'] };
+  var HORARIOS = { 2:['7:30h','19:30h'], 4:['7:30h','19:30h'], 6:['7:30h'], 0:['7:30h'] };
 
   function mostrarCampos() {
     var tipo = document.getElementById('tipo').value;
