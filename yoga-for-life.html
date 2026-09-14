@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga For Life | Formación de Yoga en Dénia | Viva Community Yoga</title>
+<meta name="description" content="Yoga For Life: formación de 8 meses para aprender a utilizar el yoga en tu vida, no solo practicarlo. Primera edición, octubre 2026, Dénia. Precio fundadoras, plazas limitadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --t: #3DBBBB; --td: #1E4A52; --a: #C4A882;
+    --cr: #F5EFE4; --w: #FFFFFF; --n: #111111;
+    --tx: #333333; --ts: #888888;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cr); color: var(--tx); overflow-x: hidden; font-size: 22px; line-height: 1.8; }
+
+  section { padding: 68px 48px; }
+  .container { max-width: 760px; margin: 0 auto; }
+  .ey { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--t); margin-bottom: 14px; font-weight: 600; display: block; text-align: center; }
+  .h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--td); line-height: 1.2; margin-bottom: 20px; text-align: center; }
+  .body { font-size: 22px; font-weight: 300; line-height: 1.85; color: var(--tx); }
+  .line { width: 52px; height: 1.5px; background: var(--a); margin: 24px auto; }
+  .btn { display: inline-block; background: var(--t); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 18px 44px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .btn:hover { background: var(--td); }
+  .center { text-align: center; }
+
+  /* HERO */
+  .hero { background: var(--td); padding: 64px 48px 56px; text-align: center; }
+  .hero .back { display: inline-block; color: rgba(255,255,255,0.5); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; margin-bottom: 28px; }
+  .hero .back:hover { color: #3DBBBB; }
+  .hero .ey { color: rgba(255,255,255,0.45); }
+  .hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(34px, 6vw, 60px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 16px; }
+  .hero .sub { font-size: 23px; font-weight: 300; color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 28px; }
+  .badge-abierta { display: inline-block; background: rgba(61,187,187,0.15); border: 1px solid #3DBBBB; color: #3DBBBB; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; padding: 8px 20px; border-radius: 30px; margin-bottom: 28px; }
+
+  .precio-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(196,168,130,0.3); border-radius: 4px; padding: 36px 32px; max-width: 460px; margin: 0 auto; }
+  .precio-box .ey { color: #3DBBBB; margin-bottom: 6px; }
+
+  /* PRECIOS 3 COLUMNAS (estilo comparativo) */
+  .precios-3grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 32px; align-items: stretch; }
+  .precio-card { background: var(--cr); border-radius: 6px; padding: 32px 26px; text-align: center; display: flex; flex-direction: column; }
+  .precio-card.feat { background: var(--t); }
+  .pc-title { font-size: 20px; font-weight: 700; color: var(--td); margin-bottom: 6px; }
+  .precio-card.feat .pc-title { color: #fff; }
+  .pc-num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; color: var(--td); line-height: 1; margin-bottom: 10px; }
+  .precio-card.feat .pc-num { color: #fff; }
+  .pc-sub { font-size: 15px; font-weight: 600; color: #8a6d3f; margin-bottom: 20px; }
+  .precio-card.feat .pc-sub { color: rgba(255,255,255,0.85); }
+  .pc-check { list-style: none; text-align: left; margin-bottom: 24px; flex-grow: 1; }
+  .pc-check li { font-size: 16px; color: #444; line-height: 1.6; margin-bottom: 12px; padding-left: 26px; position: relative; }
+  .precio-card.feat .pc-check li { color: #fff; }
+  .pc-check li::before { content: '✔'; position: absolute; left: 0; color: #e05c3e; font-size: 14px; top: 3px; }
+  .precio-card.feat .pc-check li::before { color: #FFD34E; }
+  .pc-check li em { font-style: italic; }
+  .pc-btn { width: 100%; text-align: center; }
+  .precio-card.feat .pc-btn { background: #fff; color: var(--td); }
+  .precio-card.feat .pc-btn:hover { background: var(--cr); }
+  .precio-num { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 14px; }
+  .precio-opciones { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 22px; }
+  .precio-nota { font-size: 15px; font-style: italic; color: rgba(255,255,255,0.45); margin-top: 18px; }
+
+  /* GENERIC LIST */
+  .lista-punto { display: flex; gap: 16px; margin-bottom: 22px; align-items: flex-start; }
+  .lista-punto .icono { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .lista-punto .txt strong { color: var(--td); font-weight: 700; }
+  .lista-punto .txt p { font-size: 19px; color: #555; margin-top: 4px; }
+
+  /* FLUJO CIRCULAR */
+  .flujo { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 28px 0; }
+  .flujo span { background: #fff; border: 1px solid rgba(196,168,130,0.4); color: var(--td); font-size: 15px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 10px 18px; border-radius: 30px; }
+  .flujo .arrow { color: var(--a); font-size: 20px; align-self: center; }
+
+  /* MÓDULOS */
+  .modulo { background: #fff; border-left: 4px solid var(--t); border-radius: 2px; padding: 28px 30px; margin-bottom: 14px; }
+  .modulo .mod-num { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t); margin-bottom: 6px; }
+  .modulo h3 { font-family: 'Playfair Display', serif; font-size: 23px; color: var(--td); margin-bottom: 10px; line-height: 1.3; }
+  .modulo p { font-size: 18px; color: #555; line-height: 1.7; }
+  .modulo strong { color: var(--td); }
+
+  /* INCLUYE */
+  .incluye-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+  .incluye-item { background: #fff; border: 1px solid rgba(196,168,130,0.3); border-radius: 4px; padding: 22px 24px; }
+  .incluye-item .num { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--t); }
+  .incluye-item p { font-size: 18px; color: var(--tx); margin-top: 4px; }
+
+  /* CHECKLIST SI/NO */
+  .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+  .check-col h3 { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--td); margin-bottom: 16px; text-align: center; }
+  .check-col.no h3 { color: #a05050; }
+  .check-item { font-size: 18px; margin-bottom: 12px; padding-left: 4px; }
+
+  /* DUDAS */
+  .duda { margin-bottom: 26px; }
+  .duda .q { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--td); font-style: italic; margin-bottom: 8px; }
+  .duda .r { font-size: 19px; color: #555; }
+
+  footer { background: var(--n); padding: 56px 48px; text-align: center; }
+  .fn { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 8px; }
+  footer a { font-size: 18px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 2px; }
+  footer a:hover { color: var(--t); }
+
+  @media (max-width: 720px) {
+    section { padding: 44px 22px; }
+    .incluye-grid, .check-grid { grid-template-columns: 1fr; }
+    .precios-3grid { grid-template-columns: 1fr; }
+    .flujo .arrow { display: none; }
+  }
+</style>
+<meta name="google-site-verification" content="g1k3jGIfjvrv2o0xOlAYyPJcsqfuTXhWI1szzVGploQ">
+<meta property="og:title" content="Yoga For Life | Viva Community Yoga">
+<meta property="og:description" content="El yoga no es el destino, es el camino. Formación de 8 meses en Dénia. Primera edición, precio fundadoras.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vivacommunityyoga.com/yoga-for-life/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Viva Community Yoga">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Yoga For Life",
+  "description": "Formación aplicada de 8 meses para aprender a utilizar el yoga en la vida, no solo practicarlo. 8 encuentros presenciales de 12 horas, práctica semanal y encuentros online.",
+  "provider": { "@type": "Organization", "name": "Viva Community Yoga", "sameAs": "https://vivacommunityyoga.com" },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "blended",
+    "startDate": "2026-10-10",
+    "location": { "@type": "Place", "name": "Sala de Yoga de Nati", "address": { "@type": "PostalAddress", "addressLocality": "Dénia", "addressRegion": "Alicante", "addressCountry": "ES" } }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "1200",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/LimitedAvailability",
+    "url": "https://vivacommunityyoga.com/yoga-for-life/"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <a href="/" class="back">← Viva Community Yoga</a>
+  <span class="ey">Yoga For Life</span>
+  <h1>El yoga no es el destino.<br>Es el camino.</h1>
+  <p class="sub">La formación para aprender a utilizar el yoga en tu vida, no solamente practicarlo sobre una esterilla.</p>
+  <div class="badge-abierta">🧘‍♀️ La primera edición de YFL está abierta</div>
+
+  <div class="precio-box">
+    <span class="ey">Fundadoras</span>
+    <div class="precio-num">1.200€</div>
+    <div class="precio-opciones">1 pago · o 3 pagos de 420€ · o 8 pagos de 165€</div>
+    <a href="#precios" class="btn">Ver formas de pago</a>
+    <p class="precio-nota">El precio de fundadoras estará disponible únicamente para esta primera edición.<br>Plazas limitadas.</p>
+  </div>
+</section>
+
+<!-- TENSIÓN -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <h2 class="h2">¿Cómo se siente terminar Yoga For Life?</h2>
+    <div class="line"></div>
+    <p class="body center">Quizás llevas tiempo practicando yoga. Y quizás algo ha empezado a cambiar. Ya no lo ves solamente como una serie de posturas. Te interesan sus preguntas, su filosofía. Lo que ocurre cuando respiras, cuando observas tu mente, cuando aparece una emoción, cuando tienes un conflicto, cuando quieres algo, cuando no sabes qué quieres, cuando te descubres reaccionando exactamente como no querías reaccionar.</p>
+    <p class="body center" style="margin-top:24px;font-style:italic;color:var(--td);font-weight:600;">Y entonces aparece una pregunta: ¿cómo puedo utilizar todo esto en mi vida?</p>
+    <p class="body center" style="margin-top:16px;">Eso es lo que vamos a investigar durante YFL.</p>
+  </div>
+</section>
+
+<!-- TE VAMOS A ENSEÑAR -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">Te vamos a enseñar a utilizar el yoga para</span>
+    <div class="line"></div>
+
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Comprender mejor lo que ocurre dentro de ti.</strong><p>Aprenderás a observar pensamientos, emociones, sensaciones, impulsos y patrones sin tener que reaccionar automáticamente a todo lo que aparece.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Investigar qué quieres realmente.</strong><p>Porque no todo lo que deseamos nace necesariamente de nosotros. Algunas cosas las hemos aprendido, heredado o condicionado.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Observar cómo construyes tu realidad a través del lenguaje.</strong><p>Qué te dices, cómo nombras lo que ocurre, qué interpretaciones conviertes en hechos y qué historias construyes a partir de ellas.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Relacionarte de otra manera contigo y con los demás.</strong><p>Utilizaremos la tradición del yoga para investigar límites, aprobación, comparación, escucha, responsabilidad y nuestros propios patrones relacionales.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Comprender qué haces con el conflicto.</strong><p>No para aprender a evitarlo, sino para utilizarlo como un lugar privilegiado desde el que observar cómo funcionas.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Comprender con qué energía estás construyendo tu vida.</strong><p>Qué te nutre, qué te drena, dónde pones tu atención, qué estás alimentando y qué estás dejando sin energía.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Desarrollar tu propio criterio.</strong><p>El objetivo de YFL no es que termines pensando como Nati y Naylín ni como Patañjali. Es que termines siendo capaz de observar, cuestionar, experimentar y descubrir por ti misma.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Construir una relación más profunda con el yoga.</strong><p>No solamente saber más sobre yoga, sino empezar a reconocerlo en tu propia vida.</p></div></div>
+  </div>
+</section>
+
+<!-- QUÉ ESPERAR -->
+<section style="background:var(--td);">
+  <div class="container">
+    <span class="ey" style="color:rgba(255,255,255,0.4);">Qué esperar</span>
+    <h2 class="h2" style="color:#fff;">Yoga For Life no es un curso que consumes y terminas.</h2>
+    <div class="line" style="background:rgba(255,255,255,0.2);"></div>
+    <p class="body center" style="color:rgba(255,255,255,0.75);">No es una colección de clases. No es una formación para acumular posturas. No es una biblioteca de filosofía. No es terapia. Y no es una experiencia en la que dos profesoras te dicen cómo deberías vivir.</p>
+    <p class="body center" style="color:#fff;margin-top:20px;font-weight:600;">Es una formación aplicada de 8 meses.</p>
+    <p class="body center" style="color:rgba(255,255,255,0.75);margin-top:20px;">Durante estos ocho meses vamos a trabajar simultáneamente tu comprensión del yoga, tu práctica, tu capacidad de observación y tu propia experiencia de vida. Queremos que exista una conexión permanente entre lo que estudiamos, lo que practicamos y lo que ocurre cuando sales de la sala.</p>
+  </div>
+</section>
+
+<!-- FILOSOFÍA -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">La filosofía de YFL</span>
+    <h2 class="h2">Nuestro método sigue este recorrido.</h2>
+    <div class="line"></div>
+    <div class="flujo">
+      <span>Tradición</span><span class="arrow">→</span>
+      <span>Pregunta</span><span class="arrow">→</span>
+      <span>Experiencia</span><span class="arrow">→</span>
+      <span>Observación</span><span class="arrow">→</span>
+      <span>Descubrimiento</span><span class="arrow">→</span>
+      <span>Integración</span><span class="arrow">→</span>
+      <span>Liberación</span>
+    </div>
+    <p class="body center">La tradición del yoga nos ofrece mapas. Pero un mapa no sirve de mucho si nunca sales a caminar. No queremos darte respuestas cerradas. Queremos enseñarte una manera de investigar.</p>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">Cómo funciona</span>
+    <h2 class="h2">Una vez al mes, 12 horas juntas.</h2>
+    <div class="line"></div>
+    <p class="body center">Durante 8 meses tendrás una experiencia continua. Una vez al mes nos encontraremos durante 12 horas para profundizar en una de las grandes preguntas de YFL. Son 96 horas de formación presencial.</p>
+    <p class="body center" style="margin-top:20px;">Cada encuentro integra filosofía del yoga, anatomía aplicada, asana, pranayama, meditación, contemplación, investigación, conversación y aplicación a situaciones reales. No estudiamos cada disciplina por separado: las utilizamos todas para investigar una misma pregunta.</p>
+
+    <div style="margin-top:36px;background:var(--cr);border-radius:4px;padding:32px 30px;">
+      <p class="body" style="text-align:center;font-weight:600;color:var(--td);margin-bottom:12px;">Y entre encuentro y encuentro, la investigación continúa.</p>
+      <p class="body" style="text-align:center;">Tendrás aproximadamente 9 clases regulares de VCY cada mes: una práctica semanal con Nati y una práctica semanal con Naylín. Son nuestras clases normales de VCY, no una clase artificial para enseñarte la teoría de YFL. Puedes observarla, hacerte preguntas y venir después a preguntarnos por qué elegimos esa secuencia, esa postura, esa respiración.</p>
+    </div>
+
+    <div style="margin-top:20px;background:var(--cr);border-radius:4px;padding:32px 30px;">
+      <p class="body" style="text-align:center;font-weight:600;color:var(--td);margin-bottom:12px;">Cada semana, un encuentro online.</p>
+      <p class="body" style="text-align:center;">30 minutos de preguntas y respuestas. Un espacio para traer lo que está ocurriendo durante tu práctica y tu vida, porque la pregunta importante no siempre aparece cuando estás escuchando una explicación. A veces aparece el martes, en una conversación, en un pensamiento que vuelve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TU PARTE DEL PROCESO -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">Tu parte del proceso</span>
+    <h2 class="h2">YFL no funciona si nosotras hacemos todo el trabajo.</h2>
+    <div class="line"></div>
+    <div class="incluye-grid">
+      <div class="incluye-item"><p>🧘‍♀️ Práctica personal diaria de asana</p></div>
+      <div class="incluye-item"><p>🧘 Meditación diaria</p></div>
+      <div class="incluye-item"><p>📓 Diario de observación</p></div>
+      <div class="incluye-item"><p>📚 Lecturas seleccionadas</p></div>
+      <div class="incluye-item"><p>🔎 Experimentos de aplicación en tu vida</p></div>
+      <div class="incluye-item"><p>💬 Comunidad privada de WhatsApp</p></div>
+    </div>
+    <p class="body center" style="margin-top:24px;">La intención no es llenarte de deberes. Es que aquello que investigamos tenga la oportunidad de aparecer en tu experiencia.</p>
+  </div>
+</section>
+
+<!-- 8 MÓDULOS -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">Las 8 puertas de YFL</span>
+    <h2 class="h2">Un recorrido, no una lista de temas.</h2>
+    <div class="line"></div>
+
+    <div class="modulo">
+      <div class="mod-num">Módulo 1</div>
+      <h3>¿Qué quiero realmente?</h3>
+      <p>Investigar deseo, intención y condicionamiento, para distinguir entre <strong>lo que quiero, lo que creo que debería querer</strong> y lo que realmente estoy eligiendo.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 2</div>
+      <h3>¿Qué hay en mi mente?</h3>
+      <p>Investigar pensamientos, atención, identificación, juicios e interpretaciones, para empezar a distinguir entre <strong>lo que ocurre y lo que mi mente cuenta</strong> sobre lo que ocurre.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 3</div>
+      <h3>¿Qué palabras estoy utilizando y qué estoy creando con ellas?</h3>
+      <p>Investigar la relación entre pensamiento, palabra y acción, para observar cómo nuestra manera de nombrar la realidad influye en la experiencia que construimos.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 4</div>
+      <h3>¿Qué siento y qué hago con lo que siento?</h3>
+      <p>Investigar sensaciones, emociones, impulsos, resistencia y reacción, para descubrir que <strong>sentir algo no significa necesariamente tener que actuar desde ello.</strong></p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 5</div>
+      <h3>¿Cómo me relaciono conmigo y con los demás?</h3>
+      <p>Investigar los Yamas y Niyamas a través de nuestras relaciones reales, para empezar a reconocer nuestros propios patrones allí donde antes solamente veíamos los de los demás.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 6</div>
+      <h3>¿Qué hago con el conflicto?</h3>
+      <p>Qué ocurrió, qué interpreté, qué sentí, qué hice, qué produjo mi acción. Para convertir el conflicto en un lugar de observación.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 7</div>
+      <h3>¿Con qué energía vivo?</h3>
+      <p>Investigar Prana, los Gunas y nuestra relación con el esfuerzo, el descanso, la atención y la energía, para observar <strong>qué me nutre, qué me drena</strong> y dónde estoy poniendo mi energía.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 8</div>
+      <h3>¿Qué hice en lo que hice? ¿Quién soy?</h3>
+      <p>Integramos todo el recorrido: qué queríamos, qué pensábamos, qué decíamos, qué sentíamos, cómo nos relacionábamos, cómo respondíamos al conflicto, cómo utilizábamos nuestra energía.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MEJORES PREGUNTAS -->
+<section style="background:var(--td);">
+  <div class="container">
+    <span class="ey" style="color:rgba(255,255,255,0.4);">No queremos que termines con más respuestas</span>
+    <h2 class="h2" style="color:#fff;">Queremos que termines con mejores preguntas.</h2>
+    <div class="line" style="background:rgba(255,255,255,0.2);"></div>
+    <p class="body center" style="color:rgba(255,255,255,0.8);">Imagina que después de YFL: tienes un conflicto y puedes observar qué está ocurriendo antes de reaccionar. Tienes una decisión y puedes distinguir deseo de condicionamiento. Sientes una emoción y puedes experimentarla sin convertirla automáticamente en una acción. Te descubres pensando algo y puedes preguntarte si estás observando un hecho o una interpretación. Te relacionas con alguien y puedes reconocer qué patrón tuyo está apareciendo. Estás cansada y puedes empezar a preguntarte qué estás alimentando y qué estás agotando.</p>
+    <p class="body center" style="color:#fff;margin-top:20px;font-weight:600;">Eso es llevar el yoga a la vida.</p>
+  </div>
+</section>
+
+<!-- SIN DEPENDENCIA -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">YFL no quiere crear dependencia</span>
+    <h2 class="h2">No queremos que nos preguntes "¿qué hago?"</h2>
+    <div class="line"></div>
+    <p class="body center">Queremos que puedas preguntarte: ¿qué estoy observando? ¿Qué dice la tradición sobre esto? ¿Qué estoy experimentando realmente? ¿Qué estoy interpretando? ¿Qué puedo descubrir aquí? Y que puedas seguir investigando.</p>
+    <p class="body center" style="margin-top:20px;">Por eso hablamos de <strong style="color:var(--td);">liberación</strong>. No como una promesa de convertirte en una persona que nunca vuelve a sufrir, sino como un proceso de dejar de estar completamente condicionada por tus patrones automáticos, y desarrollar cada vez más capacidad para observar y elegir.</p>
+  </div>
+</section>
+
+<!-- QUIÉN ESTÁ DETRÁS -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">¿Quién está detrás de YFL?</span>
+    <h2 class="h2">Nati y Naylín.</h2>
+    <div class="line"></div>
+    <p class="body center">YFL nace de nuestra práctica, estudio y experiencia. Llevamos años enseñando yoga y explorando qué ocurre cuando la práctica deja de quedarse únicamente en la esterilla, y hemos llegado a una conclusión: el yoga tiene muchísimo más que ofrecer que aprender a hacer una postura correctamente.</p>
+    <p class="body center" style="margin-top:16px;">Por eso hemos construido YFL. No para crear otra formación que enseñe más contenido, sino para crear un espacio donde investigar qué ocurre cuando utilizamos el yoga como herramienta para mirar nuestra propia vida.</p>
+  </div>
+</section>
+
+<!-- HONESTIDAD PRIMERA EDICIÓN -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">Una cosa importante</span>
+    <h2 class="h2">Esta es la primera edición de Yoga For Life.</h2>
+    <div class="line"></div>
+    <p class="body center">No tenemos una pared llena de testimonios. Y no vamos a inventarlos. No podemos decirte todavía "mira lo que YFL ha conseguido para estas 200 personas", porque esas personas todavía no existen.</p>
+    <p class="body center" style="margin-top:16px;">Lo que sí podemos enseñarte es exactamente lo que hemos construido: el método, las preguntas, la estructura, las prácticas, el tiempo que vamos a dedicar, la manera en la que trabajamos, y el compromiso que estamos poniendo en esta primera edición. Las primeras personas que entren serán las primeras en recorrer este camino con nosotras. Y eso tiene un valor especial.</p>
+  </div>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">¿Qué incluye YFL?</span>
+    <h2 class="h2">Más de 180 horas de formación y acompañamiento directo.</h2>
+    <div class="line"></div>
+    <div class="incluye-grid">
+      <div class="incluye-item"><div class="num">96 horas</div><p>8 encuentros presenciales de 12 horas</p></div>
+      <div class="incluye-item"><div class="num">~72 clases</div><p>Clases regulares de VCY (9 al mes × 8 meses)</p></div>
+      <div class="incluye-item"><div class="num">~16 horas</div><p>Encuentros online semanales</p></div>
+      <div class="incluye-item"><div class="num">Diario</div><p>Práctica personal y meditación diaria</p></div>
+      <div class="incluye-item"><div class="num">Materiales</div><p>Diario de observación y lecturas seleccionadas</p></div>
+      <div class="incluye-item"><div class="num">Comunidad</div><p>Grupo privado de WhatsApp y acompañamiento de Nati y Naylín</p></div>
+    </div>
+    <p class="body center" style="margin-top:20px;font-size:18px;color:#888;">Sin contar las horas de práctica personal, meditación, lectura y observación.</p>
+  </div>
+</section>
+
+<!-- VALOR -->
+<section style="background:var(--td);">
+  <div class="container">
+    <span class="ey" style="color:rgba(255,255,255,0.4);">¿Cuál es el valor de todo esto?</span>
+    <h2 class="h2" style="color:#fff;">Solo las clases regulares ya valen 1.080€.</h2>
+    <div class="line" style="background:rgba(255,255,255,0.2);"></div>
+    <p class="body center" style="color:rgba(255,255,255,0.75);">Las aproximadamente 72 clases regulares de VCY que forman parte de YFL, a 15€ cada una, tienen un valor de 1.080€. Y además tienes 96 horas de formación presencial, ~16 horas de acompañamiento online, 8 meses de práctica, materiales, lecturas, experimentos, comunidad y acompañamiento directo.</p>
+    <p class="body center" style="color:#fff;font-weight:700;font-size:26px;margin-top:24px;">El valor estimado del conjunto supera los 4.500€.</p>
+  </div>
+</section>
+
+<!-- PRECIO -->
+<section style="background:var(--td);" id="precios">
+  <div class="container center">
+    <span class="ey" style="color:rgba(255,255,255,0.4);">Pero esta primera edición no cuesta 4.500€</span>
+    <h2 class="h2" style="color:#fff;">Formas de pago</h2>
+    <div class="line" style="background:rgba(255,255,255,0.2);"></div>
+
+    <div class="precios-3grid">
+      <!-- 3 CUOTAS -->
+      <div class="precio-card">
+        <div class="pc-title">3 Cuotas</div>
+        <div class="pc-num">420€</div>
+        <div class="pc-sub">Valor por cuota</div>
+        <ul class="pc-check">
+          <li>3 pagos mensuales, cada uno de 420€ (total 1.260€)</li>
+          <li>Con tarjeta, desde cualquier parte</li>
+          <li>Un pago cada 30 días</li>
+          <li><em>El precio subirá para la edición 2027.</em></li>
+        </ul>
+        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%203%20cuotas%20de%20420%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+      </div>
+
+      <!-- 1 PAGO (destacado) -->
+      <div class="precio-card feat">
+        <div class="pc-title">1 Pago con Tarjeta</div>
+        <div class="pc-num">1.200€</div>
+        <div class="pc-sub">Formación completa, primera edición</div>
+        <ul class="pc-check">
+          <li><em>¡Ahorro de 120€!</em></li>
+          <li>Con tarjetas de crédito, débito o PayPal, desde cualquier parte</li>
+          <li>Tu plaza queda confirmada al momento</li>
+          <li><em>El precio subirá para la edición 2027.</em></li>
+        </ul>
+        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%20el%20pago%20%C3%BAnico%20de%201.200%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+      </div>
+
+      <!-- 8 CUOTAS -->
+      <div class="precio-card">
+        <div class="pc-title">8 Cuotas</div>
+        <div class="pc-num">165€</div>
+        <div class="pc-sub">Valor por cuota</div>
+        <ul class="pc-check">
+          <li>8 pagos mensuales, cada uno de 165€ (total 1.320€)</li>
+          <li>Con tarjeta, desde cualquier parte</li>
+          <li>Un pago cada 30 días</li>
+          <li><em>El precio subirá para la edición 2027.</em></li>
+        </ul>
+        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%208%20cuotas%20de%20165%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+      </div>
+    </div>
+
+    <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:28px;">¿Prefieres pagar por transferencia o tienes dudas? <a href="https://wa.me/34635993658?text=Hola%2C%20tengo%20una%20duda%20sobre%20cómo%20apuntarme%20a%20Yoga%20For%20Life." style="color:#3DBBBB;font-weight:600;">Escríbenos por WhatsApp</a>.</p>
+
+    <div style="margin-top:36px;">
+      <p class="body" style="color:rgba(255,255,255,0.75);">Porque queremos que las primeras personas que entren formen parte de esta primera edición. Vais a recorrer YFL con nosotras, y YFL también va a crecer a partir de lo que descubramos juntas. Por eso esta condición no volverá a existir exactamente igual.</p>
+      <p class="body" style="margin-top:16px;font-style:italic;color:#3DBBBB;">Después de las fundadoras: 1.600€.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ES PARA TI -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">¿Es para ti?</span>
+    <h2 class="h2">Dos listas, para que decidas con claridad.</h2>
+    <div class="line"></div>
+    <div class="check-grid">
+      <div class="check-col si">
+        <h3>YFL puede ser para ti si</h3>
+        <div class="check-item">✔️ Ya tienes una relación previa con el yoga.</div>
+        <div class="check-item">✔️ Quieres ir más allá de las posturas.</div>
+        <div class="check-item">✔️ Te interesa la filosofía del yoga, pero quieres experimentarla.</div>
+        <div class="check-item">✔️ Tienes preguntas sobre ti y tu manera de vivir.</div>
+        <div class="check-item">✔️ Quieres comprender tus patrones.</div>
+        <div class="check-item">✔️ Quieres desarrollar criterio propio.</div>
+        <div class="check-item">✔️ Estás dispuesta a practicar y observar entre encuentros.</div>
+        <div class="check-item">✔️ Quieres descubrir qué puede hacer el yoga por tu vida.</div>
+      </div>
+      <div class="check-col no">
+        <h3>Probablemente no, si</h3>
+        <div class="check-item">❌ Buscas únicamente mejorar tus asanas.</div>
+        <div class="check-item">❌ Quieres una certificación rápida.</div>
+        <div class="check-item">❌ Quieres que alguien te diga cómo vivir.</div>
+        <div class="check-item">❌ No quieres dedicar tiempo a tu propia práctica.</div>
+        <div class="check-item">❌ Prefieres acumular teoría antes que experimentar.</div>
+        <div class="check-item">❌ Buscas respuestas cerradas.</div>
+      </div>
+    </div>
+    <p class="body center" style="margin-top:28px;">Y está bien. No queremos ser para todo el mundo. Queremos reunir a las personas que realmente quieren hacer esta investigación.</p>
+  </div>
+</section>
+
+<!-- DUDAS -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">¿Todavía estás dudando?</span>
+    <div class="line"></div>
+
+    <div class="duda">
+      <div class="q">"No sé suficiente yoga."</div>
+      <div class="r">No necesitas saberlo todo. Pero sí necesitas una experiencia previa que te permita experimentar las prácticas desde dentro.</div>
+    </div>
+    <div class="duda">
+      <div class="q">"¿Y si no estoy de acuerdo con vosotras?"</div>
+      <div class="r">No necesitamos que estés de acuerdo. Queremos que desarrolles tu propio criterio.</div>
+    </div>
+    <div class="duda">
+      <div class="q">"¿Y si esto es demasiado teórico?"</div>
+      <div class="r">La teoría nunca será el destino. La utilizaremos para volver a la experiencia.</div>
+    </div>
+    <div class="duda">
+      <div class="q">"¿Y si quiero aplicar todo esto a mi vida?"</div>
+      <div class="r">Precisamente para eso existe YFL.</div>
+    </div>
+    <div class="duda">
+      <div class="q">"¿Y si ya llevo años practicando?"</div>
+      <div class="r">Entonces quizás ha llegado el momento de preguntarte: ¿qué más puedo hacer con todo lo que ya he aprendido?</div>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section style="background:var(--td);text-align:center;">
+  <div class="container">
+    <p class="body" style="color:rgba(255,255,255,0.75);">Puedes seguir haciéndote las mismas preguntas. O puedes empezar a investigarlas.</p>
+    <p class="body" style="color:rgba(255,255,255,0.75);margin-top:16px;">Durante ocho meses puedes seguir exactamente donde estás, o puedes entrar en una experiencia diseñada para llevar el yoga desde la esterilla hasta aquello que realmente estás viviendo. No sabemos qué vas a descubrir, y tampoco queremos decírtelo. Porque esa es precisamente la investigación.</p>
+
+    <h2 class="h2" style="color:#fff;margin-top:40px;">Yoga For Life</h2>
+    <p style="font-family:'Playfair Display',serif;font-size:24px;color:rgba(255,255,255,0.6);margin-bottom:32px;">El yoga no es el destino. Es el camino.</p>
+
+    <div class="precio-box">
+      <span class="ey">Primera edición · Fundadoras</span>
+      <div class="precio-num">1.200€</div>
+      <div class="precio-opciones">1 pago de 1.200€ · 3 pagos de 420€ · 8 pagos de 165€</div>
+      <a href="#precios" class="btn">Ver formas de pago</a>
+      <p class="precio-nota">Plazas limitadas.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fn">Viva Community Yoga</div>
+  <a href="https://instagram.com/vivacommunityoga" target="_blank">@vivacommunityoga</a>
+  <div style="margin-top:16px;">
+    <a href="/faq.html" style="font-size:14px;">Preguntas frecuentes</a>
+    &nbsp;·&nbsp;
+    <a href="/">Volver al inicio</a>
+  </div>
+</footer>
+
+</body>
+</html>
