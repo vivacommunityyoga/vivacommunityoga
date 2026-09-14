@@ -5,7 +5,8 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="apple-touch-icon" href="images/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yoga en Dénia, Frente al Mar | Viva Community Yoga</title>
+<title>Yoga For Life | Formación de Yoga en Dénia | Viva Community Yoga</title>
+<meta name="description" content="Yoga For Life: formación de 8 meses para aprender a utilizar el yoga en tu vida, no solo practicarlo. Primera edición, octubre 2026, Dénia. Precio fundadoras, plazas limitadas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -16,551 +17,520 @@
     --t: #3DBBBB; --td: #1E4A52; --a: #C4A882;
     --cr: #F5EFE4; --w: #FFFFFF; --n: #111111;
     --tx: #333333; --ts: #888888;
-    --min: 26px;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cr); color: var(--tx); overflow-x: hidden; font-size: var(--min); line-height: 1.7; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cr); color: var(--tx); overflow-x: hidden; font-size: 22px; line-height: 1.8; }
+
+  section { padding: 68px 48px; }
+  .container { max-width: 760px; margin: 0 auto; }
+  .ey { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--t); margin-bottom: 14px; font-weight: 600; display: block; text-align: center; }
+  .h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--td); line-height: 1.2; margin-bottom: 20px; text-align: center; }
+  .body { font-size: 22px; font-weight: 300; line-height: 1.85; color: var(--tx); }
+  .line { width: 52px; height: 1.5px; background: var(--a); margin: 24px auto; }
+  .btn { display: inline-block; background: var(--t); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 18px 44px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .btn:hover { background: var(--td); }
+  .center { text-align: center; }
 
   /* HERO */
-  .hero { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px 0; }
-  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
-  .hero-ov { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,35,38,0.6) 0%, rgba(10,35,38,0.22) 35%, rgba(10,35,38,0.75) 75%, rgba(10,35,38,0.96) 100%); }
-  .hero-logo { width: 140px; height: 140px; object-fit: contain; margin-bottom: 16px; position: relative; z-index: 2; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
-  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 32px 56px; display: flex; flex-direction: column; align-items: center; }
-  .hero-eyebrow { font-size: 14px; letter-spacing: 7px; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 12px; font-weight: 400; }
-  .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(40px, 6vw, 84px); font-weight: 700; color: var(--w); line-height: 1.1; margin-bottom: 16px; }
-  .hero-sub { font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.6; max-width: 560px; margin-bottom: 28px; }
-  .btn { display: inline-block; background: var(--t); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 48px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
-  .btn:hover { background: var(--td); }
-  .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 2; }
+  .hero { background: var(--td); padding: 64px 48px 56px; text-align: center; }
+  .hero .back { display: inline-block; color: rgba(255,255,255,0.5); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; margin-bottom: 28px; }
+  .hero .back:hover { color: #3DBBBB; }
+  .hero .ey { color: rgba(255,255,255,0.45); }
+  .hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(34px, 6vw, 60px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 16px; }
+  .hero .sub { font-size: 23px; font-weight: 300; color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 28px; }
+  .badge-abierta { display: inline-block; background: rgba(61,187,187,0.15); border: 1px solid #3DBBBB; color: #3DBBBB; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; padding: 8px 20px; border-radius: 30px; margin-bottom: 28px; }
 
-  /* SECCIONES */
-  section { padding: 72px 48px; }
-  .container { max-width: 860px; margin: 0 auto; }
-  .ey { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--t); margin-bottom: 14px; font-weight: 600; display: block; }
-  .h2 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 700; color: var(--td); line-height: 1.15; margin-bottom: 20px; }
-  .body { font-size: 26px; font-weight: 300; line-height: 1.8; color: var(--tx); }
-  .line { width: 52px; height: 1.5px; background: var(--a); margin: 26px 0; }
+  .precio-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(196,168,130,0.3); border-radius: 4px; padding: 36px 32px; max-width: 460px; margin: 0 auto; }
+  .precio-box .ey { color: #3DBBBB; margin-bottom: 6px; }
 
-  /* FILOSOFÍA */
-  .filo-grid { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; border: 1px solid rgba(196,168,130,0.3); }
-  .filo-item { padding: 38px 36px; border-bottom: 1px solid rgba(196,168,130,0.3); border-right: 1px solid rgba(196,168,130,0.3); }
-  .filo-item:nth-child(2n) { border-right: none; }
-  .filo-item:nth-last-child(-n+2) { border-bottom: none; }
-  .filo-no { font-size: 20px; font-weight: 300; color: #666; margin-bottom: 10px; font-style: italic; }
-  .filo-si { font-size: 26px; font-weight: 600; color: var(--td); }
+  /* PRECIOS 3 COLUMNAS (estilo comparativo) */
+  .precios-3grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 32px; align-items: stretch; }
+  .precio-card { background: var(--td); border-radius: 6px; padding: 32px 26px; text-align: center; display: flex; flex-direction: column; }
+  .precio-card.feat { background: #fff; border: 2px solid var(--t); }
+  .pc-title { font-size: 20px; font-weight: 700; color: #3DBBBB; margin-bottom: 6px; }
+  .precio-card.feat .pc-title { color: var(--td); }
+  .pc-num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 10px; }
+  .precio-card.feat .pc-num { color: var(--td); }
+  .pc-sub { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+  .precio-card.feat .pc-sub { color: #888; }
+  .pc-check { list-style: none; text-align: left; margin-bottom: 24px; flex-grow: 1; }
+  .pc-check li { font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px; padding-left: 26px; position: relative; }
+  .precio-card.feat .pc-check li { color: #555; }
+  .pc-check li::before { content: '✔'; position: absolute; left: 0; color: #e05c3e; font-size: 14px; top: 3px; }
+  .pc-check li em { font-style: italic; }
+  .pc-btn { width: 100%; text-align: center; }
+  .precio-num { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 14px; }
+  .precio-opciones { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 22px; }
+  .precio-nota { font-size: 15px; font-style: italic; color: rgba(255,255,255,0.45); margin-top: 18px; }
 
-  /* PARA QUIÉN */
-  .pq { background: var(--cr); }
-  .pq-list { list-style: none; margin-top: 28px; }
-  .pq-list li { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.55; display: flex; gap: 20px; }
-  .pq-list li:last-child { border-bottom: none; }
-  .pq-list li::before { content: '~'; color: rgba(255,255,255,0.3); flex-shrink: 0; font-size: 28px; }
+  /* GENERIC LIST */
+  .lista-punto { display: flex; gap: 16px; margin-bottom: 22px; align-items: flex-start; }
+  .lista-punto .icono { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .lista-punto .txt strong { color: var(--td); font-weight: 700; }
+  .lista-punto .txt p { font-size: 19px; color: #555; margin-top: 4px; }
 
-  /* EQUIPO */
-  .equipo { padding: 0; overflow: hidden; }
-  .eq-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
-  .eq-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
-  .eq-texto { background: var(--t); padding: 60px 52px; display: flex; flex-direction: column; justify-content: center; }
-  .eq-texto .ey { color: rgba(255,255,255,0.4); }
-  .eq-texto .h2 { color: var(--w); }
-  .eq-texto .line { background: rgba(255,255,255,0.2); }
-  .eq-texto .body { color: rgba(255,255,255,0.85); font-size: 24px; }
+  /* FLUJO CIRCULAR */
+  .flujo { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 28px 0; }
+  .flujo span { background: #fff; border: 1px solid rgba(196,168,130,0.4); color: var(--td); font-size: 15px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 10px 18px; border-radius: 30px; }
+  .flujo .arrow { color: var(--a); font-size: 20px; align-self: center; }
 
-  /* HORARIOS */
-  .hor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
-  .hor-card { background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 32px 30px; border-radius: 2px; }
-  .hor-dia { font-size: 13px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--t); margin-bottom: 10px; }
-  .hor-hora { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--td); margin-bottom: 6px; }
-  .hor-info { font-size: 20px; font-weight: 300; color: #666; }
+  /* MÓDULOS */
+  .modulo { background: #fff; border-left: 4px solid var(--t); border-radius: 2px; padding: 28px 30px; margin-bottom: 14px; }
+  .modulo .mod-num { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t); margin-bottom: 6px; }
+  .modulo h3 { font-family: 'Playfair Display', serif; font-size: 23px; color: var(--td); margin-bottom: 10px; line-height: 1.3; }
+  .modulo p { font-size: 18px; color: #555; line-height: 1.7; }
+  .modulo strong { color: var(--td); }
 
-  .mapa-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--td); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 18px 36px; border-radius: 2px; text-decoration: none; margin-top: 30px; transition: background 0.2s; }
-  .mapa-btn:hover { background: var(--t); }
-  .mapa-nota { font-size: 20px; color: #666; margin-top: 12px; font-style: italic; }
+  /* INCLUYE */
+  .incluye-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+  .incluye-item { background: #fff; border: 1px solid rgba(196,168,130,0.3); border-radius: 4px; padding: 22px 24px; }
+  .incluye-item .num { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--t); }
+  .incluye-item p { font-size: 18px; color: var(--tx); margin-top: 4px; }
 
-  /* PRECIOS */
-  .prec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; }
-  .prec-card { text-align: center; padding: 40px 20px; border: 1px solid rgba(196,168,130,0.4); border-radius: 2px; background: var(--w); }
-  .prec-card.feat { background: var(--t); border-color: var(--t); }
-  .prec-label { font-size: 18px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 14px; }
-  .prec-card.feat .prec-label { color: rgba(255,255,255,0.55); }
-  .prec-num { font-family: 'Playfair Display', serif; font-size: 84px; font-weight: 700; color: var(--td); line-height: 1; margin-bottom: 8px; }
-  .prec-card.feat .prec-num { color: var(--w); }
-  .prec-unit { font-size: 24px; color: #666; }
-  .prec-card.feat .prec-unit { color: rgba(255,255,255,0.55); }
-  .prec-sub { font-size: 22px; color: #7a6a52; margin-top: 12px; font-style: italic; }
-  .prec-card.feat .prec-sub { color: rgba(255,255,255,0.5); }
-  .prec-nota { margin-top: 18px; background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 24px 28px; border-radius: 2px; }
-  .prec-nota p { font-size: 22px; font-weight: 300; color: var(--tx); line-height: 1.8; }
-  .prec-nota strong { font-weight: 600; color: var(--td); }
+  /* CHECKLIST SI/NO */
+  .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+  .check-col h3 { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--td); margin-bottom: 16px; text-align: center; }
+  .check-col.no h3 { color: #a05050; }
+  .check-item { font-size: 18px; margin-bottom: 12px; padding-left: 4px; }
 
-  /* RESERVA */
-  .reserva { background: var(--td); }
-  .reserva .ey { color: rgba(255,255,255,0.4); }
-  .reserva .h2 { color: var(--w); }
-  .reserva .body { color: rgba(255,255,255,0.72); margin-bottom: 28px; }
-  .reserva .line { background: rgba(255,255,255,0.2); }
-  .badges { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
-  .badge { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); padding: 10px 18px; border-radius: 2px; }
-  .prueba { background: rgba(255,255,255,0.06); border-left: 2px solid rgba(255,255,255,0.2); padding: 26px 30px; margin-bottom: 24px; }
-  .prueba-t { font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.88); font-style: italic; line-height: 1.6; margin-bottom: 10px; }
-  .prueba-m { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.75); }
-  .form-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 44px 48px; }
-  .fg { margin-bottom: 24px; }
-  .fg label { display: block; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 12px; }
-  .fg input, .fg select { width: 100%; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); border-radius: 2px; padding: 18px 22px; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--w); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
-  .fg input::placeholder { color: rgba(255,255,255,0.6); }
-  .fg input:focus, .fg select:focus { border-color: var(--t); }
-  .fg select option { background: var(--td); color: var(--w); }
-  .cancel-nota { font-size: 20px; color: rgba(255,255,255,0.9); margin: 20px 0; font-style: italic; padding: 16px 20px; background: rgba(255,255,255,0.1); border-radius: 2px; line-height: 1.65; }
-  .btn-submit { width: 100%; background: var(--t); color: var(--w); border: none; cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 22px; border-radius: 2px; transition: background 0.2s; }
-  .btn-submit:hover { background: #2da0a0; }
-  .confirm { display: none; text-align: center; padding: 60px 24px; }
-  .confirm .check { font-size: 60px; color: var(--t); margin-bottom: 20px; }
-  .confirm h3 { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--w); margin-bottom: 16px; }
-  .confirm p { font-size: 24px; font-weight: 300; color: rgba(255,255,255,0.68); line-height: 1.75; }
+  /* DUDAS */
+  .duda { margin-bottom: 26px; }
+  .duda .q { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--td); font-style: italic; margin-bottom: 8px; }
+  .duda .r { font-size: 19px; color: #555; }
 
-  /* FOOTER */
-  footer { background: var(--n); padding: 64px 48px; text-align: center; }
-  footer img { width: 96px; height: 96px; object-fit: contain; margin-bottom: 24px; opacity: 0.9; }
-  .fn { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 10px; }
-  .fd { font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.48); margin-bottom: 8px; }
-  .ft { font-size: 14px; color: rgba(255,255,255,0.8); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
-  footer a { font-size: 20px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 2px; transition: color 0.2s; }
+  footer { background: var(--n); padding: 56px 48px; text-align: center; }
+  .fn { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 8px; }
+  footer a { font-size: 18px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 2px; }
   footer a:hover { color: var(--t); }
 
   @media (max-width: 720px) {
-    section { padding: 56px 24px; }
-    .hero-logo { width: 100px; height: 100px; margin-bottom: 10px; }
-    .hero-eyebrow { font-size: 13px; letter-spacing: 4px; margin-bottom: 10px; color: rgba(255,255,255,0.85); }
-    .hero-h1 { font-size: 38px; margin-bottom: 14px; }
-    .hero-sub { font-size: 20px; line-height: 1.55; margin-bottom: 22px; }
-    .btn { padding: 15px 34px; }
-    .filo-grid { grid-template-columns: 1fr; }
-    .filo-item { border-right: none !important; }
-    .filo-item:not(:last-child) { border-bottom: 1px solid rgba(196,168,130,0.3) !important; }
-    .eq-inner { grid-template-columns: 1fr; }
-    .eq-foto { height: 300px; }
-    .eq-texto { padding: 44px 28px; }
-    .hor-grid { grid-template-columns: 1fr; }
-    .prec-grid { grid-template-columns: 1fr; }
-    .form-wrap { padding: 30px 24px; }
+    section { padding: 44px 22px; }
+    .incluye-grid, .check-grid { grid-template-columns: 1fr; }
+    .precios-3grid { grid-template-columns: 1fr; }
+    .flujo .arrow { display: none; }
   }
 </style>
+<meta name="google-site-verification" content="g1k3jGIfjvrv2o0xOlAYyPJcsqfuTXhWI1szzVGploQ">
+<meta property="og:title" content="Yoga For Life | Viva Community Yoga">
+<meta property="og:description" content="El yoga no es el destino, es el camino. Formación de 8 meses en Dénia. Primera edición, precio fundadoras.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vivacommunityyoga.com/yoga-for-life/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Viva Community Yoga">
 
-  <!-- SEO -->
-  <meta name="google-site-verification" content="g1k3jGIfjvrv2o0xOlAYyPJcsqfuTXhWI1szzVGploQ">
-  <meta name="description" content="Yoga en Dénia, frente al mar. Clases privadas, sábados en la playa, Deep Yoga &amp; Brunch mensual y Yoga For Life. Todos los niveles, sin experiencia previa.">
-  <meta name="keywords" content="yoga Dénia, yoga en Dénia, clases de yoga Dénia, yoga playa Dénia, yoga en la playa Dénia, yoga privado Dénia, yoga Los Baños Sunshine, yoga sábados Dénia, clases yoga costa blanca">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Viva Community Yoga">
-  <link rel="canonical" href="https://vivacommunityyoga.com/">
-<link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/">
-<link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Viva Community Yoga · Yoga en Dénia, frente al mar">
-  <meta property="og:description" content="Clases privadas, sábados en la playa, Deep Yoga &amp; Brunch mensual y Yoga For Life. Todos los niveles, sin experiencia previa.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vivacommunityyoga.com">
-  <meta property="og:locale" content="es_ES">
-  <meta property="og:site_name" content="Viva Community Yoga">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Viva Community Yoga · Yoga en Dénia, frente al mar">
-  <meta name="twitter:description" content="Clases privadas, sábados en la playa, Deep Yoga & Brunch y Yoga For Life. Dénia.">
-
-  <!-- Structured Data, Local Business -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Viva Community Yoga",
-    "description": "Yoga en Dénia, frente al mar. Clases privadas, clase semanal en la playa en Los Baños Sunshine, Deep Yoga & Brunch mensual y Yoga For Life, para todos los niveles.",
-    "url": "https://vivacommunityyoga.com",
-    "telephone": "+3434635993658",
-    "email": "vivacommunityyoga@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Carrer Riu Grande 12",
-      "addressLocality": "Dénia",
-      "addressRegion": "Alicante",
-      "addressCountry": "ES"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 38.8417,
-      "longitude": 0.1097
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday"],
-        "opens": "08:00",
-        "closes": "09:00"
-      }
-    ],
-    "priceRange": "15€ - 80€",
-    "sameAs": [
-      "https://www.instagram.com/vivacommunityoga"
-    ],
-    "image": "https://vivacommunityyoga.com/og-image.jpg"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Yoga For Life",
+  "description": "Formación aplicada de 8 meses para aprender a utilizar el yoga en la vida, no solo practicarlo. 8 encuentros presenciales de 12 horas, práctica semanal y encuentros online.",
+  "provider": { "@type": "Organization", "name": "Viva Community Yoga", "sameAs": "https://vivacommunityyoga.com" },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "blended",
+    "startDate": "2026-10-10",
+    "location": { "@type": "Place", "name": "Sala de Yoga de Nati", "address": { "@type": "PostalAddress", "addressLocality": "Dénia", "addressRegion": "Alicante", "addressCountry": "ES" } }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "1200",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/LimitedAvailability",
+    "url": "https://vivacommunityyoga.com/yoga-for-life/"
   }
-  </script>
-  <!-- Structured Data, Deep Yoga & Brunch (fechas confirmadas de la temporada de otoño 2026) -->
-  <script type="application/ld+json">
-  [
-    { "@context": "https://schema.org", "@type": "Event", "name": "Deep Yoga & Brunch en la playa, Dénia", "startDate": "2026-09-26T08:00:00+02:00", "endDate": "2026-09-26T11:00:00+02:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Los Baños Sunshine", "address": { "@type": "PostalAddress", "streetAddress": "Carrer Riu Grande 12", "addressLocality": "Dénia", "postalCode": "03700", "addressRegion": "Alicante", "addressCountry": "ES" } }, "description": "Sesión de yoga más larga en sustitución de la clase habitual, seguida de un desayuno compartido, todo incluido.", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://vivacommunityyoga.com/yoga-en-la-playa.html#deep-brunch" }, "organizer": { "@type": "Organization", "name": "Viva Community Yoga", "url": "https://vivacommunityyoga.com" } },
-    { "@context": "https://schema.org", "@type": "Event", "name": "Deep Yoga & Brunch en la playa, Dénia", "startDate": "2026-10-17T08:00:00+02:00", "endDate": "2026-10-17T11:00:00+02:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Los Baños Sunshine", "address": { "@type": "PostalAddress", "streetAddress": "Carrer Riu Grande 12", "addressLocality": "Dénia", "postalCode": "03700", "addressRegion": "Alicante", "addressCountry": "ES" } }, "description": "Sesión de yoga más larga en sustitución de la clase habitual, seguida de un desayuno compartido, todo incluido.", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://vivacommunityyoga.com/yoga-en-la-playa.html#deep-brunch" }, "organizer": { "@type": "Organization", "name": "Viva Community Yoga", "url": "https://vivacommunityyoga.com" } },
-    { "@context": "https://schema.org", "@type": "Event", "name": "Deep Yoga & Brunch en la playa, Dénia", "startDate": "2026-11-14T08:00:00+01:00", "endDate": "2026-11-14T11:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Los Baños Sunshine", "address": { "@type": "PostalAddress", "streetAddress": "Carrer Riu Grande 12", "addressLocality": "Dénia", "postalCode": "03700", "addressRegion": "Alicante", "addressCountry": "ES" } }, "description": "Sesión de yoga más larga en sustitución de la clase habitual, seguida de un desayuno compartido, todo incluido.", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://vivacommunityyoga.com/yoga-en-la-playa.html#deep-brunch" }, "organizer": { "@type": "Organization", "name": "Viva Community Yoga", "url": "https://vivacommunityyoga.com" } },
-    { "@context": "https://schema.org", "@type": "Event", "name": "Deep Yoga & Brunch en la playa, Dénia", "startDate": "2026-12-05T08:00:00+01:00", "endDate": "2026-12-05T11:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Los Baños Sunshine", "address": { "@type": "PostalAddress", "streetAddress": "Carrer Riu Grande 12", "addressLocality": "Dénia", "postalCode": "03700", "addressRegion": "Alicante", "addressCountry": "ES" } }, "description": "Sesión de yoga más larga en sustitución de la clase habitual, seguida de un desayuno compartido, todo incluido.", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://vivacommunityyoga.com/yoga-en-la-playa.html#deep-brunch" }, "organizer": { "@type": "Organization", "name": "Viva Community Yoga", "url": "https://vivacommunityyoga.com" } }
-  ]
-  </script>
-<!-- Meta Pixel Code (deferred until after page load so it doesn't compete with content for load time) -->
-<script>
-window.addEventListener('load', function() {
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1148864329659008');
-fbq('track', 'PageView');
-});
+}
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 </head>
 <body>
 
+<!-- HERO -->
+<section class="hero">
+  <a href="/" class="back">← Viva Community Yoga</a>
+  <span class="ey">Yoga For Life</span>
+  <h1>El yoga no es el destino.<br>Es el camino.</h1>
+  <p class="sub">La formación para aprender a utilizar el yoga en tu vida, no solamente practicarlo sobre una esterilla.</p>
+  <div class="badge-abierta">🧘‍♀️ La primera edición de YFL está abierta</div>
 
-<section class="hero" style="position:relative;">
-  <div style="position:absolute;top:24px;right:24px;z-index:10;font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:2px;">
-      <a href="/" style="color:#3DBBBB;text-decoration:none;font-weight:700;">ES</a>
-      <span style="color:rgba(255,255,255,0.4);margin:0 6px;">·</span>
-      <a href="/en/" style="color:rgba(255,255,255,0.5);text-decoration:none;font-weight:400;">EN</a>
-    </div>
-  <img class="hero-bg" src="images/hero-bg.jpeg" width="1000" height="1333" alt="Yoga frente al mar en Dénia" fetchpriority="high"/>
-  <div class="hero-ov"></div>
-  <svg class="hero-wave" viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none">
-    <path d="M0 20 Q180 0 360 20 Q540 40 720 20 Q900 0 1080 20 Q1260 40 1440 20 L1440 40 L0 40 Z" fill="#F5EFE4"/>
-  </svg>
-  <div class="hero-content">
-    <img class="hero-logo" src="images/logo.png" width="300" height="300" alt="Viva Community Yoga" fetchpriority="high"/>
-    <span class="hero-eyebrow">Dénia</span>
-    <h1 class="hero-h1">Yoga en Dénia,<br>frente al mar.</h1>
-    <p class="hero-eyebrow" style="margin-top:8px;font-style:italic;font-weight:300;letter-spacing:2px;text-transform:none;">Una hora que cambia el resto del día.</p>
-    <p class="hero-sub">Sábados de 8:00 a 9:00h en la playa. 15€ la clase.</p>
-    <a href="/yoga-en-la-playa.html#reserva" class="btn">Reserva tu plaza</a>
-    <a href="https://wa.me/34635993658?text=Hola%2C%20me%20interesa%20apuntarme%20a%20una%20clase%20de%20yoga%20en%20Los%20Ba%C3%B1os%20Sunshine.%20%C2%BFTen%C3%A9is%20plaza%3F" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1ea84e;color:#fff;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;border-radius:2px;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent;white-space:nowrap;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp
-    </a>
-    <p style="font-size:15px;font-weight:300;color:rgba(255,255,255,0.55);margin-top:24px;margin-bottom:8px;max-width:480px;">Además: clases privadas, Deep Yoga &amp; Brunch mensual, y Yoga For Life, nuestra formación desde octubre.</p>
+  <div class="precio-box">
+    <span class="ey">Fundadoras</span>
+    <div class="precio-num">1.200€</div>
+    <div class="precio-opciones">1 pago · o 3 pagos de 420€ · o 8 pagos de 165€</div>
+    <a href="#precios" class="btn">Ver formas de pago</a>
+    <p class="precio-nota">El precio de fundadoras estará disponible únicamente para esta primera edición.<br>Plazas limitadas.</p>
   </div>
 </section>
 
-<section class="pq">
+<!-- TENSIÓN -->
+<section style="background:var(--cr);">
   <div class="container">
-    <span class="ey">¿Para quién?</span>
-    <h2 class="h2">Si has llegado buscando yoga en Dénia, te entendemos.</h2>
+    <h2 class="h2">¿Cómo se siente terminar Yoga For Life?</h2>
     <div class="line"></div>
-    <div style="max-width:720px;margin:0 auto;text-align:left;">
-      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:18px;">Quizás nunca has hecho una clase y no tienes ni idea de por dónde empezar.</p>
-      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:18px;">Quizás lo que necesitas es simplemente parar. Dejar atrás el ruido de la semana, respirar y regalarte una hora para volver a ti.</p>
-      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:18px;">Quizás estás de paso por Dénia y no quieres dejar de practicar mientras estás aquí.</p>
-      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:18px;">O quizás ya llevas años haciendo yoga y sientes que quieres ir más allá de las posturas: entender mejor lo que ocurre en tu mente, cómo te relacionas, qué haces con lo que sientes y cómo llevar todo eso a tu vida.</p>
-      <p style="font-size:26px;font-weight:600;line-height:1.6;color:var(--td);margin-bottom:8px;">No necesitas tenerlo claro.<br>Puedes venir por cualquiera de estas razones.</p>
-      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:0;">Ven a practicar. Observa cómo te sientes. Y descubre qué ocurre cuando haces espacio para ti.</p>
-    </div>
-
-    <div style="max-width:720px;margin:56px auto 0;text-align:left;background:var(--td);border-radius:4px;padding:36px 40px;">
-      <p style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:6px;">Y quizá no seamos para ti.</p>
-      <p style="font-size:19px;font-weight:300;color:rgba(255,255,255,0.55);margin-bottom:18px;">Y también está bien.</p>
-      <p style="font-size:20px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.7;margin-bottom:16px;">En Dénia hay muchos profesores y espacios donde practicar yoga. Conocemos a muchos de ellos y creemos que cada persona necesita algo diferente.</p>
-      <p style="font-size:20px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.7;margin-bottom:16px;">Por eso, si después de conocerte pensamos que otra práctica, otro profesor o incluso otro espacio puede encajar mejor contigo, te lo diremos.</p>
-      <p style="font-size:21px;font-weight:500;color:#fff;line-height:1.7;margin-bottom:24px;">No queremos que encuentres simplemente una clase de yoga.<br>Queremos que encuentres el yoga que tiene sentido para ti.</p>
-      <a href="https://wa.me/34635993658?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20con%20vosotras%20antes%20de%20apuntarme." target="_blank" style="display:inline-block;font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#3DBBBB;text-decoration:none;border-bottom:1px solid rgba(61,187,187,0.4);">Hablar con nosotras →</a>
-    </div>
+    <p class="body center">Quizás llevas tiempo practicando yoga. Y quizás algo ha empezado a cambiar. Ya no lo ves solamente como una serie de posturas. Te interesan sus preguntas, su filosofía. Lo que ocurre cuando respiras, cuando observas tu mente, cuando aparece una emoción, cuando tienes un conflicto, cuando quieres algo, cuando no sabes qué quieres, cuando te descubres reaccionando exactamente como no querías reaccionar.</p>
+    <p class="body center" style="margin-top:24px;font-style:italic;color:var(--td);font-weight:600;">Y entonces aparece una pregunta: ¿cómo puedo utilizar todo esto en mi vida?</p>
+    <p class="body center" style="margin-top:16px;">Eso es lo que vamos a investigar durante YFL.</p>
   </div>
 </section>
 
-<section style="background:var(--cr)">
+<!-- TE VAMOS A ENSEÑAR -->
+<section style="background:var(--w);">
   <div class="container">
-    <span class="ey">Cómo empezar</span>
-    <h2 class="h2">4 formas de practicar con Viva Community Yoga.</h2>
+    <span class="ey">Te vamos a enseñar a utilizar el yoga para</span>
     <div class="line"></div>
-    <p class="body" style="margin-bottom:36px;">Ninguna es más importante que otra, depende de lo que necesites ahora mismo: clase privada, clase semanal en la playa, Deep Yoga &amp; Brunch mensual, o Yoga For Life.</p>
-    <div class="prec-grid" style="margin-top:0;">
 
-      <div style="background:var(--w);border:1px solid rgba(196,168,130,0.3);border-radius:2px;padding:32px 30px;">
-        <div style="font-size:13px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--t);margin-bottom:10px;">1. Clase privada</div>
-        <p style="font-size:21px;font-weight:300;color:var(--tx);line-height:1.7;margin-bottom:16px;">Una práctica pensada solo para ti, en tu ritmo y tu momento. En tu espacio o frente al mar.</p>
-        <a href="/privadas.html" style="font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--td);text-decoration:none;border-bottom:1px solid rgba(30,74,82,0.3);">Ver clases privadas →</a>
-      </div>
-
-      <div style="background:var(--w);border:1px solid rgba(196,168,130,0.3);border-radius:2px;padding:32px 30px;">
-        <div style="font-size:13px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--t);margin-bottom:10px;">2. Yoga en la playa, cada semana</div>
-        <p style="font-size:21px;font-weight:300;color:var(--tx);line-height:1.7;margin-bottom:16px;">Una hora para volver al cuerpo, respirar y practicar, frente al mar.</p>
-        <a href="/yoga-en-la-playa.html" style="font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--td);text-decoration:none;border-bottom:1px solid rgba(30,74,82,0.3);">Ver horarios →</a>
-      </div>
-
-      <div style="background:var(--w);border:1px solid rgba(196,168,130,0.3);border-radius:2px;padding:32px 30px;">
-        <div style="font-size:13px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--t);margin-bottom:10px;">3. Deep Yoga &amp; Brunch</div>
-        <p style="font-size:21px;font-weight:300;color:var(--tx);line-height:1.7;margin-bottom:16px;">Una práctica más lenta y profunda. Después, desayuno y un taller que parte de un concepto distinto de la tradición del yoga cada mes.</p>
-        <a href="/yoga-en-la-playa.html#deep-brunch" style="font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--td);text-decoration:none;border-bottom:1px solid rgba(30,74,82,0.3);">Ver detalles →</a>
-      </div>
-
-    </div>
-
-    <div style="margin-top:14px;background:var(--td);border-radius:2px;padding:36px 34px;">
-      <div style="font-size:13px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#3DBBBB;margin-bottom:10px;">4. Yoga For Life</div>
-      <p style="font-size:23px;font-weight:300;color:rgba(255,255,255,0.88);line-height:1.7;margin-bottom:18px;">El yoga no es el destino, es el camino. Nuestra formación, desde octubre.</p>
-      <a href="/yoga-for-life/" style="font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.4);">Descubre Yoga For Life →</a>
-    </div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Comprender mejor lo que ocurre dentro de ti.</strong><p>Aprenderás a observar pensamientos, emociones, sensaciones, impulsos y patrones sin tener que reaccionar automáticamente a todo lo que aparece.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Investigar qué quieres realmente.</strong><p>Porque no todo lo que deseamos nace necesariamente de nosotros. Algunas cosas las hemos aprendido, heredado o condicionado.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Observar cómo construyes tu realidad a través del lenguaje.</strong><p>Qué te dices, cómo nombras lo que ocurre, qué interpretaciones conviertes en hechos y qué historias construyes a partir de ellas.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Relacionarte de otra manera contigo y con los demás.</strong><p>Utilizaremos la tradición del yoga para investigar límites, aprobación, comparación, escucha, responsabilidad y nuestros propios patrones relacionales.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Comprender qué haces con el conflicto.</strong><p>No para aprender a evitarlo, sino para utilizarlo como un lugar privilegiado desde el que observar cómo funcionas.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Comprender con qué energía estás construyendo tu vida.</strong><p>Qué te nutre, qué te drena, dónde pones tu atención, qué estás alimentando y qué estás dejando sin energía.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Desarrollar tu propio criterio.</strong><p>El objetivo de YFL no es que termines pensando como Nati y Naylín ni como Patañjali. Es que termines siendo capaz de observar, cuestionar, experimentar y descubrir por ti misma.</p></div></div>
+    <div class="lista-punto"><div class="icono">💥</div><div class="txt"><strong>Construir una relación más profunda con el yoga.</strong><p>No solamente saber más sobre yoga, sino empezar a reconocerlo en tu propia vida.</p></div></div>
   </div>
 </section>
 
-<section class="equipo">
-  <div class="eq-inner">
-    <div class="eq-foto"><img src="images/equipo.jpg" width="700" height="933" alt="Nati y Naylín, profesoras de Viva Community Yoga" loading="lazy" decoding="async"/></div>
-    <div class="eq-texto">
-      <span class="ey">Quiénes somos</span>
-      <h2 class="h2">Dos profesoras.<br>Un mismo espacio.</h2>
-      <div class="line"></div>
-      <p class="body">Somos Nati y Naylín. Llevamos más de una década enseñando yoga y este verano lo compartimos aquí, frente al mar. Nos formamos en India y en España y hemos enseñado en nuestras propias escuelas, en congresos, en sitios muy distintos. Y esto (una esterilla, el mar delante, compartirlo contigo) nos encanta. Nos devuelve a lo sencillo, al origen. Si vienes, aunque sea solo una vez, ya serás parte de nuestra familia, de esta Comunidad que quiere disfrutar de esa hora sin demandas, sin móviles, sin prisas.</p>
-    </div>
-  </div>
-</section>
-
-<section style="background:var(--cr)">
+<!-- QUÉ ESPERAR -->
+<section style="background:var(--td);">
   <div class="container">
-    <span class="ey">Yoga en Dénia</span>
-    <h2 class="h2">Yoga en Dénia, todo el año.</h2>
+    <span class="ey" style="color:rgba(255,255,255,0.4);">Qué esperar</span>
+    <h2 class="h2" style="color:#fff;">Yoga For Life no es un curso que consumes y terminas.</h2>
+    <div class="line" style="background:rgba(255,255,255,0.2);"></div>
+    <p class="body center" style="color:rgba(255,255,255,0.75);">No es una colección de clases. No es una formación para acumular posturas. No es una biblioteca de filosofía. No es terapia. Y no es una experiencia en la que dos profesoras te dicen cómo deberías vivir.</p>
+    <p class="body center" style="color:#fff;margin-top:20px;font-weight:600;">Es una formación aplicada de 8 meses.</p>
+    <p class="body center" style="color:rgba(255,255,255,0.75);margin-top:20px;">Durante estos ocho meses vamos a trabajar simultáneamente tu comprensión del yoga, tu práctica, tu capacidad de observación y tu propia experiencia de vida. Queremos que exista una conexión permanente entre lo que estudiamos, lo que practicamos y lo que ocurre cuando sales de la sala.</p>
+  </div>
+</section>
+
+<!-- FILOSOFÍA -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">La filosofía de YFL</span>
+    <h2 class="h2">Nuestro método sigue este recorrido.</h2>
     <div class="line"></div>
-    <p class="body">Viva Community Yoga es un espacio de yoga en Dénia donde puedes practicar durante todo el año, en clase semanal, en sesión privada o en nuestro Deep Yoga &amp; Brunch mensual. Estamos en Los Baños Sunshine, Carrer Riu Grande 12, y trabajamos con quien quiere empezar a practicar, quien ya practica y busca profundizar, o simplemente quien busca un espacio para parar, respirar y sentirse acompañada.</p>
-    <div style="margin-top:24px;font-size:22px;font-weight:300;color:var(--tx);line-height:2;">
-      📍 Los Baños Sunshine · Carrer Riu Grande 12, Dénia<br>
-      🕐 Sábados 8:00h · Deep Yoga & Brunch el último sábado del mes
+    <div class="flujo">
+      <span>Tradición</span><span class="arrow">→</span>
+      <span>Pregunta</span><span class="arrow">→</span>
+      <span>Experiencia</span><span class="arrow">→</span>
+      <span>Observación</span><span class="arrow">→</span>
+      <span>Descubrimiento</span><span class="arrow">→</span>
+      <span>Integración</span><span class="arrow">→</span>
+      <span>Liberación</span>
     </div>
-    <a href="https://maps.google.com/?q=Los+Baños+Sunshine+Denia+Carrer+Riu+Grande+12" target="_blank" class="mapa-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Cómo llegar
-    </a>
+    <p class="body center">La tradición del yoga nos ofrece mapas. Pero un mapa no sirve de mucho si nunca sales a caminar. No queremos darte respuestas cerradas. Queremos enseñarte una manera de investigar.</p>
   </div>
 </section>
 
-
-<section style="background:var(--n);padding:0;overflow:hidden;" id="horarios">
-  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:280px;">
-    <div style="position:relative;overflow:hidden;">
-      <img src="images/losbanos-1.jpg" width="800" height="533" alt="Terraza Los Baños Sunshine frente al mar" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" decoding="async"/>
-    </div>
-    <div style="position:relative;overflow:hidden;">
-      <img src="images/losbanos-2.jpg" width="800" height="560" alt="Desayuno saludable Los Baños Sunshine" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" loading="lazy" decoding="async"/>
-    </div>
-  </div>
-  <div style="background:var(--n);padding:56px 48px;text-align:center;">
-    <span style="font-size:13px;letter-spacing:6px;text-transform:uppercase;color:var(--t);font-weight:600;display:block;margin-bottom:16px;">Cuándo y cuánto</span>
-    <p style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--w);line-height:1.2;max-width:680px;margin:0 auto 16px;">Yoga en la playa en Dénia, cada sábado.</p>
-    <p style="font-size:21px;font-weight:300;color:rgba(255,255,255,0.65);max-width:600px;margin:0 auto 28px;line-height:1.7;">Del 19 de septiembre al 19 de diciembre. Los Baños Sunshine, 8:00h, una hora para volver al cuerpo, respirar y practicar. Todos los niveles, sin experiencia previa. <a href="/agenda.html" style="color:#3DBBBB;">Ver el calendario completo de otoño →</a></p>
-
-    <div style="display:flex;gap:14px;max-width:820px;margin:0 auto;flex-wrap:wrap;justify-content:center;">
-      <div style="flex:1;min-width:160px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.3);border-radius:4px;padding:20px 16px;">
-        <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:8px;">Clase suelta</div>
-        <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;">15€</div>
-      </div>
-      <div style="flex:1;min-width:160px;background:rgba(61,187,187,0.12);border:1px solid #3DBBBB;border-radius:4px;padding:20px 16px;">
-        <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#3DBBBB;margin-bottom:8px;">Bono 3 clases</div>
-        <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;">40€</div>
-      </div>
-      <div style="flex:1;min-width:160px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.3);border-radius:4px;padding:20px 16px;">
-        <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:8px;">Bono 5 clases</div>
-        <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;">60€</div>
-      </div>
-    </div>
-
-    <div id="deep-brunch" style="margin-top:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:28px 32px;max-width:640px;margin-left:auto;margin-right:auto;text-align:left;">
-      <div style="font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:8px;">Cuatro fechas esta temporada</div>
-      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:8px;">Deep Yoga &amp; Brunch · 60€</div>
-      <p style="font-size:18px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.6;margin-bottom:14px;">26 de septiembre, 17 de octubre, 14 de noviembre y 5 de diciembre, 8:00–11:00h. Esos sábados no hay clase habitual: una práctica más lenta y profunda, con desayuno y un taller que parte de un concepto distinto de la tradición del yoga cada mes.</p>
-      <a href="https://wa.me/34635993658?text=Hola%2C%20me%20interesa%20el%20pr%C3%B3ximo%20Deep%20Yoga%20%26%20Brunch.%20%C2%BFMe%20cont%C3%A1is%20m%C3%A1s%3F" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#3DBBBB;color:#fff;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:12px 22px;border-radius:2px;text-decoration:none;">Reservar por WhatsApp →</a>
-    </div>
-
-    <div style="margin-top:16px;background:rgba(30,74,82,0.5);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:24px 32px;max-width:640px;margin-left:auto;margin-right:auto;text-align:left;">
-      <a href="/privadas.html" style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#3DBBBB;text-decoration:none;display:block;margin-bottom:6px;">Clase particular</a>
-      <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;display:inline;">65€</div>
-      <span style="font-size:16px;color:rgba(255,255,255,0.55);"> por persona, +15€ persona adicional, en tu casa o en la playa →</span>
-    </div>
-
-    <div style="margin-top:32px;">
-      <a href="https://maps.google.com/?q=Los+Baños+Sunshine+Denia+Carrer+Riu+Grande+12" target="_blank" class="mapa-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Cómo llegar
-      </a>
-      <p style="font-size:18px;color:rgba(255,255,255,0.5);margin-top:12px;font-style:italic;">Los Baños Sunshine · Carrer Riu Grande 12, Dénia</p>
-      <p style="font-size:15px;color:rgba(255,255,255,0.4);margin-top:16px;">Cancelación gratuita con más de 24h de antelación. Reservas con mínimo 12h de antelación.</p>
-    </div>
-
-    <a href="/yoga-en-la-playa.html#reserva" class="btn" style="margin-top:32px;">Reservar mi plaza</a>
-    <p style="font-size:15px;color:rgba(255,255,255,0.4);margin-top:14px;">¿Vienes de visita en verano? En <a href="/yoga-en-la-playa.html#verano" style="color:#3DBBBB;">esta página</a> tienes el horario fijo de temporada alta.</p>
-  </div>
-</section>
-
-
-
-
-<section class="test-section" style="background:#F5EFE4;padding:80px 0;">
-  <div class="container" style="text-align:center;margin-bottom:48px;">
-    <span class="ey">Lo que dicen</span>
-    <h2 class="h2">Ellas (y ellos) ya estuvieron aquí.</h2>
-    <div class="line" style="margin:0 auto;"></div>
-  </div>
-
-  <div style="position:relative;overflow:hidden;max-width:100%;">
-    <div id="carousel" style="display:flex;transition:transform 0.4s ease;will-change:transform;">
-
-      <!-- Sara -->
-      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
-        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="images/testimonio-sara.jpg.png" alt="Sara en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
-          <div style="padding:32px 36px 36px;">
-            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Empezar el día de esta manera, junto al mar, con uno mismo, sin nada más… llena de paz y calma que se convierte en energía para todo el día. Una experiencia maravillosa. 💚</p>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Sara</div>
-            
-          </div>
-        </div>
-      </div>
-
-      <!-- Caroline -->
-      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
-        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="images/testimonio-caroline.jpg.png" alt="Caroline en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
-          <div style="padding:32px 36px 36px;">
-            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Tenía dolores cada día y necesitaba calmarme. La sesión me permitió descomprimir de verdad porque la profesora tuvo en cuenta mis rigideces y me invitó a soltar sin ninguna presión, simplemente a disfrutar de un momento de bienestar.</p>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Caroline</div>
-            
-          </div>
-        </div>
-      </div>
-
-      <!-- Bea -->
-      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
-        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="images/testimonio-bea.jpg.png" alt="Bea en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
-          <div style="padding:32px 36px 36px;">
-            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Un espacio para sentirse acogida y cuidada. Cada encuentro es una invitación a dejarlo todo fuera y volver a habitar el momento presente.</p>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Bea</div>
-            
-          </div>
-        </div>
-      </div>
-
-      <!-- Emma -->
-      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
-        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="images/testimonio-emma.jpg.png" alt="Emma en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
-          <div style="padding:32px 36px 36px;">
-            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">The morning yoga session was lovely! Strength to both your body and mind. You can join as an experienced practitioner or as a complete beginner. The finishing relaxation left you energized for the rest of the day. Strongly recommend!</p>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Emma</div>
-            
-          </div>
-        </div>
-      </div>
-
-      <!-- Alice -->
-      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
-        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="images/testimonio-alice.jpg.png" alt="Alice en clase de yoga en la playa de Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
-          <div style="padding:32px 36px 36px;">
-            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">I joined the 07:30 sunrise yoga session at Los Baños Sunshine, and it is honestly one of the highlights of my stay in Dénia. Starting the day with the sound of the waves, the sea breeze, and the soft sun created such a peaceful atmosphere. The class was welcoming, relaxing, and suitable for every level. I left feeling completely refreshed and full of positive energy. If you're visiting Dénia, I can highly recommend this experience.</p>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Alice</div>
-            
-          </div>
-        </div>
-      </div>
-
-      <!-- David -->
-      <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
-        <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="images/testimonio-david.jpg.png" alt="David Busto en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
-          <div style="padding:32px 36px 36px;">
-            <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Gracias a la clase de yoga consigo soltar todo lo que se va acumulando durante la semana en el cuerpo y en la mente. La clase se pasa muy rápido y me ayuda a despejar la mente para volver a mi propósito con energía renovada.</p>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">David Busto</div>
-            
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <button onclick="moveCarousel(-1)" style="position:absolute;left:8px;top:45%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:10;">‹</button>
-    <button onclick="moveCarousel(1)" style="position:absolute;right:8px;top:45%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:10;">›</button>
-  </div>
-
-  <div style="text-align:center;margin-top:24px;display:flex;justify-content:center;gap:8px;" id="dots">
-    <span onclick="goTo(0)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#3DBBBB;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
-    <span onclick="goTo(1)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
-    <span onclick="goTo(2)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
-    <span onclick="goTo(3)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
-    <span onclick="goTo(4)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
-    <span onclick="goTo(5)" class="dot" style="width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;display:inline-block;transition:background 0.2s;"></span>
-  </div>
-
-  <script>
-    var cur = 0, total = 6;
-    function updateCarousel() {
-      document.getElementById('carousel').style.transform = 'translateX(-' + (cur * 100) + '%)';
-      document.querySelectorAll('.dot').forEach(function(d, i) {
-        d.style.background = i === cur ? '#3DBBBB' : '#ccc';
-      });
-    }
-    function moveCarousel(dir) { cur = (cur + dir + total) % total; updateCarousel(); }
-    function goTo(i) { cur = i; updateCarousel(); }
-    var startX = 0;
-    document.getElementById('carousel').addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive:true});
-    document.getElementById('carousel').addEventListener('touchend', function(e) {
-      if (Math.abs(startX - e.changedTouches[0].clientX) > 50) moveCarousel(startX > e.changedTouches[0].clientX ? 1 : -1);
-    }, {passive:true});
-  </script>
-</section>
-<section style="background:var(--td);padding:80px 48px;text-align:center;">
+<!-- CÓMO FUNCIONA -->
+<section style="background:var(--w);">
   <div class="container">
-    <p style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,3.5vw,38px);font-weight:700;color:#fff;line-height:1.3;max-width:640px;margin:0 auto 12px;">El yoga no es el destino, es el camino.</p>
-    <p style="font-size:19px;font-weight:300;color:rgba(255,255,255,0.55);margin-bottom:36px;">¿Tienes dudas antes de reservar? Consulta nuestras <a href="/faq.html" style="color:#3DBBBB;text-decoration:none;border-bottom:1px solid rgba(61,187,187,0.4);">preguntas frecuentes</a>.</p>
-    <a href="/yoga-en-la-playa.html" class="btn">Ver horarios y reservar</a>
+    <span class="ey">Cómo funciona</span>
+    <h2 class="h2">Una vez al mes, 12 horas juntas.</h2>
+    <div class="line"></div>
+    <p class="body center">Durante 8 meses tendrás una experiencia continua. Una vez al mes nos encontraremos durante 12 horas para profundizar en una de las grandes preguntas de YFL. Son 96 horas de formación presencial.</p>
+    <p class="body center" style="margin-top:20px;">Cada encuentro integra filosofía del yoga, anatomía aplicada, asana, pranayama, meditación, contemplación, investigación, conversación y aplicación a situaciones reales. No estudiamos cada disciplina por separado: las utilizamos todas para investigar una misma pregunta.</p>
+
+    <div style="margin-top:36px;background:var(--cr);border-radius:4px;padding:32px 30px;">
+      <p class="body" style="text-align:center;font-weight:600;color:var(--td);margin-bottom:12px;">Y entre encuentro y encuentro, la investigación continúa.</p>
+      <p class="body" style="text-align:center;">Tendrás aproximadamente 9 clases regulares de VCY cada mes: una práctica semanal con Nati y una práctica semanal con Naylín. Son nuestras clases normales de VCY, no una clase artificial para enseñarte la teoría de YFL. Puedes observarla, hacerte preguntas y venir después a preguntarnos por qué elegimos esa secuencia, esa postura, esa respiración.</p>
+    </div>
+
+    <div style="margin-top:20px;background:var(--cr);border-radius:4px;padding:32px 30px;">
+      <p class="body" style="text-align:center;font-weight:600;color:var(--td);margin-bottom:12px;">Cada semana, un encuentro online.</p>
+      <p class="body" style="text-align:center;">30 minutos de preguntas y respuestas. Un espacio para traer lo que está ocurriendo durante tu práctica y tu vida, porque la pregunta importante no siempre aparece cuando estás escuchando una explicación. A veces aparece el martes, en una conversación, en un pensamiento que vuelve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TU PARTE DEL PROCESO -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">Tu parte del proceso</span>
+    <h2 class="h2">YFL no funciona si nosotras hacemos todo el trabajo.</h2>
+    <div class="line"></div>
+    <div class="incluye-grid">
+      <div class="incluye-item"><p>🧘‍♀️ Práctica personal diaria de asana</p></div>
+      <div class="incluye-item"><p>🧘 Meditación diaria</p></div>
+      <div class="incluye-item"><p>📓 Diario de observación</p></div>
+      <div class="incluye-item"><p>📚 Lecturas seleccionadas</p></div>
+      <div class="incluye-item"><p>🔎 Experimentos de aplicación en tu vida</p></div>
+      <div class="incluye-item"><p>💬 Comunidad privada de WhatsApp</p></div>
+    </div>
+    <p class="body center" style="margin-top:24px;">La intención no es llenarte de deberes. Es que aquello que investigamos tenga la oportunidad de aparecer en tu experiencia.</p>
+  </div>
+</section>
+
+<!-- 8 MÓDULOS -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">Las 8 puertas de YFL</span>
+    <h2 class="h2">Un recorrido, no una lista de temas.</h2>
+    <div class="line"></div>
+
+    <div class="modulo">
+      <div class="mod-num">Módulo 1</div>
+      <h3>¿Qué quiero realmente?</h3>
+      <p>Investigar deseo, intención y condicionamiento, para distinguir entre <strong>lo que quiero, lo que creo que debería querer</strong> y lo que realmente estoy eligiendo.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 2</div>
+      <h3>¿Qué hay en mi mente?</h3>
+      <p>Investigar pensamientos, atención, identificación, juicios e interpretaciones, para empezar a distinguir entre <strong>lo que ocurre y lo que mi mente cuenta</strong> sobre lo que ocurre.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 3</div>
+      <h3>¿Qué palabras estoy utilizando y qué estoy creando con ellas?</h3>
+      <p>Investigar la relación entre pensamiento, palabra y acción, para observar cómo nuestra manera de nombrar la realidad influye en la experiencia que construimos.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 4</div>
+      <h3>¿Qué siento y qué hago con lo que siento?</h3>
+      <p>Investigar sensaciones, emociones, impulsos, resistencia y reacción, para descubrir que <strong>sentir algo no significa necesariamente tener que actuar desde ello.</strong></p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 5</div>
+      <h3>¿Cómo me relaciono conmigo y con los demás?</h3>
+      <p>Investigar los Yamas y Niyamas a través de nuestras relaciones reales, para empezar a reconocer nuestros propios patrones allí donde antes solamente veíamos los de los demás.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 6</div>
+      <h3>¿Qué hago con el conflicto?</h3>
+      <p>Qué ocurrió, qué interpreté, qué sentí, qué hice, qué produjo mi acción. Para convertir el conflicto en un lugar de observación.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 7</div>
+      <h3>¿Con qué energía vivo?</h3>
+      <p>Investigar Prana, los Gunas y nuestra relación con el esfuerzo, el descanso, la atención y la energía, para observar <strong>qué me nutre, qué me drena</strong> y dónde estoy poniendo mi energía.</p>
+    </div>
+    <div class="modulo">
+      <div class="mod-num">Módulo 8</div>
+      <h3>¿Qué hice en lo que hice? ¿Quién soy?</h3>
+      <p>Integramos todo el recorrido: qué queríamos, qué pensábamos, qué decíamos, qué sentíamos, cómo nos relacionábamos, cómo respondíamos al conflicto, cómo utilizábamos nuestra energía.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MEJORES PREGUNTAS -->
+<section style="background:var(--td);">
+  <div class="container">
+    <span class="ey" style="color:rgba(255,255,255,0.4);">No queremos que termines con más respuestas</span>
+    <h2 class="h2" style="color:#fff;">Queremos que termines con mejores preguntas.</h2>
+    <div class="line" style="background:rgba(255,255,255,0.2);"></div>
+    <p class="body center" style="color:rgba(255,255,255,0.8);">Imagina que después de YFL: tienes un conflicto y puedes observar qué está ocurriendo antes de reaccionar. Tienes una decisión y puedes distinguir deseo de condicionamiento. Sientes una emoción y puedes experimentarla sin convertirla automáticamente en una acción. Te descubres pensando algo y puedes preguntarte si estás observando un hecho o una interpretación. Te relacionas con alguien y puedes reconocer qué patrón tuyo está apareciendo. Estás cansada y puedes empezar a preguntarte qué estás alimentando y qué estás agotando.</p>
+    <p class="body center" style="color:#fff;margin-top:20px;font-weight:600;">Eso es llevar el yoga a la vida.</p>
+  </div>
+</section>
+
+<!-- SIN DEPENDENCIA -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">YFL no quiere crear dependencia</span>
+    <h2 class="h2">No queremos que nos preguntes "¿qué hago?"</h2>
+    <div class="line"></div>
+    <p class="body center">Queremos que puedas preguntarte: ¿qué estoy observando? ¿Qué dice la tradición sobre esto? ¿Qué estoy experimentando realmente? ¿Qué estoy interpretando? ¿Qué puedo descubrir aquí? Y que puedas seguir investigando.</p>
+    <p class="body center" style="margin-top:20px;">Por eso hablamos de <strong style="color:var(--td);">liberación</strong>. No como una promesa de convertirte en una persona que nunca vuelve a sufrir, sino como un proceso de dejar de estar completamente condicionada por tus patrones automáticos, y desarrollar cada vez más capacidad para observar y elegir.</p>
+  </div>
+</section>
+
+<!-- QUIÉN ESTÁ DETRÁS -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">¿Quién está detrás de YFL?</span>
+    <h2 class="h2">Nati y Naylín.</h2>
+    <div class="line"></div>
+    <p class="body center">YFL nace de nuestra práctica, estudio y experiencia. Llevamos años enseñando yoga y explorando qué ocurre cuando la práctica deja de quedarse únicamente en la esterilla, y hemos llegado a una conclusión: el yoga tiene muchísimo más que ofrecer que aprender a hacer una postura correctamente.</p>
+    <p class="body center" style="margin-top:16px;">Por eso hemos construido YFL. No para crear otra formación que enseñe más contenido, sino para crear un espacio donde investigar qué ocurre cuando utilizamos el yoga como herramienta para mirar nuestra propia vida.</p>
+  </div>
+</section>
+
+<!-- HONESTIDAD PRIMERA EDICIÓN -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">Una cosa importante</span>
+    <h2 class="h2">Esta es la primera edición de Yoga For Life.</h2>
+    <div class="line"></div>
+    <p class="body center">No tenemos una pared llena de testimonios. Y no vamos a inventarlos. No podemos decirte todavía "mira lo que YFL ha conseguido para estas 200 personas", porque esas personas todavía no existen.</p>
+    <p class="body center" style="margin-top:16px;">Lo que sí podemos enseñarte es exactamente lo que hemos construido: el método, las preguntas, la estructura, las prácticas, el tiempo que vamos a dedicar, la manera en la que trabajamos, y el compromiso que estamos poniendo en esta primera edición. Las primeras personas que entren serán las primeras en recorrer este camino con nosotras. Y eso tiene un valor especial.</p>
+  </div>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">¿Qué incluye YFL?</span>
+    <h2 class="h2">Más de 180 horas de formación y acompañamiento directo.</h2>
+    <div class="line"></div>
+    <div class="incluye-grid">
+      <div class="incluye-item"><div class="num">96 horas</div><p>8 encuentros presenciales de 12 horas</p></div>
+      <div class="incluye-item"><div class="num">~72 clases</div><p>Clases regulares de VCY (9 al mes × 8 meses)</p></div>
+      <div class="incluye-item"><div class="num">~16 horas</div><p>Encuentros online semanales</p></div>
+      <div class="incluye-item"><div class="num">Diario</div><p>Práctica personal y meditación diaria</p></div>
+      <div class="incluye-item"><div class="num">Materiales</div><p>Diario de observación y lecturas seleccionadas</p></div>
+      <div class="incluye-item"><div class="num">Comunidad</div><p>Grupo privado de WhatsApp y acompañamiento de Nati y Naylín</p></div>
+    </div>
+    <p class="body center" style="margin-top:20px;font-size:18px;color:#888;">Sin contar las horas de práctica personal, meditación, lectura y observación.</p>
+  </div>
+</section>
+
+<!-- VALOR -->
+<section style="background:var(--td);">
+  <div class="container">
+    <span class="ey" style="color:rgba(255,255,255,0.4);">¿Cuál es el valor de todo esto?</span>
+    <h2 class="h2" style="color:#fff;">Solo las clases regulares ya valen 1.080€.</h2>
+    <div class="line" style="background:rgba(255,255,255,0.2);"></div>
+    <p class="body center" style="color:rgba(255,255,255,0.75);">Las aproximadamente 72 clases regulares de VCY que forman parte de YFL, a 15€ cada una, tienen un valor de 1.080€. Y además tienes 96 horas de formación presencial, ~16 horas de acompañamiento online, 8 meses de práctica, materiales, lecturas, experimentos, comunidad y acompañamiento directo.</p>
+    <p class="body center" style="color:#fff;font-weight:700;font-size:26px;margin-top:24px;">El valor estimado del conjunto supera los 4.500€.</p>
+  </div>
+</section>
+
+<!-- PRECIO -->
+<section style="background:var(--cr);" id="precios">
+  <div class="container center">
+    <span class="ey">Pero esta primera edición no cuesta 4.500€</span>
+    <h2 class="h2">Precio fundadoras</h2>
+    <div class="line"></div>
+
+    <div class="precios-3grid">
+      <!-- 1 PAGO -->
+      <div class="precio-card">
+        <div class="pc-title">1 Pago de</div>
+        <div class="pc-num">1.200€</div>
+        <div class="pc-sub">Formación completa, primera edición</div>
+        <ul class="pc-check">
+          <li><em>¡Ahorro de 120€!</em></li>
+          <li>Con tarjeta, desde cualquier parte</li>
+          <li>Tu plaza queda confirmada al momento</li>
+          <li><em>El precio subirá para la edición 2027.</em></li>
+        </ul>
+        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%20el%20pago%20%C3%BAnico%20de%201.200%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+      </div>
+
+      <!-- 3 CUOTAS -->
+      <div class="precio-card feat">
+        <div class="pc-title">3 Cuotas Mensuales</div>
+        <div class="pc-num">420€</div>
+        <div class="pc-sub">Formación completa, primera edición</div>
+        <ul class="pc-check">
+          <li><em>¡Ahorro de 60€!</em></li>
+          <li>3 pagos mensuales, cada uno de 420€</li>
+          <li>Con tarjeta, desde cualquier parte</li>
+          <li>Un pago cada 30 días</li>
+          <li><em>El precio subirá para la edición 2027.</em></li>
+        </ul>
+        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%203%20cuotas%20de%20420%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+      </div>
+
+      <!-- 8 CUOTAS -->
+      <div class="precio-card">
+        <div class="pc-title">8 Cuotas Mensuales</div>
+        <div class="pc-num">165€</div>
+        <div class="pc-sub">Formación completa, primera edición</div>
+        <ul class="pc-check">
+          <li>8 pagos mensuales, cada uno de 165€</li>
+          <li>Con tarjeta, desde cualquier parte</li>
+          <li>Un pago cada 30 días</li>
+          <li><em>El precio subirá para la edición 2027.</em></li>
+        </ul>
+        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%208%20cuotas%20de%20165%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+      </div>
+    </div>
+
+    <p style="font-size:18px;color:#8a6d3f;margin-top:28px;">¿Prefieres pagar por transferencia o tienes dudas? <a href="https://wa.me/34635993658?text=Hola%2C%20tengo%20una%20duda%20sobre%20cómo%20apuntarme%20a%20Yoga%20For%20Life." style="color:var(--td);font-weight:600;">Escríbenos por WhatsApp</a>.</p>
+
+    <div style="margin-top:36px;">
+      <p class="body">Porque queremos que las primeras personas que entren formen parte de esta primera edición. Vais a recorrer YFL con nosotras, y YFL también va a crecer a partir de lo que descubramos juntas. Por eso esta condición no volverá a existir exactamente igual.</p>
+      <p class="body" style="margin-top:16px;font-style:italic;color:#8a6d3f;">Después de las fundadoras: 1.600€.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ES PARA TI -->
+<section style="background:var(--w);">
+  <div class="container">
+    <span class="ey">¿Es para ti?</span>
+    <h2 class="h2">Dos listas, para que decidas con claridad.</h2>
+    <div class="line"></div>
+    <div class="check-grid">
+      <div class="check-col si">
+        <h3>YFL puede ser para ti si</h3>
+        <div class="check-item">✔️ Ya tienes una relación previa con el yoga.</div>
+        <div class="check-item">✔️ Quieres ir más allá de las posturas.</div>
+        <div class="check-item">✔️ Te interesa la filosofía del yoga, pero quieres experimentarla.</div>
+        <div class="check-item">✔️ Tienes preguntas sobre ti y tu manera de vivir.</div>
+        <div class="check-item">✔️ Quieres comprender tus patrones.</div>
+        <div class="check-item">✔️ Quieres desarrollar criterio propio.</div>
+        <div class="check-item">✔️ Estás dispuesta a practicar y observar entre encuentros.</div>
+        <div class="check-item">✔️ Quieres descubrir qué puede hacer el yoga por tu vida.</div>
+      </div>
+      <div class="check-col no">
+        <h3>Probablemente no, si</h3>
+        <div class="check-item">❌ Buscas únicamente mejorar tus asanas.</div>
+        <div class="check-item">❌ Quieres una certificación rápida.</div>
+        <div class="check-item">❌ Quieres que alguien te diga cómo vivir.</div>
+        <div class="check-item">❌ No quieres dedicar tiempo a tu propia práctica.</div>
+        <div class="check-item">❌ Prefieres acumular teoría antes que experimentar.</div>
+        <div class="check-item">❌ Buscas respuestas cerradas.</div>
+      </div>
+    </div>
+    <p class="body center" style="margin-top:28px;">Y está bien. No queremos ser para todo el mundo. Queremos reunir a las personas que realmente quieren hacer esta investigación.</p>
+  </div>
+</section>
+
+<!-- DUDAS -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey">¿Todavía estás dudando?</span>
+    <div class="line"></div>
+
+    <div class="duda">
+      <div class="q">"No sé suficiente yoga."</div>
+      <div class="r">No necesitas saberlo todo. Pero sí necesitas una experiencia previa que te permita experimentar las prácticas desde dentro.</div>
+    </div>
+    <div class="duda">
+      <div class="q">"¿Y si no estoy de acuerdo con vosotras?"</div>
+      <div class="r">No necesitamos que estés de acuerdo. Queremos que desarrolles tu propio criterio.</div>
+    </div>
+    <div class="duda">
+      <div class="q">"¿Y si esto es demasiado teórico?"</div>
+      <div class="r">La teoría nunca será el destino. La utilizaremos para volver a la experiencia.</div>
+    </div>
+    <div class="duda">
+      <div class="q">"¿Y si quiero aplicar todo esto a mi vida?"</div>
+      <div class="r">Precisamente para eso existe YFL.</div>
+    </div>
+    <div class="duda">
+      <div class="q">"¿Y si ya llevo años practicando?"</div>
+      <div class="r">Entonces quizás ha llegado el momento de preguntarte: ¿qué más puedo hacer con todo lo que ya he aprendido?</div>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section style="background:var(--td);text-align:center;">
+  <div class="container">
+    <p class="body" style="color:rgba(255,255,255,0.75);">Puedes seguir haciéndote las mismas preguntas. O puedes empezar a investigarlas.</p>
+    <p class="body" style="color:rgba(255,255,255,0.75);margin-top:16px;">Durante ocho meses puedes seguir exactamente donde estás, o puedes entrar en una experiencia diseñada para llevar el yoga desde la esterilla hasta aquello que realmente estás viviendo. No sabemos qué vas a descubrir, y tampoco queremos decírtelo. Porque esa es precisamente la investigación.</p>
+
+    <h2 class="h2" style="color:#fff;margin-top:40px;">Yoga For Life</h2>
+    <p style="font-family:'Playfair Display',serif;font-size:24px;color:rgba(255,255,255,0.6);margin-bottom:32px;">El yoga no es el destino. Es el camino.</p>
+
+    <div class="precio-box">
+      <span class="ey">Primera edición · Fundadoras</span>
+      <div class="precio-num">1.200€</div>
+      <div class="precio-opciones">1 pago de 1.200€ · 3 pagos de 420€ · 8 pagos de 165€</div>
+      <a href="#precios" class="btn">Ver formas de pago</a>
+      <p class="precio-nota">Plazas limitadas.</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <img src="images/logo.png" width="96" height="96" alt="Viva Community Yoga" loading="lazy" decoding="async"/>
   <div class="fn">Viva Community Yoga</div>
-  <div class="fd">Los Baños Sunshine · Carrer Riu Grande 12 · Dénia</div>
-  <div class="ft">Yoga en Dénia · Todo el año</div>
   <a href="https://instagram.com/vivacommunityoga" target="_blank">@vivacommunityoga</a>
   <div style="margin-top:16px;">
-    <a href="/faq.html" style="font-size:14px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:2px;">Preguntas frecuentes</a>
+    <a href="/faq.html" style="font-size:14px;">Preguntas frecuentes</a>
+    &nbsp;·&nbsp;
+    <a href="/">Volver al inicio</a>
   </div>
 </footer>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/34635993658?text=Hola%2C%20me%20interesa%20apuntarme%20a%20una%20clase%20de%20yoga%20en%20Los%20Ba%C3%B1os%20Sunshine.%20%C2%BFTen%C3%A9is%20plaza%3F" 
-   target="_blank"
-   style="position:fixed;bottom:20px;right:20px;width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);z-index:999999;text-decoration:none;-webkit-tap-highlight-color:transparent;"
->
-  <svg width="34" height="34" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
 </body>
 </html>
