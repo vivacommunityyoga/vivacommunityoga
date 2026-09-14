@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendario de Otoño 2026 | Viva Community Yoga</title>
+<meta name="description" content="Todas las clases, Deep Yoga & Brunch y encuentros de Yoga For Life de este otoño en Dénia, mes a mes, con reserva directa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --t: #3DBBBB; --td: #1E4A52; --a: #C4A882;
+    --cr: #F5EFE4; --w: #FFFFFF; --n: #111111;
+    --tx: #333333; --ts: #888888;
+    --db: #B5654F; --db-bg: #FBEEEA;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cr); color: var(--tx); overflow-x: hidden; font-size: 22px; line-height: 1.7; }
+
+  section { padding: 64px 48px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .ey { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--t); margin-bottom: 14px; font-weight: 600; display: block; }
+  .h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--td); line-height: 1.15; margin-bottom: 18px; }
+  .body { font-size: 23px; font-weight: 300; line-height: 1.8; color: var(--tx); }
+  .line { width: 52px; height: 1.5px; background: var(--a); margin: 22px auto; }
+  .btn { display: inline-block; background: var(--t); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 14px 32px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .btn:hover { background: var(--td); }
+
+  /* MINI HERO */
+  .mini-hero { background: var(--td); padding: 64px 48px 52px; text-align: center; }
+  .mini-hero .back { display: inline-block; color: rgba(255,255,255,0.55); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; margin-bottom: 24px; }
+  .mini-hero .back:hover { color: #3DBBBB; }
+  .mini-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 18px; }
+  .mini-hero p { font-size: 22px; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 10px; }
+  .mini-hero .sub { font-size: 18px; font-style: normal; color: rgba(255,255,255,0.5); margin-top: 18px; }
+
+  /* LEYENDA DE FORMATOS */
+  .leyenda-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 32px; }
+  .leyenda-card { background: #fff; border-radius: 4px; padding: 28px 24px; border-top: 4px solid var(--t); }
+  .leyenda-card.db { border-top-color: var(--db); }
+  .leyenda-card.yfl { border-top-color: var(--td); background: var(--td); }
+  .leyenda-card .lc-title { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: var(--td); margin-bottom: 6px; }
+  .leyenda-card.yfl .lc-title { color: #fff; }
+  .leyenda-card .lc-hora { font-size: 14px; letter-spacing: 1px; color: var(--t); text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
+  .leyenda-card.db .lc-hora { color: var(--db); }
+  .leyenda-card.yfl .lc-hora { color: #3DBBBB; }
+  .leyenda-card p { font-size: 17px; font-weight: 300; color: #555; line-height: 1.6; }
+  .leyenda-card.yfl p { color: rgba(255,255,255,0.75); }
+
+  /* MESES */
+  .mes-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--a); margin: 48px 0 20px; text-align: center; }
+  .mes-title:first-of-type { margin-top: 0; }
+  .evento { background: #fff; border-radius: 4px; padding: 26px 30px; margin-bottom: 14px; border-left: 5px solid var(--t); }
+  .evento.db { border-left-color: var(--db); background: var(--db-bg); }
+  .evento.yfl { border-left-color: var(--td); background: var(--td); }
+  .ev-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .ev-fecha { font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t); }
+  .evento.db .ev-fecha { color: var(--db); }
+  .evento.yfl .ev-fecha { color: #3DBBBB; }
+  .ev-badge { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #999; }
+  .evento.yfl .ev-badge { color: rgba(255,255,255,0.5); }
+  .ev-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--td); margin-bottom: 8px; line-height: 1.3; }
+  .evento.yfl .ev-title { color: #fff; }
+  .ev-desc { font-size: 18px; font-weight: 300; color: #555; line-height: 1.7; margin-bottom: 14px; }
+  .evento.yfl .ev-desc { color: rgba(255,255,255,0.75); }
+  .ev-cta { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--td); text-decoration: none; border-bottom: 1px solid rgba(30,74,82,0.3); }
+  .evento.yfl .ev-cta { color: #3DBBBB; border-bottom-color: rgba(61,187,187,0.4); }
+
+  /* INVESTIGACIÓN */
+  .investigacion { background: var(--td); text-align: center; }
+  .investigacion .h2, .investigacion .ey { color: #fff; }
+  .investigacion p { color: rgba(255,255,255,0.8); font-size: 22px; font-weight: 300; line-height: 1.85; max-width: 680px; margin: 0 auto 16px; }
+
+  /* YFL CENTERPIECE */
+  .yfl-center { background: var(--w); text-align: center; border: 2px solid var(--td); border-radius: 4px; max-width: 780px; margin: 0 auto; padding: 48px 40px; }
+  .yfl-center .ey { color: var(--t); }
+  .yfl-center h2 { color: var(--td); }
+  .yfl-center p { font-size: 21px; font-weight: 300; color: var(--tx); line-height: 1.8; margin-bottom: 20px; }
+  .yfl-precio { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; color: var(--td); margin: 20px 0 6px; }
+  .yfl-precio-sub { font-size: 16px; color: #888; margin-bottom: 28px; }
+
+  footer { background: var(--n); padding: 56px 48px; text-align: center; }
+  .fn { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 8px; }
+  .ft { font-size: 13px; color: rgba(255,255,255,0.8); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+  footer a { font-size: 18px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 2px; }
+  footer a:hover { color: var(--t); }
+
+  @media (max-width: 720px) {
+    section { padding: 44px 22px; }
+    .leyenda-grid { grid-template-columns: 1fr; }
+    .ev-top { flex-direction: column; align-items: flex-start; }
+    .yfl-center { padding: 36px 24px; }
+  }
+</style>
+<meta name="google-site-verification" content="g1k3jGIfjvrv2o0xOlAYyPJcsqfuTXhWI1szzVGploQ">
+</head>
+<body>
+
+<section class="mini-hero">
+  <a href="/" class="back">← Viva Community Yoga</a>
+  <h1>Calendario de Otoño 2026</h1>
+  <p>Hay otoños que cambian el paisaje. Y otros cambian la forma de mirarlo.</p>
+  <p class="sub">Una colección de prácticas, conversaciones, mañanas de Deep Yoga &amp; Brunch y el comienzo de Yoga For Life. Ven por el yoga. Quédate por todo lo que empieza a pasar alrededor.</p>
+</section>
+
+<!-- LEYENDA -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <span class="ey" style="text-align:center;">Tres formas de vivir VCY</span>
+    <div class="leyenda-grid">
+      <div class="leyenda-card">
+        <div class="lc-hora">8:00–9:00 · 1 hora</div>
+        <div class="lc-title">Clase de Yoga</div>
+        <p>Una hora para volver al cuerpo, respirar y practicar.</p>
+      </div>
+      <div class="leyenda-card db">
+        <div class="lc-hora">8:00–11:00 · 3 horas</div>
+        <div class="lc-title">Deep Yoga &amp; Brunch</div>
+        <p>Una práctica más lenta, suave y profunda. Después, desayuno y taller.</p>
+      </div>
+      <div class="leyenda-card yfl">
+        <div class="lc-hora">8:00–20:00 · 12 horas</div>
+        <div class="lc-title">Yoga For Life</div>
+        <p>Formación de 8 meses. Primera edición: 10 plazas, octubre 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEPTIEMBRE -->
+<section style="background:var(--w);">
+  <div class="container">
+    <div class="mes-title">Septiembre</div>
+
+    <div class="evento">
+      <div class="ev-top"><span class="ev-fecha">19 septiembre · 8:00–9:00</span><span class="ev-badge">Clase de Yoga</span></div>
+      <div class="ev-title">¿Qué quiero realmente?</div>
+      <p class="ev-desc">Empezamos por una pregunta sencilla, hasta que dejamos de responderla de memoria. Después de la práctica, quien quiera puede quedarse a tomar algo y continuar la conversación.</p>
+      <a href="/yoga-en-la-playa.html?tipo=grupal&fecha=2026-09-19#reserva" class="ev-cta">Reservar →</a>
+    </div>
+
+    <div class="evento db">
+      <div class="ev-top"><span class="ev-fecha">26 septiembre · 8:00–11:00</span><span class="ev-badge">Deep Yoga &amp; Brunch</span></div>
+      <div class="ev-title">Deseo y apego · Raga · Vairagya</div>
+      <p class="ev-desc">Hay cosas que queremos tanto que terminamos viviendo alrededor de ellas. Una práctica suave y profunda para explorar deseo, apego y libertad. Después, desayuno y taller.</p>
+      <a href="/yoga-en-la-playa.html?tipo=deep-brunch&fecha=2026-09-26#reserva" class="ev-cta">Reservar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- OCTUBRE -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <div class="mes-title">Octubre</div>
+
+    <div class="evento">
+      <div class="ev-top"><span class="ev-fecha">3 octubre · 8:00–9:00</span><span class="ev-badge">Clase de Yoga</span></div>
+      <div class="ev-title">¿Cuánto de tu vida estás eligiendo?</div>
+      <p class="ev-desc">Hay caminos que seguimos durante años sin recordar el momento en que decidimos tomarlos. Una práctica para mirar nuestras elecciones.</p>
+      <a href="/yoga-en-la-playa.html?tipo=grupal&fecha=2026-10-03#reserva" class="ev-cta">Reservar →</a>
+    </div>
+
+    <div class="evento yfl">
+      <div class="ev-top"><span class="ev-fecha">10 octubre · 8:00–20:00</span><span class="ev-badge">Yoga For Life · Primer encuentro</span></div>
+      <div class="ev-title">¿Qué quiero realmente?</div>
+      <p class="ev-desc">Comienza la primera edición. Diez personas, ocho módulos y ocho meses de investigación. Un viaje para descubrir qué ocurre cuando el yoga deja de ser solamente algo que haces y se convierte en una forma de mirar.</p>
+      <a href="/yoga-for-life/" class="ev-cta">Más información →</a>
+    </div>
+
+    <div class="evento db">
+      <div class="ev-top"><span class="ev-fecha">17 octubre · 8:00–11:00</span><span class="ev-badge">Deep Yoga &amp; Brunch</span></div>
+      <div class="ev-title">La mente que cuenta historias · Citta · Vritti</div>
+      <p class="ev-desc">Ocurre algo y, antes de que podamos darnos cuenta, nuestra mente ya ha escrito lo que significa. Practicamos para bajar el ruido. Después, desayuno y taller.</p>
+      <a href="/yoga-en-la-playa.html?tipo=deep-brunch&fecha=2026-10-17#reserva" class="ev-cta">Reservar →</a>
+    </div>
+
+    <div class="evento">
+      <div class="ev-top"><span class="ev-fecha">24 octubre · 8:00–9:00</span><span class="ev-badge">Clase de Yoga</span></div>
+      <div class="ev-title">Entre lo que ocurre y lo que haces</div>
+      <p class="ev-desc">Entre el acontecimiento y nuestra reacción existe un espacio. A veces dura un segundo. A veces cambia una vida.</p>
+      <a href="/yoga-en-la-playa.html?tipo=grupal&fecha=2026-10-24#reserva" class="ev-cta">Reservar →</a>
+    </div>
+
+    <div class="evento">
+      <div class="ev-top"><span class="ev-fecha">31 octubre · 8:00–9:00</span><span class="ev-badge">Clase de Yoga</span></div>
+      <div class="ev-title">Clase de yoga en la playa</div>
+      <p class="ev-desc">Una hora para volver al cuerpo, respirar y practicar, frente al mar.</p>
+      <a href="/yoga-en-la-playa.html?tipo=grupal&fecha=2026-10-31#reserva" class="ev-cta">Reservar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- NOVIEMBRE -->
+<section style="background:var(--w);">
+  <div class="container">
+    <div class="mes-title">Noviembre</div>
+
+    <div class="evento yfl">
+      <div class="ev-top"><span class="ev-fecha">7 noviembre · 8:00–20:00</span><span class="ev-badge">Yoga For Life · Segundo encuentro</span></div>
+      <div class="ev-title">Las palabras que te hablan</div>
+      <p class="ev-desc">"Soy así." "Siempre me pasa lo mismo." "No puedo." A veces repetimos tanto una historia que terminamos llamándola verdad. En YFL aprendemos a observarla.</p>
+      <a href="/yoga-for-life/" class="ev-cta">Más información →</a>
+    </div>
+
+    <div class="evento db">
+      <div class="ev-top"><span class="ev-fecha">14 noviembre · 8:00–11:00</span><span class="ev-badge">Deep Yoga &amp; Brunch</span></div>
+      <div class="ev-title">¿Es verdad o es una historia? · Satya</div>
+      <p class="ev-desc">Una mañana para separar el hecho de todo aquello que construimos alrededor. Yoga profundo, desayuno y taller.</p>
+      <a href="/yoga-en-la-playa.html?tipo=deep-brunch&fecha=2026-11-14#reserva" class="ev-cta">Reservar →</a>
+    </div>
+
+    <div class="evento">
+      <div class="ev-top"><span class="ev-fecha">21 noviembre · 8:00–9:00</span><span class="ev-badge">Clase de Yoga</span></div>
+      <div class="ev-title">Sentir no significa actuar</div>
+      <p class="ev-desc">El miedo aparece. El enfado aparece. La tristeza aparece. La pregunta es qué hacemos después.</p>
+      <a href="/yoga-en-la-playa.html?tipo=grupal&fecha=2026-11-21#reserva" class="ev-cta">Reservar →</a>
+    </div>
+
+    <div class="evento">
+      <div class="ev-top"><span class="ev-fecha">28 noviembre · 8:00–9:00</span><span class="ev-badge">Clase de Yoga</span></div>
+      <div class="ev-title">¿Qué hago con lo que siento?</div>
+      <p class="ev-desc">No elegimos cada emoción que aparece. Podemos aprender a observar nuestra respuesta.</p>
+      <a href="/yoga-en-la-playa.html?tipo=grupal&fecha=2026-11-28#reserva" class="ev-cta">Reservar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- DICIEMBRE -->
+<section style="background:var(--cr);">
+  <div class="container">
+    <div class="mes-title">Diciembre</div>
+
+    <div class="evento db">
+      <div class="ev-top"><span class="ev-fecha">5 diciembre · 8:00–11:00</span><span class="ev-badge">Deep Yoga &amp; Brunch</span></div>
+      <div class="ev-title">La forma en que te tratas · Ahimsa</div>
+      <p class="ev-desc">Hay una conversación que escuchas todos los días: la que tienes contigo. Yoga profundo, desayuno y taller.</p>
+      <a href="/yoga-en-la-playa.html?tipo=deep-brunch&fecha=2026-12-05#reserva" class="ev-cta">Reservar →</a>
+    </div>
+
+    <div class="evento yfl">
+      <div class="ev-top"><span class="ev-fecha">12 diciembre · 8:00–20:00</span><span class="ev-badge">Yoga For Life · Tercer encuentro</span></div>
+      <div class="ev-title">¿Quién soy cuando dejo de reaccionar?</div>
+      <p class="ev-desc">Después de meses haciendo preguntas, quizá empiece a aparecer algo más silencioso: la posibilidad de elegir.</p>
+      <a href="/yoga-for-life/" class="ev-cta">Más información →</a>
+    </div>
+
+    <div class="evento">
+      <div class="ev-top"><span class="ev-fecha">19 diciembre · 8:00–9:00</span><span class="ev-badge">Clase de Yoga · Cierre de ciclo</span></div>
+      <div class="ev-title">Lo que termina también enseña</div>
+      <p class="ev-desc">Las hojas no se llevan el otoño. Lo transforman. Cerramos la temporada practicando, mirando atrás y haciendo espacio para lo que viene.</p>
+      <a href="/yoga-en-la-playa.html?tipo=grupal&fecha=2026-12-19#reserva" class="ev-cta">Reservar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- UNA MISMA INVESTIGACIÓN -->
+<section class="investigacion">
+  <div class="container">
+    <span class="ey">Una misma investigación</span>
+    <h2 class="h2">Este otoño no hemos querido llenar una agenda.</h2>
+    <div class="line" style="background:rgba(255,255,255,0.2);"></div>
+    <p>Hemos creado un recorrido. Una clase puede dejar una sensación en el cuerpo. Una conversación puede dejar una pregunta en la cabeza. Un Deep puede abrir una puerta. Y Yoga For Life permite cruzarla durante ocho meses.</p>
+    <p>La tradición del yoga pone los mapas sobre la mesa. La práctica nos permite experimentarlos. Y la vida nos dice qué ocurre cuando nos los llevamos a casa.</p>
+  </div>
+</section>
+
+<!-- YFL CENTERPIECE -->
+<section style="background:var(--w);">
+  <div class="container">
+    <div class="yfl-center">
+      <span class="ey">La pieza central de esta temporada</span>
+      <h2 class="h2">Yoga For Life</h2>
+      <p style="font-size:16px;color:#999;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">8 meses · 10 plazas · primera edición</p>
+      <p>Hay un momento en la práctica en el que una postura deja de ser solamente una postura. Empiezas a notar cómo aparece la exigencia, cómo comparas, cómo huyes de una sensación incómoda.</p>
+      <p>No queremos darte una colección de respuestas. Queremos ayudarte a desarrollar la mirada necesaria para encontrar las tuyas.</p>
+      <div class="yfl-precio">1.200€</div>
+      <div class="yfl-precio-sub">precio fundadoras · o 3 pagos de 420€ · o 8 pagos de 165€</div>
+      <a href="/yoga-for-life/" class="btn">Más información sobre Yoga For Life</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fn">Viva Community Yoga</div>
+  <div class="ft">Ven por el yoga. Quédate por todo lo que empieza a pasar alrededor.</div>
+  <a href="https://instagram.com/vivacommunityoga" target="_blank">@vivacommunityoga</a>
+  <div style="margin-top:16px;">
+    <a href="/faq.html" style="font-size:14px;">Preguntas frecuentes</a>
+    &nbsp;·&nbsp;
+    <a href="/">Volver al inicio</a>
+  </div>
+</footer>
+
+</body>
+</html>
