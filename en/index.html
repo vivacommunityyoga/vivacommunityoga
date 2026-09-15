@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="apple-touch-icon" href="../images/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yoga in Dénia · Beach Yoga | Viva Community Yoga · Los Baños Sunshine</title>
+<title>Yoga in Dénia, By the Sea | Viva Community Yoga</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -26,7 +26,7 @@
   .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
   .hero-ov { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,35,38,0.6) 0%, rgba(10,35,38,0.22) 35%, rgba(10,35,38,0.75) 75%, rgba(10,35,38,0.96) 100%); }
   .hero-logo { width: 140px; height: 140px; object-fit: contain; margin-bottom: 16px; position: relative; z-index: 2; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3)); }
-  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 32px; display: flex; flex-direction: column; align-items: center; }
+  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 32px 56px; display: flex; flex-direction: column; align-items: center; }
   .hero-eyebrow { font-size: 14px; letter-spacing: 7px; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 12px; font-weight: 400; }
   .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(40px, 6vw, 84px); font-weight: 700; color: var(--w); line-height: 1.1; margin-bottom: 16px; }
   .hero-sub { font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.6; max-width: 560px; margin-bottom: 28px; }
@@ -34,7 +34,7 @@
   .btn:hover { background: var(--td); }
   .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 2; }
 
-  /* SECCIONES */
+  /* SECTIONS */
   section { padding: 72px 48px; }
   .container { max-width: 860px; margin: 0 auto; }
   .ey { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--t); margin-bottom: 14px; font-weight: 600; display: block; }
@@ -42,7 +42,7 @@
   .body { font-size: 26px; font-weight: 300; line-height: 1.8; color: var(--tx); }
   .line { width: 52px; height: 1.5px; background: var(--a); margin: 26px 0; }
 
-  /* FILOSOFÍA */
+  /* PHILOSOPHY (legacy, kept for CSS parity) */
   .filo-grid { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; border: 1px solid rgba(196,168,130,0.3); }
   .filo-item { padding: 38px 36px; border-bottom: 1px solid rgba(196,168,130,0.3); border-right: 1px solid rgba(196,168,130,0.3); }
   .filo-item:nth-child(2n) { border-right: none; }
@@ -50,17 +50,14 @@
   .filo-no { font-size: 20px; font-weight: 300; color: #666; margin-bottom: 10px; font-style: italic; }
   .filo-si { font-size: 26px; font-weight: 600; color: var(--td); }
 
-  /* PARA QUIÉN */
-  .pq { background: var(--td); }
-  .pq .ey { color: rgba(255,255,255,0.4); }
-  .pq .h2 { color: var(--w); }
-  .pq .line { background: rgba(255,255,255,0.2); }
+  /* WHO IS THIS FOR */
+  .pq { background: var(--cr); }
   .pq-list { list-style: none; margin-top: 28px; }
   .pq-list li { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.55; display: flex; gap: 20px; }
   .pq-list li:last-child { border-bottom: none; }
   .pq-list li::before { content: '~'; color: rgba(255,255,255,0.3); flex-shrink: 0; font-size: 28px; }
 
-  /* EQUIPO */
+  /* TEAM */
   .equipo { padding: 0; overflow: hidden; }
   .eq-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
   .eq-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
@@ -70,7 +67,7 @@
   .eq-texto .line { background: rgba(255,255,255,0.2); }
   .eq-texto .body { color: rgba(255,255,255,0.85); font-size: 24px; }
 
-  /* HORARIOS */
+  /* SCHEDULE */
   .hor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
   .hor-card { background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 32px 30px; border-radius: 2px; }
   .hor-dia { font-size: 13px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--t); margin-bottom: 10px; }
@@ -81,7 +78,7 @@
   .mapa-btn:hover { background: var(--t); }
   .mapa-nota { font-size: 20px; color: #666; margin-top: 12px; font-style: italic; }
 
-  /* PRECIOS */
+  /* PRICING */
   .prec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; }
   .prec-card { text-align: center; padding: 40px 20px; border: 1px solid rgba(196,168,130,0.4); border-radius: 2px; background: var(--w); }
   .prec-card.feat { background: var(--t); border-color: var(--t); }
@@ -97,31 +94,12 @@
   .prec-nota p { font-size: 22px; font-weight: 300; color: var(--tx); line-height: 1.8; }
   .prec-nota strong { font-weight: 600; color: var(--td); }
 
-  /* RESERVA */
+  /* BOOKING (kept for CSS parity, unused on this page) */
   .reserva { background: var(--td); }
   .reserva .ey { color: rgba(255,255,255,0.4); }
   .reserva .h2 { color: var(--w); }
   .reserva .body { color: rgba(255,255,255,0.72); margin-bottom: 28px; }
   .reserva .line { background: rgba(255,255,255,0.2); }
-  .badges { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
-  .badge { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); padding: 10px 18px; border-radius: 2px; }
-  .prueba { background: rgba(255,255,255,0.06); border-left: 2px solid rgba(255,255,255,0.2); padding: 26px 30px; margin-bottom: 24px; }
-  .prueba-t { font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.88); font-style: italic; line-height: 1.6; margin-bottom: 10px; }
-  .prueba-m { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.75); }
-  .form-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 44px 48px; }
-  .fg { margin-bottom: 24px; }
-  .fg label { display: block; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 12px; }
-  .fg input, .fg select { width: 100%; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); border-radius: 2px; padding: 18px 22px; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--w); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
-  .fg input::placeholder { color: rgba(255,255,255,0.6); }
-  .fg input:focus, .fg select:focus { border-color: var(--t); }
-  .fg select option { background: var(--td); color: var(--w); }
-  .cancel-nota { font-size: 20px; color: rgba(255,255,255,0.9); margin: 20px 0; font-style: italic; padding: 16px 20px; background: rgba(255,255,255,0.1); border-radius: 2px; line-height: 1.65; }
-  .btn-submit { width: 100%; background: var(--t); color: var(--w); border: none; cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 22px; border-radius: 2px; transition: background 0.2s; }
-  .btn-submit:hover { background: #2da0a0; }
-  .confirm { display: none; text-align: center; padding: 60px 24px; }
-  .confirm .check { font-size: 60px; color: var(--t); margin-bottom: 20px; }
-  .confirm h3 { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--w); margin-bottom: 16px; }
-  .confirm p { font-size: 24px; font-weight: 300; color: rgba(255,255,255,0.68); line-height: 1.75; }
 
   /* FOOTER */
   footer { background: var(--n); padding: 64px 48px; text-align: center; }
@@ -139,49 +117,44 @@
     .hero-h1 { font-size: 38px; margin-bottom: 14px; }
     .hero-sub { font-size: 20px; line-height: 1.55; margin-bottom: 22px; }
     .btn { padding: 15px 34px; }
-    .filo-grid { grid-template-columns: 1fr; }
-    .filo-item { border-right: none !important; }
-    .filo-item:not(:last-child) { border-bottom: 1px solid rgba(196,168,130,0.3) !important; }
     .eq-inner { grid-template-columns: 1fr; }
     .eq-foto { height: 300px; }
     .eq-texto { padding: 44px 28px; }
-    .hor-grid { grid-template-columns: 1fr; }
     .prec-grid { grid-template-columns: 1fr; }
-    .form-wrap { padding: 30px 24px; }
   }
 </style>
 
   <!-- SEO -->
-  <meta name="google-site-verification" content="g1k3jGIfjvrv2o0xOlAYyPJcsqfuTXhWI1szzVGploQ">
-  <meta name="description" content="Beach yoga in Dénia, Spain. Weekly Saturday class at Los Baños Sunshine. All levels welcome, no experience needed. From 15€.">
-  <meta name="keywords" content="yoga Dénia, Dénia yoga classes, beach yoga Dénia, yoga by the sea Dénia, yoga Los Baños Sunshine, Saturday yoga Dénia, yoga costa blanca">
+  <meta name="description" content="Yoga in Dénia, by the sea. Private classes, Saturdays on the beach, monthly Deep Yoga &amp; Brunch, and Yoga For Life. All levels, no experience needed.">
+  <meta name="keywords" content="yoga Denia, yoga in Denia, yoga classes Denia, beach yoga Denia, private yoga Denia, yoga Los Baños Sunshine, Saturday yoga Denia, yoga costa blanca">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Viva Community Yoga">
   <link rel="canonical" href="https://vivacommunityyoga.com/en/">
 <link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/">
 <link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Viva Community Yoga · Beach Yoga in Dénia">
-  <meta property="og:description" content="Beach yoga in Dénia, Spain. Weekly Saturday class at Los Baños Sunshine. All levels welcome. From 15€.">
+  <meta property="og:title" content="Viva Community Yoga · Yoga in Dénia, by the sea">
+  <meta property="og:description" content="Private classes, Saturdays on the beach, monthly Deep Yoga &amp; Brunch, and Yoga For Life. All levels, no experience needed.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vivacommunityyoga.com">
-  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://vivacommunityyoga.com/en/">
+  <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="Viva Community Yoga">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Viva Community Yoga · Beach Yoga in Dénia">
-  <meta name="twitter:description" content="Beach yoga classes at Los Baños Sunshine, Dénia, every Saturday. From 15€. Book online.">
+  <meta name="twitter:title" content="Viva Community Yoga · Yoga in Dénia, by the sea">
+  <meta name="twitter:description" content="Private classes, Saturdays on the beach, Deep Yoga & Brunch and Yoga For Life. Dénia.">
 
-  <!-- Structured Data — Local Business -->
+  <!-- Structured Data, Local Business -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Viva Community Yoga",
-    "description": "Beach yoga in Dénia, Spain. Weekly beach yoga class at Los Baños Sunshine every Saturday, for all levels.",
-    "url": "https://vivacommunityyoga.com",
+    "description": "Yoga in Dénia, by the sea. Private classes, weekly beach class at Los Baños Sunshine, monthly Deep Yoga & Brunch, and Yoga For Life, for all levels.",
+    "url": "https://vivacommunityyoga.com/en/",
     "telephone": "+3434635993658",
     "email": "vivacommunityyoga@gmail.com",
     "address": {
@@ -234,158 +207,177 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
 <body>
 
 
-
 <section class="hero" style="position:relative;">
   <div style="position:absolute;top:24px;right:24px;z-index:10;font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:2px;">
       <a href="/" style="color:rgba(255,255,255,0.5);text-decoration:none;font-weight:400;">ES</a>
       <span style="color:rgba(255,255,255,0.4);margin:0 6px;">·</span>
       <a href="/en/" style="color:#3DBBBB;text-decoration:none;font-weight:700;">EN</a>
     </div>
-  <img class="hero-bg" src="/images/hero-bg.jpeg" width="1000" height="1333" alt="Beach yoga in Dénia" fetchpriority="high"/>
+  <img class="hero-bg" src="../images/hero-bg.jpeg" width="1000" height="1333" alt="Yoga by the sea in Dénia" fetchpriority="high"/>
   <div class="hero-ov"></div>
   <svg class="hero-wave" viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none">
     <path d="M0 20 Q180 0 360 20 Q540 40 720 20 Q900 0 1080 20 Q1260 40 1440 20 L1440 40 L0 40 Z" fill="#F5EFE4"/>
   </svg>
   <div class="hero-content">
-    <img class="hero-logo" src="/images/logo.png" width="300" height="300" alt="Viva Community Yoga" fetchpriority="high"/>
-    <span class="hero-eyebrow">Dénia · Los Baños Sunshine</span>
+    <img class="hero-logo" src="../images/logo.png" width="300" height="300" alt="Viva Community Yoga" fetchpriority="high"/>
+    <span class="hero-eyebrow">Dénia</span>
     <h1 class="hero-h1">Yoga in Dénia,<br>by the sea.</h1>
     <p class="hero-eyebrow" style="margin-top:8px;font-style:italic;font-weight:300;letter-spacing:2px;text-transform:none;">One hour that changes the rest of your day.</p>
-    <p class="hero-sub">Beach yoga class every Saturday at 8:00am, at Los Baños Sunshine. All levels welcome, no experience needed.</p>
-    <a href="#reserva" class="btn">Book your spot</a>
-    <a href="https://wa.me/34635993658?text=Hi%2C%20I%27m%20interested%20in%20joining%20a%20yoga%20class%20at%20Los%20Ba%C3%B1os%20Sunshine.%20Do%20you%20have%20spots%20available%3F" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1ea84e;color:#fff;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;border-radius:2px;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent;white-space:nowrap;">
+    <p class="hero-sub">Saturdays, 8:00–9:00am on the beach. €15 per class.</p>
+    <a href="/en/beach-yoga.html#reserva" class="btn">Reserve your spot</a>
+    <a href="https://wa.me/34635993658?text=Hi%2C%20I%27m%20interested%20in%20joining%20a%20yoga%20class%20at%20Los%20Ba%C3%B1os%20Sunshine.%20Do%20you%20have%20space%3F" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1ea84e;color:#fff;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;border-radius:2px;text-decoration:none;margin-top:10px;-webkit-tap-highlight-color:transparent;white-space:nowrap;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp
     </a>
-  </div>
-</section>
-
-<section style="background:var(--cr)">
-  <div class="container">
-    <span class="ey">Our philosophy</span>
-    <h2 class="h2">We're not here to be perfect.</h2>
-    <div class="line"></div>
-    <p class="body">One different hour in the middle of your holiday. No effort, no competing, no pressure. Just you, the sea and your breath.</p>
-    <div class="filo-grid">
-      <div class="filo-item"><div class="filo-no">We're not here to compete.</div><div class="filo-si">We're here to breathe.</div></div>
-      <div class="filo-item"><div class="filo-no">You're not here to do yoga.</div><div class="filo-si">You're here to feel different when the class ends.</div></div>
-      <div class="filo-item"><div class="filo-no">We're not here to perform better.</div><div class="filo-si">We're here to enjoy more.</div></div>
-      <div class="filo-item"><div class="filo-no">No prior experience needed.</div><div class="filo-si">Just bring some curiosity.</div></div>
-    </div>
+    <p style="font-size:15px;font-weight:300;color:rgba(255,255,255,0.55);margin-top:24px;margin-bottom:8px;max-width:480px;">Also: private classes, monthly Deep Yoga &amp; Brunch, and Yoga For Life, our training programme starting October.</p>
   </div>
 </section>
 
 <section class="pq">
   <div class="container">
-    <span class="ey">Who is it for?</span>
-    <h2 class="h2">For those who want a real holiday.</h2>
+    <span class="ey">Who is this for?</span>
+    <h2 class="h2">If you came here looking for yoga in Dénia, we understand.</h2>
     <div class="line"></div>
-    <ul class="pq-list">
-      <li>For those who want to add something special to their days in Dénia.</li>
-      <li>For those who enjoy starting the day with energy and calm before heading to the beach.</li>
-      <li>For those travelling alone or as a couple looking for their own moment.</li>
-      <li>For those who practise yoga at home and want to keep up their practice this summer.</li>
-      <li>For those who have never tried yoga but have always been curious.</li>
-    </ul>
-  </div>
-</section>
+    <div style="max-width:720px;margin:0 auto;text-align:left;">
+      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:18px;">Maybe you've never taken a class and have no idea where to start.</p>
+      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:18px;">Maybe what you need is simply to stop. To leave the noise of the week behind, breathe, and give yourself an hour to come back to yourself.</p>
+      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:18px;">Maybe you're visiting Dénia and don't want to stop practising while you're here.</p>
+      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:18px;">Or maybe you've been doing yoga for years and feel ready to go beyond the postures: to understand better what happens in your mind, how you relate to others, what you do with what you feel, and how to bring all of that into your life.</p>
+      <p style="font-size:26px;font-weight:600;line-height:1.6;color:var(--td);margin-bottom:8px;">You don't need to have it figured out.<br>You can come for any of these reasons.</p>
+      <p style="font-size:26px;font-weight:300;line-height:1.8;color:var(--tx);margin-bottom:0;">Come to practise. Notice how you feel. And discover what happens when you make space for yourself.</p>
+    </div>
 
-<section class="equipo">
-  <div class="eq-inner">
-    <div class="eq-foto"><img src="/images/equipo.jpg" width="700" height="933" alt="Nati y Naylín, profesoras de Viva Community Yoga" loading="lazy" decoding="async"/></div>
-    <div class="eq-texto">
-      <span class="ey">About us</span>
-      <h2 class="h2">Two teachers.<br>One shared space.</h2>
-      <div class="line"></div>
-      <p class="body">We are Nati and Naylín. We have been teaching yoga for over a decade and this summer we are sharing it here, by the sea. We trained in India and Spain and have taught in our own schools, at conferences, in very different places. And this — a mat, the sea in front of us, sharing it with you — is what we love most. It brings us back to the simple things, to the origin. If you come, even just once, you will already be part of our family, this Community that wants to enjoy that hour without demands, without phones, without rush.</p>
+    <div style="max-width:720px;margin:56px auto 0;text-align:left;background:var(--td);border-radius:4px;padding:36px 40px;">
+      <p style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:6px;">And maybe we're not for you.</p>
+      <p style="font-size:19px;font-weight:300;color:rgba(255,255,255,0.55);margin-bottom:18px;">And that's okay too.</p>
+      <p style="font-size:20px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.7;margin-bottom:16px;">There are many teachers and spaces to practise yoga in Dénia. We know quite a few of them, and we believe every person needs something different.</p>
+      <p style="font-size:20px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.7;margin-bottom:16px;">So if, after getting to know you, we think another practice, teacher, or even another space might suit you better, we'll tell you.</p>
+      <p style="font-size:21px;font-weight:500;color:#fff;line-height:1.7;margin-bottom:24px;">We don't just want you to find a yoga class.<br>We want you to find the yoga that makes sense for you.</p>
+      <a href="https://wa.me/34635993658?text=Hi%2C%20I%27d%20like%20to%20talk%20to%20you%20before%20signing%20up." target="_blank" style="display:inline-block;font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#3DBBBB;text-decoration:none;border-bottom:1px solid rgba(61,187,187,0.4);">Talk to us →</a>
     </div>
-  </div>
-</section>
-
-
-<section style="background:var(--n);padding:0;overflow:hidden;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:480px;">
-    <div style="position:relative;overflow:hidden;">
-      <img src="/images/losbanos-1.jpg" width="800" height="533" alt="Los Baños Sunshine terrace by the sea" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" decoding="async"/>
-    </div>
-    <div style="position:relative;overflow:hidden;">
-      <img src="/images/losbanos-2.jpg" width="800" height="560" alt="Desayuno saludable Los Baños Sunshine" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" loading="lazy" decoding="async"/>
-    </div>
-  </div>
-  <div style="background:var(--n);padding:52px 48px;text-align:center;">
-    <span style="font-size:13px;letter-spacing:6px;text-transform:uppercase;color:var(--t);font-weight:600;display:block;margin-bottom:16px;">After the class</span>
-    <p style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--w);line-height:1.2;max-width:680px;margin:0 auto 16px;">And after the class,<br>the table is set.</p>
-    <p style="font-size:22px;font-weight:300;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto;line-height:1.75;">Los Baños Sunshine welcomes you with breakfast by the sea. Because the experience doesn't end when you roll up your mat.</p><p style="font-size:18px;font-weight:300;color:rgba(255,255,255,0.55);max-width:560px;margin:16px auto 0;line-height:1.7;">Must be booked the day before. Price: 15€ per pack.</p>
-
-  <div style="display:flex;gap:24px;max-width:900px;margin:32px auto 0;flex-wrap:wrap;justify-content:center;">
-    <!-- Sweet Pack -->
-    <div style="flex:1;min-width:240px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:28px 24px;">
-      <div style="font-family:Georgia,serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:12px;">Sweet Pack</div>
-      <div style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:#FFFFFF;margin-bottom:16px;">Açaí Bowl</div>
-      <ul style="list-style:none;margin:0 0 20px;padding:0;">
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Açaí Green &amp; Berry</li>
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Coffee or tea</li>
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;">Orange juice</li>
-      </ul>
-      <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#C4A882;">15€</div>
-    </div>
-    <!-- Savoury Pack -->
-    <div style="flex:1;min-width:240px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:28px 24px;">
-      <div style="font-family:Georgia,serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:12px;">Savoury Pack</div>
-      <div style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:#FFFFFF;margin-bottom:16px;">Mediterranean Mollete</div>
-      <ul style="list-style:none;margin:0 0 20px;padding:0;">
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Acorn-fed ham, tomato and olive oil</li>
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Coffee or tea</li>
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;">Orange juice</li>
-      </ul>
-      <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#C4A882;">15€</div>
-    </div>
-    <!-- Pack Vegetariano -->
-    <div style="flex:1;min-width:240px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:28px 24px;">
-      <div style="font-family:Georgia,serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:12px;">Pack Vegetariano</div>
-      <div style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:#FFFFFF;margin-bottom:16px;">Scrambled Eggs</div>
-      <ul style="list-style:none;margin:0 0 20px;padding:0;">
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">With toast, tomato and olive oil</li>
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Coffee or tea</li>
-        <li style="font-family:Georgia,serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);padding:6px 0;">Orange juice</li>
-      </ul>
-      <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#C4A882;">15€</div>
-    </div>
-  </div>
   </div>
 </section>
 
 <section style="background:var(--cr)">
   <div class="container">
-    <span class="ey">When</span>
-    <h2 class="h2">Class schedule.</h2>
+    <span class="ey">How to start</span>
+    <h2 class="h2">4 ways to practise with Viva Community Yoga.</h2>
     <div class="line"></div>
-    <div class="hor-grid" style="grid-template-columns:1fr;max-width:340px;">
-      <div class="hor-card"><div class="hor-dia">Saturday</div><div class="hor-hora">8:00h</div><div class="hor-info">Weekly beach yoga class</div></div>
+    <p class="body" style="margin-bottom:36px;">None is more important than the others, it depends on what you need right now: a private class, a weekly beach class, a monthly Deep Yoga &amp; Brunch, or Yoga For Life.</p>
+    <div class="prec-grid" style="margin-top:0;">
+
+      <div style="background:var(--w);border:1px solid rgba(196,168,130,0.3);border-radius:2px;padding:32px 30px;">
+        <div style="font-size:13px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--t);margin-bottom:10px;">1. Private class</div>
+        <p style="font-size:21px;font-weight:300;color:var(--tx);line-height:1.7;margin-bottom:16px;">A practice designed just for you, at your own pace and your own moment. In your own space or by the sea.</p>
+        <a href="/en/private.html" style="font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--td);text-decoration:none;border-bottom:1px solid rgba(30,74,82,0.3);">See private classes →</a>
+      </div>
+
+      <div style="background:var(--w);border:1px solid rgba(196,168,130,0.3);border-radius:2px;padding:32px 30px;">
+        <div style="font-size:13px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--t);margin-bottom:10px;">2. Beach yoga, every week</div>
+        <p style="font-size:21px;font-weight:300;color:var(--tx);line-height:1.7;margin-bottom:16px;">An hour to come back to your body, breathe, and practise, by the sea.</p>
+        <a href="/en/beach-yoga.html" style="font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--td);text-decoration:none;border-bottom:1px solid rgba(30,74,82,0.3);">See schedule →</a>
+      </div>
+
+      <div style="background:var(--w);border:1px solid rgba(196,168,130,0.3);border-radius:2px;padding:32px 30px;">
+        <div style="font-size:13px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--t);margin-bottom:10px;">3. Deep Yoga &amp; Brunch</div>
+        <p style="font-size:21px;font-weight:300;color:var(--tx);line-height:1.7;margin-bottom:16px;">A slower, deeper practice. Afterwards, brunch and a workshop that starts from a different concept from the yoga tradition each month.</p>
+        <a href="/en/beach-yoga.html#deep-brunch" style="font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--td);text-decoration:none;border-bottom:1px solid rgba(30,74,82,0.3);">See details →</a>
+      </div>
+
     </div>
 
+    <div style="margin-top:14px;background:var(--td);border-radius:2px;padding:36px 34px;">
+      <div style="font-size:13px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#3DBBBB;margin-bottom:10px;">4. Yoga For Life</div>
+      <p style="font-size:23px;font-weight:300;color:rgba(255,255,255,0.88);line-height:1.7;margin-bottom:18px;">Yoga is not the destination, it's the path. Our training programme, starting October.</p>
+      <a href="/en/yoga-for-life.html" style="font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.4);">Discover Yoga For Life →</a>
+    </div>
+  </div>
+</section>
+
+<section class="equipo">
+  <div class="eq-inner">
+    <div class="eq-foto"><img src="../images/equipo.jpg" width="700" height="933" alt="Nati and Naylín, Viva Community Yoga teachers" loading="lazy" decoding="async"/></div>
+    <div class="eq-texto">
+      <span class="ey">Who we are</span>
+      <h2 class="h2">Two teachers.<br>One shared space.</h2>
+      <div class="line"></div>
+      <p class="body">We're Nati and Naylín. We've been teaching yoga for over a decade, and this summer we share it here, by the sea. We trained in India and in Spain, and have taught in our own schools, at conferences, in very different places. And this (a mat, the sea ahead, sharing it with you) is what we love. It brings us back to simplicity, to the origin. If you come, even just once, you'll already be part of our family, of this Community that wants to enjoy that hour without demands, without phones, without rushing.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cr)">
+  <div class="container">
+    <span class="ey">Yoga in Dénia</span>
+    <h2 class="h2">Yoga in Dénia, all year round.</h2>
+    <div class="line"></div>
+    <p class="body">Viva Community Yoga is a yoga space in Dénia where you can practise all year, in a weekly class, in a private session, or in our monthly Deep Yoga &amp; Brunch. We're at Los Baños Sunshine, Carrer Riu Grande 12, and we work with anyone who wants to start practising, who already practises and wants to go deeper, or who's simply looking for a space to stop, breathe, and feel accompanied.</p>
+    <div style="margin-top:24px;font-size:22px;font-weight:300;color:var(--tx);line-height:2;">
+      📍 Los Baños Sunshine · Carrer Riu Grande 12, Dénia<br>
+      🕐 Saturdays 8:00am · Deep Yoga &amp; Brunch, last Saturday of the month
+    </div>
     <a href="https://maps.google.com/?q=Los+Baños+Sunshine+Denia+Carrer+Riu+Grande+12" target="_blank" class="mapa-btn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Get directions
     </a>
-    <p class="mapa-nota">Los Baños Sunshine · Carrer Riu Grande 12, Dénia</p>
-    <div style="margin-top:60px;">
-      <span class="ey">Pricing</span>
-      <div class="prec-grid">
-        <div class="prec-card"><div class="prec-label">Drop-in</div><div class="prec-num">15€</div><div class="prec-unit">per class</div><div class="prec-sub">First time or short stay</div></div>
-        <div class="prec-card feat"><div class="prec-label">3-class pass</div><div class="prec-num">40€</div><div class="prec-unit">13€ / class</div><div class="prec-sub">One-week stay</div></div>
-        <div class="prec-card"><div class="prec-label">5-class pass</div><div class="prec-num">60€</div><div class="prec-unit">12€ / class</div><div class="prec-sub">Longer stay or returning</div></div>
+  </div>
+</section>
+
+
+<section style="background:var(--n);padding:0;overflow:hidden;" id="horarios">
+  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:280px;">
+    <div style="position:relative;overflow:hidden;">
+      <img src="../images/losbanos-1.jpg" width="800" height="533" alt="Los Baños Sunshine terrace by the sea" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" decoding="async"/>
+    </div>
+    <div style="position:relative;overflow:hidden;">
+      <img src="../images/losbanos-2.jpg" width="800" height="560" alt="Healthy breakfast at Los Baños Sunshine" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" loading="lazy" decoding="async"/>
+    </div>
+  </div>
+  <div style="background:var(--n);padding:56px 48px;text-align:center;">
+    <span style="font-size:13px;letter-spacing:6px;text-transform:uppercase;color:var(--t);font-weight:600;display:block;margin-bottom:16px;">When and how much</span>
+    <p style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--w);line-height:1.2;max-width:680px;margin:0 auto 16px;">Beach yoga in Dénia, every Saturday.</p>
+    <p style="font-size:21px;font-weight:300;color:rgba(255,255,255,0.65);max-width:600px;margin:0 auto 28px;line-height:1.7;">From 19 September to 19 December. Los Baños Sunshine, 8:00am, an hour to come back to your body, breathe, and practise. All levels, no experience needed.</p>
+
+    <div style="display:flex;gap:14px;max-width:820px;margin:0 auto;flex-wrap:wrap;justify-content:center;">
+      <div style="flex:1;min-width:160px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.3);border-radius:4px;padding:20px 16px;">
+        <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:8px;">Single class</div>
+        <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;">€15</div>
       </div>
-      <div style="margin-top:24px;background:#1E4A52;border-radius:4px;padding:28px 32px;color:#fff;">
-        <a href="/en/private.html" style="font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:8px;text-decoration:none;display:block;">Private class · See details →</a>
-        <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#fff;line-height:1;">65€</div>
-        <div style="font-size:18px;color:rgba(255,255,255,0.6);margin:6px 0 16px;">per person · +15€ each additional person</div>
-        <div style="font-size:19px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.7;">At your accommodation or on the beach. We adapt the class to your level, your body and what you need that day.</div>
+      <div style="flex:1;min-width:160px;background:rgba(61,187,187,0.12);border:1px solid #3DBBBB;border-radius:4px;padding:20px 16px;">
+        <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#3DBBBB;margin-bottom:8px;">3-class pass</div>
+        <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;">€40</div>
       </div>
-      <div class="prec-nota">
-<p>Free cancellation with more than 24h notice.<br>Bookings must be made at least 12 hours in advance (a booking at 10pm is not valid for the 7:30h class the following morning).</p>
+      <div style="flex:1;min-width:160px;background:rgba(255,255,255,0.07);border:1px solid rgba(196,168,130,0.3);border-radius:4px;padding:20px 16px;">
+        <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:8px;">5-class pass</div>
+        <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;">€60</div>
       </div>
     </div>
+
+    <div id="deep-brunch" style="margin-top:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:28px 32px;max-width:640px;margin-left:auto;margin-right:auto;text-align:left;">
+      <div style="font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#3DBBBB;margin-bottom:8px;">Four dates this season</div>
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:8px;">Deep Yoga &amp; Brunch · €60</div>
+      <p style="font-size:18px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.6;margin-bottom:14px;">26 September, 17 October, 14 November and 5 December, 8:00–11:00am. On these Saturdays there's no regular class: a slower, deeper practice, with breakfast and a workshop that starts from a different concept from the yoga tradition each month.</p>
+      <a href="/en/beach-yoga.html?tipo=deep-brunch#reserva" style="display:inline-flex;align-items:center;gap:8px;background:#3DBBBB;color:#fff;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:12px 22px;border-radius:2px;text-decoration:none;">Reserve my spot →</a>
+      <a href="https://wa.me/34635993658?text=Hi%2C%20I%27m%20interested%20in%20the%20next%20Deep%20Yoga%20%26%20Brunch.%20Can%20you%20tell%20me%20more%3F" target="_blank" style="display:inline-block;margin-left:10px;font-size:14px;color:rgba(255,255,255,0.55);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.25);">or ask on WhatsApp</a>
+    </div>
+
+    <div style="margin-top:16px;background:rgba(30,74,82,0.5);border:1px solid rgba(196,168,130,0.25);border-radius:4px;padding:24px 32px;max-width:640px;margin-left:auto;margin-right:auto;text-align:left;">
+      <a href="/en/private.html" style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#3DBBBB;text-decoration:none;display:block;margin-bottom:6px;">Private class</a>
+      <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;display:inline;">€65</div>
+      <span style="font-size:16px;color:rgba(255,255,255,0.55);"> per person, +€15 per extra person, at your place or on the beach →</span>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a href="https://maps.google.com/?q=Los+Baños+Sunshine+Denia+Carrer+Riu+Grande+12" target="_blank" class="mapa-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Get directions
+      </a>
+      <p style="font-size:18px;color:rgba(255,255,255,0.5);margin-top:12px;font-style:italic;">Los Baños Sunshine · Carrer Riu Grande 12, Dénia</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.4);margin-top:16px;">Free cancellation with more than 24h notice. Bookings require at least 12h notice.</p>
+    </div>
+
+    <a href="/en/beach-yoga.html#reserva" class="btn" style="margin-top:32px;">Reserve my spot</a>
+    <p style="font-size:15px;color:rgba(255,255,255,0.4);margin-top:14px;">Visiting in summer? On <a href="/en/beach-yoga.html#verano" style="color:#3DBBBB;">this page</a> you'll find our fixed high-season schedule.</p>
   </div>
 </section>
 
@@ -394,7 +386,7 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
 
 <section class="test-section" style="background:#F5EFE4;padding:80px 0;">
   <div class="container" style="text-align:center;margin-bottom:48px;">
-    <span class="ey">What they say</span>
+    <span class="ey">What people say</span>
     <h2 class="h2">They've already been here.</h2>
     <div class="line" style="margin:0 auto;"></div>
   </div>
@@ -405,12 +397,11 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       <!-- Sara -->
       <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
         <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="/images/testimonio-sara.jpg.png" alt="Sara en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <img src="../images/testimonio-sara.jpg.png" alt="Sara at a yoga class in Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
           <div style="padding:32px 36px 36px;">
             <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Starting the day like this — by the sea, with yourself, nothing else — fills you with peace and calm that turns into energy for the whole day. A wonderful experience. 💚</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Starting the day this way, by the sea, alone with myself, nothing else… it's full of peace and calm that turns into energy for the whole day. A wonderful experience. 💚</p>
             <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Sara</div>
-
           </div>
         </div>
       </div>
@@ -418,12 +409,11 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       <!-- Caroline -->
       <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
         <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="/images/testimonio-caroline.jpg.png" alt="Caroline en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <img src="../images/testimonio-caroline.jpg.png" alt="Caroline at a yoga class in Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
           <div style="padding:32px 36px 36px;">
             <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">I had pain every day and needed to calm down. The session truly helped me decompress because the teacher took my stiffness into account and invited me to let go without any pressure — simply to enjoy a moment of wellbeing.</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">I had pain every day and needed to calm down. The session let me truly decompress because the teacher took my stiffness into account and invited me to let go without any pressure, simply enjoying a moment of wellbeing.</p>
             <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Caroline</div>
-
           </div>
         </div>
       </div>
@@ -431,12 +421,11 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       <!-- Bea -->
       <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
         <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="/images/testimonio-bea.jpg.png" alt="Bea en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <img src="../images/testimonio-bea.jpg.png" alt="Bea at a yoga class in Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
           <div style="padding:32px 36px 36px;">
             <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">A space to feel welcomed and cared for. Each session is an invitation to leave everything outside and return to the present moment.</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">A space to feel welcomed and cared for. Every session is an invitation to leave everything else outside and return to the present moment.</p>
             <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Bea</div>
-
           </div>
         </div>
       </div>
@@ -444,12 +433,11 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       <!-- Emma -->
       <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
         <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="/images/testimonio-emma.jpg.png" alt="Emma en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <img src="../images/testimonio-emma.jpg.png" alt="Emma at a yoga class in Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
           <div style="padding:32px 36px 36px;">
             <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
             <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">The morning yoga session was lovely! Strength to both your body and mind. You can join as an experienced practitioner or as a complete beginner. The finishing relaxation left you energized for the rest of the day. Strongly recommend!</p>
             <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Emma</div>
-
           </div>
         </div>
       </div>
@@ -457,12 +445,11 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       <!-- Alice -->
       <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
         <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="/images/testimonio-alice.jpg.png" alt="Alice en clase de yoga en la playa de Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <img src="../images/testimonio-alice.jpg.png" alt="Alice at a beach yoga class in Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
           <div style="padding:32px 36px 36px;">
             <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
             <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">I joined the 07:30 sunrise yoga session at Los Baños Sunshine, and it is honestly one of the highlights of my stay in Dénia. Starting the day with the sound of the waves, the sea breeze, and the soft sun created such a peaceful atmosphere. The class was welcoming, relaxing, and suitable for every level. I left feeling completely refreshed and full of positive energy. If you're visiting Dénia, I can highly recommend this experience.</p>
             <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">Alice</div>
-
           </div>
         </div>
       </div>
@@ -470,12 +457,11 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
       <!-- David -->
       <div style="min-width:100%;box-sizing:border-box;padding:0 24px;">
         <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 20px rgba(30,74,82,0.08);">
-          <img src="/images/testimonio-david.jpg.png" alt="David Busto en clase de yoga en Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
+          <img src="../images/testimonio-david.jpg.png" alt="David Busto at a yoga class in Dénia" style="width:100%;aspect-ratio:1/1;width:100%;object-fit:cover;object-position:center top;" width="760" height="760" loading="lazy" decoding="async"/>
           <div style="padding:32px 36px 36px;">
             <div style="color:#3DBBBB;font-size:20px;letter-spacing:3px;margin-bottom:12px;">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Gracias a la clase de yoga consigo soltar todo lo que se va acumulando durante la semana en el cuerpo y en la mente. La clase se pasa muy rápido y me ayuda a despejar la mente para volver a mi propósito con energía renovada.</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#444;line-height:1.8;font-style:italic;margin-bottom:20px;">Thanks to the yoga class I manage to let go of everything that builds up during the week, in body and mind. The class flies by, and it helps me clear my head to return to my purpose with renewed energy.</p>
             <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#1E4A52;letter-spacing:2px;text-transform:uppercase;">David Busto</div>
-
           </div>
         </div>
       </div>
@@ -512,272 +498,27 @@ src="https://www.facebook.com/tr?id=1148864329659008&ev=PageView&noscript=1"
     }, {passive:true});
   </script>
 </section>
-<section style="background:var(--cr);padding:32px 48px;text-align:center;">
-  <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--ts);">
-    Any questions before booking? Check our
-    <a href="/en/faq.html" style="color:var(--t);text-decoration:none;border-bottom:1px solid rgba(61,187,187,0.4);">FAQ</a>.
-  </p>
-</section>
-<section class="reserva" id="reserva">
+<section style="background:var(--td);padding:80px 48px;text-align:center;">
   <div class="container">
-    <span class="ey">Book</span>
-    <h2 class="h2">Choose your class and secure your spot.</h2>
-    <div class="line"></div>
-    <p class="body">Choose your class, pay online and your spot is confirmed instantly.</p>
-
-    <div class="prueba">
-      <p class="prueba-t">"It was the highlight of my day — and what made the rest of the day even better."</p>
-      <p class="prueba-m">That's what we want you to say when you leave.</p>
-    </div>
-
-    <div class="form-wrap" id="form-wrap">
-
-      <!-- Tipo -->
-      <div class="fg">
-        <label for="tipo">Type of class</label>
-        <select id="tipo" required onchange="mostrarCampos()">
-          <option value="">Choose...</option>
-          <option value="grupal">Group class · from 15€</option>
-          <option value="privada">Private class · from 65€</option>
-        </select>
-      </div>
-
-      <!-- Name -->
-      <div class="fg">
-        <label for="nombre">Your name</label>
-        <input type="text" id="nombre" placeholder="Name" required/>
-      </div>
-
-      <!-- Teléfono -->
-      <div class="fg">
-        <label for="telefono">Your WhatsApp</label>
-        <input type="tel" id="telefono" placeholder="600 000 000" required/>
-      </div>
-
-      <!-- Campos clase grupal -->
-      <div id="campos-grupal" style="display:none;">
-        <div class="fg">
-          <label for="fecha">What Saturday would you like to come?</label>
-          <input type="date" id="fecha" onchange="actualizarHoras()"/>
-        </div>
-        <div class="fg">
-          <label for="hora">Time</label>
-          <select id="hora">
-            <option value="">First choose a date...</option>
-          </select>
-        </div>
-        <div class="fg">
-          <label for="bono">Price</label>
-          <select id="bono">
-            <option value="suelta">Drop-in · 15€</option>
-            <option value="bono3">3-class pass · 40€</option>
-            <option value="bono5">5-class pass · 60€</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Campos clase privada -->
-      <div id="campos-privada" style="display:none;">
-        <div class="fg">
-          <label for="personas-privada">Number of people</label>
-          <select id="personas-privada" onchange="actualizarPrecioPrivada()">
-            <option value="1" data-precio="65" data-stripe="https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t">1 person · 65€</option>
-            <option value="2" data-precio="80" data-stripe="https://buy.stripe.com/dRm4gAcTi5TxaQScpYdZ60u">2 people · 80€</option>
-            <option value="mas" data-precio="" data-stripe="">More than 2 people</option>
-          </select>
-        </div>
-        <div id="precio-privada-info" style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#3DBBBB;text-align:center;margin:8px 0 16px;">
-          Total: 65€
-        </div>
-        <div id="aviso-mas-personas" style="display:none;background:rgba(61,187,187,0.12);border:1px solid rgba(61,187,187,0.3);color:rgba(255,255,255,0.85);padding:14px 18px;border-radius:2px;font-size:18px;line-height:1.65;margin-bottom:8px;">
-          For groups of more than 2 people, message us on WhatsApp for pricing. 👉 <a href="https://wa.me/34635993658?text=Hi%2C%20I%27m%20interested%20in%20a%20private%20class%20for%20more%20than%202%20people." target="_blank" style="color:#3DBBBB;">Message us here</a>
-        </div>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;margin:8px 0 16px;">
-          After payment we will contact you on WhatsApp to arrange the time and location.
-        </p>
-      </div>
-
-      <div id="error-12h" style="display:none;background:rgba(220,53,69,0.15);border:1px solid rgba(220,53,69,0.4);color:#ff6b7a;padding:14px 18px;border-radius:2px;font-size:17px;margin-bottom:16px;">
-        ⚠️ This class starts in less than 12 hours. Please choose another date or message us directly on WhatsApp.
-      </div>
-
-      <div class="cancel-nota">⚠️ Free cancellation with more than 24h notice.<br>Bookings must be made at least 12 hours in advance.</div>
-
-      <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.75);text-align:center;margin-bottom:16px;">🔒 Secure payment · Instant confirmation · Free cancellation up to 24h before</p>
-
-      <button id="sub-btn" onclick="procesarBook()" style="width:100%;background:#3DBBBB;color:#fff;border:none;border-radius:2px;padding:18px 32px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:3px;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:background 0.2s;" onmouseover="this.style.background='#2da0a0'" onmouseout="this.style.background='#3DBBBB'">Pay and book your spot →</button>
-    </div>
-
-    <div id="form-ok" style="display:none;text-align:center;padding:48px 0;">
-      <div style="font-size:48px;margin-bottom:16px;">🌊</div>
-      <p style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;margin-bottom:8px;">Spot booked!</p>
-      <p style="font-size:18px;color:rgba(255,255,255,0.7);">We've sent you the confirmation by email.</p>
-    </div>
+    <p style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,3.5vw,38px);font-weight:700;color:#fff;line-height:1.3;max-width:640px;margin:0 auto 12px;">Yoga is not the destination, it's the path.</p>
+    <p style="font-size:19px;font-weight:300;color:rgba(255,255,255,0.55);margin-bottom:36px;">Have questions before booking? Check our <a href="/en/faq.html" style="color:#3DBBBB;text-decoration:none;border-bottom:1px solid rgba(61,187,187,0.4);">FAQ</a>.</p>
+    <a href="/en/beach-yoga.html" class="btn">See schedule &amp; book</a>
   </div>
-
-  <script>
-  var STRIPE = {
-    suelta: 'https://buy.stripe.com/00w28s3iIgyb9MOey6dZ60q',
-    bono3:  'https://buy.stripe.com/00weVe06w3Lpf78blUdZ60r',
-    bono5:  'https://buy.stripe.com/8x2dRa06w6XB9MOblUdZ60s',
-    privada:'https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t'
-  };
-  var HORARIOS = { 6:['8:00h'] };
-
-  function mostrarCampos() {
-    var tipo = document.getElementById('tipo').value;
-    document.getElementById('campos-grupal').style.display = tipo === 'grupal' ? 'block' : 'none';
-    document.getElementById('campos-privada').style.display = tipo === 'privada' ? 'block' : 'none';
-    if (tipo === 'grupal') {
-      var hoy = new Date();
-      document.getElementById('fecha').min = hoy.toISOString().split('T')[0];
-    }
-  }
-
-  function actualizarHoras() {
-    var fechaVal = document.getElementById('fecha').value;
-    var horaSelect = document.getElementById('hora');
-    horaSelect.innerHTML = '<option value="">Choose a time...</option>';
-    if (!fechaVal) return;
-    var dia = new Date(fechaVal + 'T00:00:00').getDay();
-    var horas = HORARIOS[dia];
-    if (!horas) {
-      horaSelect.innerHTML = '<option value="">No class on this day — classes are on Saturdays at 8:00h</option>';
-      return;
-    }
-    var labels = { '8:00h': '🌅 8:00h — Saturday class' };
-    horas.forEach(function(h) {
-      var opt = document.createElement('option');
-      opt.value = h; opt.textContent = labels[h] || h;
-      horaSelect.appendChild(opt);
-    });
-  }
-
-  function validar12h(fechaStr, horaStr) {
-    var hm = horaStr.replace('h','').split(':');
-    var claseDate = new Date(fechaStr + 'T' + hm[0].padStart(2,'0') + ':' + (hm[1]||'00') + ':00');
-    return (claseDate - new Date()) / 3600000 >= 12;
-  }
-
-  function actualizarPrecioPrivada() {
-    var sel = document.getElementById('personas-privada');
-    var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
-    var aviso = document.getElementById('aviso-mas-personas');
-    var info = document.getElementById('precio-privada-info');
-    if (sel.value === 'mas') {
-      aviso.style.display = 'block';
-      info.style.display = 'none';
-    } else {
-      aviso.style.display = 'none';
-      info.style.display = 'block';
-      info.textContent = 'Total: ' + precio + '€';
-    }
-  }
-
-  function procesarBook() {
-    var tipo = document.getElementById('tipo').value;
-    var nombre = document.getElementById('nombre').value.trim();
-    var tel = document.getElementById('telefono').value.trim();
-    if (!tipo || !nombre || !tel) { alert('Por favor indica tu nombre, WhatsApp y tipo de clase.'); return; }
-
-    var stripeUrl, resumen;
-
-    if (tipo === 'grupal') {
-      var fecha = document.getElementById('fecha').value;
-      var hora = document.getElementById('hora').value;
-      var bono = document.getElementById('bono').value;
-      if (!fecha || !hora || hora.indexOf('Primero') > -1 || hora === '') { alert('Please choose a valid date and time.'); return; }
-      if (!validar12h(fecha, hora)) { document.getElementById('error-12h').style.display = 'block'; return; }
-      document.getElementById('error-12h').style.display = 'none';
-      var bonoLabel = {'suelta':'Drop-in 15€','bono3':'3-class pass 40€','bono5':'5-class pass 60€'}[bono];
-      resumen = nombre + ' | ' + tel + ' | ' + fecha + ' ' + hora + ' | ' + bonoLabel;
-      stripeUrl = STRIPE[bono] + '?client_reference_id=' + encodeURIComponent(resumen);
-    } else {
-      var sel = document.getElementById('personas-privada');
-      if (sel.value === 'mas') { alert('For groups of more than 2 people, please message us on WhatsApp.'); return; }
-      var stripeLink = sel.options[sel.selectedIndex].getAttribute('data-stripe');
-      var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
-      resumen = nombre + ' | ' + tel + ' | clase privada ' + sel.value + ' persona(s) ' + precio + '€';
-      stripeUrl = stripeLink + '?client_reference_id=' + encodeURIComponent(resumen);
-    }
-
-    // Enviar a Formspree y redirigir tras breve espera
-    fetch('https://formspree.io/f/mwvdlgyv', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-      body: JSON.stringify({
-        nombre: nombre,
-        telefono: tel,
-        reserva: resumen,
-        tipo: tipo
-      })
-    }).catch(function(){}).finally(function() {
-      window.location.href = stripeUrl;
-    });
-
-    // Fallback: si Formspree tarda más de 1.5s, redirigir igualmente
-    setTimeout(function() {
-      window.location.href = stripeUrl;
-    }, 1500);
-  }
-</script>
 </section>
 
 <footer>
-  <img src="/images/logo.png" width="96" height="96" alt="Viva Community Yoga" loading="lazy" decoding="async"/>
+  <img src="../images/logo.png" width="96" height="96" alt="Viva Community Yoga" loading="lazy" decoding="async"/>
   <div class="fn">Viva Community Yoga</div>
-  <div class="fd">Los Baños Sunshine · Carrer Riu Grande 12 · Dénia, Spain</div>
-  <div class="ft">Yoga in Dénia · Year-round</div>
+  <div class="fd">Los Baños Sunshine · Carrer Riu Grande 12 · Dénia</div>
+  <div class="ft">Yoga in Dénia · All year round</div>
   <a href="https://instagram.com/vivacommunityoga" target="_blank">@vivacommunityoga</a>
   <div style="margin-top:16px;">
     <a href="/en/faq.html" style="font-size:14px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:2px;">FAQ</a>
   </div>
 </footer>
 
-<script>
-async function handleBook() {
-  var n = document.getElementById('nombre').value.trim();
-  var e = document.getElementById('email').value.trim();
-  var t = document.getElementById('telefono').value.trim();
-  var c = document.getElementById('clase').value;
-  var b = document.getElementById('bono').value;
-  if (!n || !e || !c) { alert('Por favor completa nombre, email y clase.'); return; }
-
-  var btn = document.querySelector('.btn-submit');
-  btn.textContent = 'Enviando...';
-  btn.disabled = true;
-
-  try {
-    var res = await fetch('https://formspree.io/f/mwvdlgyv', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        nombre: n,
-        email: e,
-        telefono: t || 'No indicado',
-        clase: c,
-        tipo_reserva: b,
-        _subject: 'Nueva reserva — ' + c + ' · ' + n,
-        _replyto: e
-      })
-    });
-
-    if (res.ok) {
-      document.getElementById('form-wrap').style.display = 'none';
-      document.getElementById('confirm').style.display = 'block';
-    } else {
-      throw new Error('Error');
-    }
-  } catch(err) {
-    btn.textContent = 'Book spot';
-    btn.disabled = false;
-    alert('Ha habido un error. Por favor escríbenos directamente a info@naylinnunez.com');
-  }
-}
-</script>
-
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/34635993658?text=Hi%2C%20I%27m%20interested%20in%20joining%20a%20yoga%20class%20at%20Los%20Ba%C3%B1os%20Sunshine.%20Do%20you%20have%20spots%20available%3F"
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/34635993658?text=Hi%2C%20I%27m%20interested%20in%20joining%20a%20yoga%20class%20at%20Los%20Ba%C3%B1os%20Sunshine.%20Do%20you%20have%20space%3F" 
    target="_blank"
    style="position:fixed;bottom:20px;right:20px;width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);z-index:999999;text-decoration:none;-webkit-tap-highlight-color:transparent;"
 >
