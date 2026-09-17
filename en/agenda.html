@@ -299,5 +299,116 @@
   </div>
 </footer>
 
+<!-- ===== COOKIE BANNER (EN) ===== -->
+<style>
+  .cookie-banner { display:none; position:fixed; bottom:0; left:0; right:0; z-index:99998; background:#111; border-top:1px solid rgba(196,168,130,0.3); padding:22px 28px; }
+  .cookie-banner-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
+  .cookie-text { flex:1; min-width:240px; font-family:'Cormorant Garamond',Georgia,serif; font-size:17px; font-weight:300; color:rgba(255,255,255,0.8); line-height:1.6; margin:0; }
+  .cookie-text a { color:#3DBBBB; text-decoration:underline; }
+  .cookie-actions { display:flex; gap:10px; flex-wrap:wrap; }
+  .cookie-btn { font-family:'Cormorant Garamond',Georgia,serif; font-size:14px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:11px 20px; border-radius:2px; cursor:pointer; border:none; white-space:nowrap; }
+  .cookie-btn-outline { background:transparent; border:1px solid rgba(255,255,255,0.35); color:#fff; }
+  .cookie-btn-outline:hover { border-color:#3DBBBB; color:#3DBBBB; }
+  .cookie-btn-solid { background:#3DBBBB; color:#fff; }
+  .cookie-btn-solid:hover { background:#2da0a0; }
+
+  .cookie-settings-modal { display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.55); align-items:center; justify-content:center; padding:20px; }
+  .cookie-settings-box { background:#fff; border-radius:6px; max-width:520px; width:100%; padding:36px 32px; max-height:85vh; overflow-y:auto; }
+  .cookie-settings-box h3 { font-family:'Playfair Display',Georgia,serif; font-size:26px; color:#1E4A52; margin-bottom:18px; }
+  .cookie-cat { border-bottom:1px solid rgba(196,168,130,0.25); padding:16px 0; }
+  .cookie-cat:last-of-type { border-bottom:none; }
+  .cookie-cat-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .cookie-cat-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:19px; font-weight:600; color:#1E4A52; }
+  .cookie-cat-desc { font-family:'Cormorant Garamond',Georgia,serif; font-size:16px; font-weight:300; color:#555; line-height:1.5; }
+  .cookie-switch { position:relative; width:44px; height:24px; flex-shrink:0; }
+  .cookie-switch input { opacity:0; width:0; height:0; }
+  .cookie-slider { position:absolute; inset:0; background:#ccc; border-radius:24px; cursor:pointer; transition:0.2s; }
+  .cookie-slider::before { content:''; position:absolute; height:18px; width:18px; left:3px; bottom:3px; background:#fff; border-radius:50%; transition:0.2s; }
+  .cookie-switch input:checked + .cookie-slider { background:#3DBBBB; }
+  .cookie-switch input:checked + .cookie-slider::before { transform:translateX(20px); }
+  .cookie-switch input:disabled + .cookie-slider { background:#3DBBBB; opacity:0.5; cursor:not-allowed; }
+  .cookie-settings-actions { display:flex; gap:10px; margin-top:24px; flex-wrap:wrap; }
+  .cookie-settings-actions .cookie-btn-outline { border-color:rgba(30,74,82,0.3); color:#1E4A52; }
+  .cookie-settings-actions .cookie-btn-outline:hover { border-color:#3DBBBB; color:#3DBBBB; }
+
+  @media (max-width:720px) {
+    .cookie-banner { padding:18px 20px; }
+    .cookie-actions { width:100%; }
+    .cookie-actions .cookie-btn { flex:1; }
+  }
+</style>
+
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-banner-inner">
+    <p class="cookie-text">We use our own cookies and, if you accept them, third-party cookies to improve your experience. You can accept all, reject them, or choose which ones. More information in our <a href="/en/cookies-policy.html">Cookie Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieReject()">Reject</button>
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieShowSettings()">Customise</button>
+      <button class="cookie-btn cookie-btn-solid" onclick="vcyCookieAcceptAll()">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<div id="cookieSettings" class="cookie-settings-modal">
+  <div class="cookie-settings-box">
+    <h3>Cookie preferences</h3>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Necessary</span>
+        <label class="cookie-switch"><input type="checkbox" checked disabled><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Essential for the website to work (for example, remembering your cookie choice). These cannot be switched off.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Analytics</span>
+        <label class="cookie-switch"><input type="checkbox" id="ckAnalytics"><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Help us understand how the site is used so we can improve it. We currently have none active.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Marketing</span>
+        <label class="cookie-switch"><input type="checkbox" id="ckMarketing"><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Used to show relevant advertising on social media. We currently have none active.</p>
+    </div>
+    <div class="cookie-settings-actions">
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieCloseSettings()">Cancel</button>
+      <button class="cookie-btn cookie-btn-solid" onclick="vcyCookieSaveSettings()">Save preferences</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function vcyGetConsent(){ try { return JSON.parse(localStorage.getItem('vcy_cookie_consent')); } catch(e){ return null; } }
+  function vcySetConsent(obj){
+    obj.date = Date.now();
+    localStorage.setItem('vcy_cookie_consent', JSON.stringify(obj));
+    document.getElementById('cookieBanner').style.display = 'none';
+    document.getElementById('cookieSettings').style.display = 'none';
+  }
+  function vcyCookieAcceptAll(){ vcySetConsent({necessary:true, analytics:true, marketing:true}); }
+  function vcyCookieReject(){ vcySetConsent({necessary:true, analytics:false, marketing:false}); }
+  function vcyCookieShowSettings(){
+    var c = vcyGetConsent() || {analytics:false, marketing:false};
+    document.getElementById('ckAnalytics').checked = !!c.analytics;
+    document.getElementById('ckMarketing').checked = !!c.marketing;
+    document.getElementById('cookieSettings').style.display = 'flex';
+  }
+  function vcyCookieCloseSettings(){ document.getElementById('cookieSettings').style.display = 'none'; }
+  function vcyCookieSaveSettings(){
+    vcySetConsent({
+      necessary:true,
+      analytics: document.getElementById('ckAnalytics').checked,
+      marketing: document.getElementById('ckMarketing').checked
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    if(!vcyGetConsent()){ document.getElementById('cookieBanner').style.display = 'block'; }
+  });
+</script>
+<!-- ===== END COOKIE BANNER ===== -->
+
 </body>
 </html>
