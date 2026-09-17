@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Yoga in Dénia, Spain | Individual or Couples Class · Viva Community Yoga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"></noscript>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --t: #3DBBBB; --td: #1E4A52; --a: #C4A882;
+    --cr: #F5EFE4; --w: #FFFFFF; --n: #111111;
+    --tx: #333333; --ts: #888888;
+    --min: 26px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cr); color: var(--tx); overflow-x: hidden; font-size: var(--min); line-height: 1.7; }
+
+  /* MINI HERO */
+  .mini-hero { background: var(--td); padding: 64px 48px 48px; text-align: center; }
+  .mini-hero .back { display: inline-block; color: rgba(255,255,255,0.55); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; margin-bottom: 24px; }
+  .mini-hero .back:hover { color: #3DBBBB; }
+  .mini-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(32px, 5vw, 54px); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 14px; }
+  .mini-hero p { font-size: 21px; font-weight: 300; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto; }
+
+  /* NAV */
+  .navbar { position: static; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; background: var(--td); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 1px; white-space: nowrap; }
+  .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+  .nav-links a { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.85); text-decoration: none; letter-spacing: 0.5px; white-space: nowrap; transition: color 0.2s; }
+  .nav-links a:hover { color: #3DBBBB; }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+  .nav-lang a { font-size: 14px; letter-spacing: 1px; text-decoration: none; font-weight: 400; }
+  .nav-lang a.on { color: #3DBBBB; font-weight: 700; }
+  .nav-lang a.off { color: rgba(255,255,255,0.5); }
+  .nav-book { background: #3DBBBB; color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 10px 20px; border-radius: 2px; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+  .nav-book:hover { background: #2da0a0; }
+  .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 30; }
+  .nav-burger span { width: 24px; height: 2px; background: #fff; display: block; transition: 0.2s; }
+  .nav-mobile { display: none; }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .navbar .nav-right > .nav-lang, .navbar .nav-right > .nav-book { display: none; }
+    .nav-burger { display: flex; }
+    .navbar { padding: 16px 20px; }
+    .nav-logo { font-size: 17px; }
+    .nav-mobile { display: block; position: fixed; top: 0; right: 0; height: 100vh; width: min(78vw, 320px); background: var(--td); z-index: 25; padding: 90px 32px 32px; transform: translateX(100%); transition: transform 0.25s ease; box-shadow: -8px 0 30px rgba(0,0,0,0.3); }
+    .nav-mobile.open { transform: translateX(0); }
+    .nav-mobile a { display: block; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #fff; text-decoration: none; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .nav-mobile .nav-book { display: inline-block; margin-top: 24px; }
+    .nav-mobile .nav-lang { margin-top: 20px; font-size: 16px; }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 22; }
+    .nav-overlay.open { display: block; }
+  }
+  .btn { display: inline-block; background: var(--t); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 48px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  .btn:hover { background: var(--td); }
+
+  /* SECCIONES */
+  section { padding: 72px 48px; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .ey { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--t); margin-bottom: 14px; font-weight: 600; display: block; }
+  .h2 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 700; color: var(--td); line-height: 1.15; margin-bottom: 20px; }
+  .body { font-size: 26px; font-weight: 300; line-height: 1.8; color: var(--tx); }
+  .line { width: 52px; height: 1.5px; background: var(--a); margin: 26px 0; }
+
+  /* FILOSOFÍA */
+  .filo-grid { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; border: 1px solid rgba(196,168,130,0.3); }
+  .filo-item { padding: 38px 36px; border-bottom: 1px solid rgba(196,168,130,0.3); border-right: 1px solid rgba(196,168,130,0.3); }
+  .filo-item:nth-child(2n) { border-right: none; }
+  .filo-item:nth-last-child(-n+2) { border-bottom: none; }
+  .filo-no { font-size: 20px; font-weight: 300; color: #666; margin-bottom: 10px; font-style: italic; }
+  .filo-si { font-size: 26px; font-weight: 600; color: var(--td); }
+
+  /* PARA QUIÉN */
+  .pq { background: var(--td); }
+  .pq .ey { color: rgba(255,255,255,0.4); }
+  .pq .h2 { color: var(--w); }
+  .pq .line { background: rgba(255,255,255,0.2); }
+  .pq-list { list-style: none; margin-top: 28px; }
+  .pq-list li { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 26px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.55; display: flex; gap: 20px; }
+  .pq-list li:last-child { border-bottom: none; }
+  .pq-list li::before { content: '~'; color: rgba(255,255,255,0.3); flex-shrink: 0; font-size: 28px; }
+
+  /* EQUIPO */
+  .equipo { padding: 0; overflow: hidden; }
+  .eq-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
+  .eq-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+  .eq-texto { background: var(--t); padding: 60px 52px; display: flex; flex-direction: column; justify-content: center; }
+  .eq-texto .ey { color: rgba(255,255,255,0.4); }
+  .eq-texto .h2 { color: var(--w); }
+  .eq-texto .line { background: rgba(255,255,255,0.2); }
+  .eq-texto .body { color: rgba(255,255,255,0.85); font-size: 24px; }
+
+  /* DÓNDE Y CUÁNDO */
+  .info-box { background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 36px 40px; border-radius: 2px; margin-top: 30px; }
+  .info-box p { font-size: 24px; font-weight: 300; color: var(--tx); line-height: 1.8; }
+  .info-box strong { color: var(--td); font-weight: 600; }
+
+  .mapa-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--td); color: var(--w); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 18px 36px; border-radius: 2px; text-decoration: none; margin-top: 30px; transition: background 0.2s; }
+  .mapa-btn:hover { background: var(--t); }
+
+  /* PRECIOS */
+  .prec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 32px; }
+  .prec-card { text-align: center; padding: 40px 20px; border: 1px solid rgba(196,168,130,0.4); border-radius: 2px; background: var(--w); }
+  .prec-card.feat { background: var(--t); border-color: var(--t); }
+  .prec-label { font-size: 18px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 14px; }
+  .prec-card.feat .prec-label { color: rgba(255,255,255,0.55); }
+  .prec-num { font-family: 'Playfair Display', serif; font-size: 84px; font-weight: 700; color: var(--td); line-height: 1; margin-bottom: 8px; }
+  .prec-card.feat .prec-num { color: var(--w); }
+  .prec-unit { font-size: 24px; color: #666; }
+  .prec-card.feat .prec-unit { color: rgba(255,255,255,0.55); }
+  .prec-sub { font-size: 22px; color: #7a6a52; margin-top: 12px; font-style: italic; }
+  .prec-card.feat .prec-sub { color: rgba(255,255,255,0.5); }
+  .prec-nota { margin-top: 18px; background: var(--w); border: 1px solid rgba(196,168,130,0.3); padding: 24px 28px; border-radius: 2px; }
+  .prec-nota p { font-size: 22px; font-weight: 300; color: var(--tx); line-height: 1.8; }
+  .prec-nota strong { font-weight: 600; color: var(--td); }
+  .prec-mas { margin-top: 18px; background: rgba(61,187,187,0.1); border: 1px solid rgba(61,187,187,0.3); padding: 22px 26px; border-radius: 2px; text-align: center; }
+  .prec-mas p { font-size: 21px; font-weight: 300; color: var(--td); }
+  .prec-mas a { color: var(--t); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--t); }
+
+  /* TESTIMONIOS */
+  .test-card { max-width: 760px; margin: 0 auto 24px; background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 20px rgba(30,74,82,0.08); display: grid; grid-template-columns: 200px 1fr; }
+  .test-card img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .test-body { padding: 28px 32px; }
+  .test-stars { color: #3DBBBB; font-size: 18px; letter-spacing: 3px; margin-bottom: 10px; }
+  .test-quote { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 14px; }
+  .test-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: #1E4A52; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* RESERVA */
+  .reserva { background: var(--td); }
+  .reserva .ey { color: rgba(255,255,255,0.4); }
+  .reserva .h2 { color: var(--w); }
+  .reserva .body { color: rgba(255,255,255,0.72); margin-bottom: 28px; }
+  .reserva .line { background: rgba(255,255,255,0.2); }
+  .cancel-nota { font-size: 20px; color: rgba(255,255,255,0.9); margin: 20px 0; font-style: italic; padding: 16px 20px; background: rgba(255,255,255,0.1); border-radius: 2px; line-height: 1.65; }
+  .form-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 44px 48px; }
+  .fg { margin-bottom: 24px; }
+  .fg label { display: block; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 12px; }
+  .fg input, .fg select { width: 100%; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); border-radius: 2px; padding: 18px 22px; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--w); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
+  .fg input::placeholder { color: rgba(255,255,255,0.6); }
+  .fg input:focus, .fg select:focus { border-color: var(--t); }
+  .fg select option { background: var(--td); color: var(--w); }
+  .btn-submit { width: 100%; background: var(--t); color: var(--w); border: none; cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 22px; border-radius: 2px; transition: background 0.2s; }
+  .btn-submit:hover { background: #2da0a0; }
+
+  /* FOOTER */
+  footer { background: var(--n); padding: 64px 48px; text-align: center; }
+  footer img { width: 96px; height: 96px; object-fit: contain; margin-bottom: 24px; opacity: 0.9; }
+  .fn { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 10px; }
+  .fd { font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.48); margin-bottom: 8px; }
+  .ft { font-size: 14px; color: rgba(255,255,255,0.8); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
+  footer a { font-size: 20px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 2px; transition: color 0.2s; }
+  footer a:hover { color: var(--t); }
+
+  @media (max-width: 720px) {
+    section { padding: 56px 24px; }
+    .btn { padding: 15px 34px; }
+    .filo-grid { grid-template-columns: 1fr; }
+    .filo-item { border-right: none !important; }
+    .filo-item:not(:last-child) { border-bottom: 1px solid rgba(196,168,130,0.3) !important; }
+    .eq-inner { grid-template-columns: 1fr; }
+    .eq-foto { height: 300px; }
+    .eq-texto { padding: 44px 28px; }
+    .prec-grid { grid-template-columns: 1fr; }
+    .test-card { grid-template-columns: 1fr; }
+    .test-card img { height: 220px; }
+    .form-wrap { padding: 30px 24px; }
+  }
+</style>
+
+<!-- SEO -->
+<meta name="description" content="Private yoga in Dénia, Spain, at your accommodation, urbanisation or beach of your choice. Individual or couples class, tailored to you. From 65€.">
+<meta name="keywords" content="private yoga Dénia, clases de yoga individuales Dénia, yoga a domicilio Dénia, yoga en pareja Dénia, yoga Dénia, yoga en Dénia">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Viva Community Yoga">
+<link rel="canonical" href="https://vivacommunityyoga.com/en/private.html">
+<link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/privadas.html">
+<link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/private.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Private Yoga in Dénia · Viva Community Yoga">
+<meta property="og:description" content="A yoga class tailored entirely to you, where you decide: your accommodation, your urbanisation, or the beach. Individual or couples, from €65.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vivacommunityyoga.com/en/private.html">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Viva Community Yoga">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Private Yoga in Dénia · Viva Community Yoga">
+<meta name="twitter:description" content="Individual or couples yoga class, wherever you choose in Dénia. From €65.">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Yoga privado en Dénia",
+  "description": "Private yoga classes, individual or for couples, at the accommodation, urbanisation, or beach of the client's choice in Dénia.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Viva Community Yoga",
+    "telephone": "+34635993658",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer Riu Grande 12",
+      "addressLocality": "Dénia",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "areaServed": "Dénia",
+  "offers": [
+    { "@type": "Offer", "price": "65", "priceCurrency": "EUR", "description": "Private class, 1 person" },
+    { "@type": "Offer", "price": "80", "priceCurrency": "EUR", "description": "Private class, 2 people" }
+  ]
+}
+</script>
+
+<!-- Meta Pixel retired (not in use). If reactivated later, pixel ID was
+     1148864329659008; make sure it only loads after cookie consent
+     (marketing/social cookies). -->
+</head>
+<body>
+
+<section class="mini-hero">
+  <nav class="navbar">
+    <a href="/en/" class="nav-logo">Viva Community Yoga</a>
+    <ul class="nav-links">
+      <li><a href="/en/beach-yoga.html">Beach yoga</a></li>
+      <li><a href="/en/private.html">Private classes</a></li>
+      <li><a href="/en/beach-yoga.html#deep-brunch">Deep Brunch</a></li>
+      <li><a href="/en/yoga-for-life.html">Yoga For Life</a></li>
+      <li><a href="/en/agenda.html">Calendar</a></li>
+      <li><a href="/en/faq.html">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-lang"><a href="/" class="off">ES</a> · <a href="/en/" class="on">EN</a></span>
+      <a href="#reserva" class="nav-book">Book now</a>
+      <button class="nav-burger" onclick="toggleMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="/en/beach-yoga.html">Beach yoga</a>
+    <a href="/en/private.html">Private classes</a>
+    <a href="/en/beach-yoga.html#deep-brunch">Deep Brunch</a>
+    <a href="/en/yoga-for-life.html">Yoga For Life</a>
+    <a href="/en/agenda.html">Calendar</a>
+    <a href="/en/faq.html">FAQ</a>
+    <span class="nav-lang"><a href="/" class="off">ES</a> · <a href="/en/" class="on">EN</a></span>
+    <a href="#reserva" class="nav-book">Book now</a>
+  </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMobile').classList.toggle('open');
+      document.getElementById('navOverlay').classList.toggle('open');
+    }
+  </script>
+  <a href="/en/" class="back">← Viva Community Yoga</a>
+  <h1>Private yoga in Dénia</h1>
+  <p>At your accommodation, your urbanisation, or the beach of your choice. Individual or couples, without sharing a mat with anyone else, at your own pace.</p>
+</section>
+
+<section style="background:var(--cr)">
+  <div class="container">
+    <span class="ey">A philosophy</span>
+    <h2 class="h2">We don't come to repeat the same class for everyone.</h2>
+    <div class="line"></div>
+    <p class="body">A private class isn't the same class as always at a different time. It's something else: it's built around you, your body, and what you need that day.</p>
+    <div class="filo-grid">
+      <div class="filo-item"><div class="filo-no">It's not a generic class.</div><div class="filo-si">It's a class designed for you.</div></div>
+      <div class="filo-item"><div class="filo-no">You don't have to come to us.</div><div class="filo-si">We come to wherever you are.</div></div>
+      <div class="filo-item"><div class="filo-no">There's no fixed time slot.</div><div class="filo-si">We find the time that works best for you, together.</div></div>
+      <div class="filo-item"><div class="filo-no">No prior experience needed.</div><div class="filo-si">All you need is curiosity.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pq">
+  <div class="container">
+    <span class="ey">Who is it for?</span>
+    <h2 class="h2">For those who want a space entirely their own.</h2>
+    <div class="line"></div>
+    <ul class="pq-list">
+      <li>For those who prefer to practise without sharing the space with anyone.</li>
+      <li>For couples looking for their own moment during their holiday.</li>
+      <li>For those with any discomfort or injury who need a practice adapted to their body.</li>
+      <li>For those staying far from Los Baños Sunshine who prefer the class to come to them.</li>
+      <li>For those who have never tried yoga and prefer to start in an intimate setting rather than a group.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="equipo">
+  <div class="eq-inner">
+    <div class="eq-foto"><img src="/images/equipo.jpg" width="700" height="933" alt="Nati and Naylín, Viva Community Yoga teachers" loading="lazy" decoding="async"/></div>
+    <div class="eq-texto">
+      <span class="ey">Who we are</span>
+      <h2 class="h2">Two teachers.<br>One class for you.</h2>
+      <div class="line"></div>
+      <p class="body">We're Nati and Naylín. We've been teaching yoga for over a decade, trained in India and in Spain, with our own schools behind us. In a private class you get all of that experience at the service of just one person: you. No one else on the mat, nothing that isn't exactly what you need that day.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cr)">
+  <div class="container">
+    <span class="ey">When and where</span>
+    <h2 class="h2">No fixed time slot.</h2>
+    <div class="line"></div>
+    <div class="info-box">
+      <p>We don't have a fixed schedule for private classes, <strong>we find the best time for you together</strong>, with a minimum of 12 hours notice so we can prepare properly.</p>
+      <p style="margin-top:16px;">You also choose the location: <strong>your urbanisation, your home, or the beach of your choice</strong> in Dénia.</p>
+    </div>
+    <a href="https://wa.me/635993658?text=Hi%2C%20I%27m%20interested%20in%20a%20private%20yoga%20class%20in%20D%C3%A9nia." target="_blank" class="mapa-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Arrange time and place
+    </a>
+
+    <div style="margin-top:60px;">
+      <span class="ey">Pricing</span>
+      <div class="prec-grid">
+        <div class="prec-card"><div class="prec-label">1 person</div><div class="prec-num">65€</div><div class="prec-unit">per session</div><div class="prec-sub">Individual class</div></div>
+        <div class="prec-card feat"><div class="prec-label">2 people</div><div class="prec-num">80€</div><div class="prec-unit">per session</div><div class="prec-sub">Ideal for couples or friends</div></div>
+      </div>
+      <div class="prec-mas">
+        <p>More than 2 people? <a href="https://wa.me/635993658?text=Hi%2C%20I%27m%20interested%20in%20a%20private%20class%20for%20more%20than%202%20people.">Message us on WhatsApp</a> and we'll put together a session tailored to you.</p>
+      </div>
+      <div class="prec-nota">
+        <p>Free cancellation with more than 24h notice.<br>Bookings must be made at least 12 hours in advance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#F5EFE4;">
+  <div class="container" style="text-align:center;margin-bottom:16px;">
+    <span class="ey">What people say</span>
+    <h2 class="h2">This is how people feel after practising with us.</h2>
+    <div class="line" style="margin:0 auto;"></div>
+  </div>
+  <div class="test-card">
+    <img src="/images/testimonio-sara.jpg.png" alt="Sara at a yoga class in Dénia" width="200" height="260" loading="lazy" decoding="async"/>
+    <div class="test-body">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">Starting the day this way, alone with myself, nothing else… it's full of peace and calm that turns into energy for the whole day. A wonderful experience. 💚</p>
+      <div class="test-name">Sara</div>
+    </div>
+  </div>
+  <div class="test-card">
+    <img src="/images/testimonio-david.jpg.png" alt="David Busto at a yoga class in Dénia" width="200" height="260" loading="lazy" decoding="async"/>
+    <div class="test-body">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">Thanks to the yoga class I manage to let go of everything that builds up during the week, in body and mind. It helps me clear my head and return to my purpose with renewed energy.</p>
+      <div class="test-name">David Busto</div>
+    </div>
+  </div>
+</section>
+
+<section class="reserva" id="reserva">
+  <div class="container">
+    <span class="ey">Booking</span>
+    <h2 class="h2">Tell us, and we'll get in touch.</h2>
+    <div class="line"></div>
+    <p class="body">Leave us your name and WhatsApp number. Choose the number of people, pay for the session, and we'll message you to arrange the day, time, and place.</p>
+
+    <div class="form-wrap" id="form-wrap">
+      <div class="fg">
+        <label for="nombre">Your name</label>
+        <input type="text" id="nombre" placeholder="Your name"/>
+      </div>
+      <div class="fg">
+        <label for="telefono">Your WhatsApp</label>
+        <input type="tel" id="telefono" placeholder="+34 ..."/>
+      </div>
+      <div class="fg">
+        <label for="people-privada">Number of people</label>
+        <select id="people-privada" onchange="actualizarPrecioPrivada()">
+          <option value="1" data-precio="65" data-stripe="https://buy.stripe.com/bJe28s9H6chV0ce4XwdZ60t">1 person · 65€</option>
+          <option value="2" data-precio="80" data-stripe="https://buy.stripe.com/dRm4gAcTi5TxaQScpYdZ60u">2 people · 80€</option>
+          <option value="mas" data-precio="" data-stripe="">More than 2 people</option>
+        </select>
+      </div>
+      <div id="precio-privada-info" style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#3DBBBB;text-align:center;margin:8px 0 16px;">
+        Total: 65€
+      </div>
+      <div id="aviso-mas-people" style="display:none;background:rgba(61,187,187,0.12);border:1px solid rgba(61,187,187,0.3);color:rgba(255,255,255,0.85);padding:14px 18px;border-radius:2px;font-size:18px;line-height:1.65;margin-bottom:8px;">
+        For groups of more than 2 people, message us on WhatsApp and we'll give you a price. 👉 <a href="https://wa.me/635993658?text=Hi%2C%20I%27m%20interested%20in%20a%20private%20class%20for%20more%20than%202%20people." target="_blank" style="color:#3DBBBB;">Message us here</a>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;margin:8px 0 16px;">
+        After payment, we'll contact you on WhatsApp to arrange the time and place, with at least 12h notice.
+      </p>
+
+      <div class="cancel-nota">⚠️ Free cancellation with more than 24h notice.<br>Bookings must be made at least 12 hours in advance.</div>
+
+      <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.75);text-align:center;margin-bottom:16px;">🔒 Secure payment · Instant confirmation</p>
+
+      <button class="btn-submit" onclick="procesarReservaPrivada()">Pay and book my class →</button>
+    </div>
+
+    <div id="form-ok" style="display:none;text-align:center;padding:48px 0;">
+      <div style="font-size:48px;margin-bottom:16px;">🌊</div>
+      <p style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;margin-bottom:8px;">Session booked!</p>
+      <p style="font-size:18px;color:rgba(255,255,255,0.7);">We'll message you on WhatsApp to arrange the day, time, and place.</p>
+    </div>
+  </div>
+
+  <script>
+  function actualizarPrecioPrivada() {
+    var sel = document.getElementById('people-privada');
+    var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
+    var aviso = document.getElementById('aviso-mas-people');
+    var info = document.getElementById('precio-privada-info');
+    if (sel.value === 'mas') {
+      aviso.style.display = 'block';
+      info.style.display = 'none';
+    } else {
+      aviso.style.display = 'none';
+      info.style.display = 'block';
+      info.textContent = 'Total: ' + precio + '€';
+    }
+  }
+
+  function procesarReservaPrivada() {
+    var nombre = document.getElementById('nombre').value.trim();
+    var tel = document.getElementById('telefono').value.trim();
+    var sel = document.getElementById('people-privada');
+    if (!nombre || !tel) { alert('Please enter your name and WhatsApp number.'); return; }
+    if (sel.value === 'mas') { alert('For groups of more than 2 people, please message us on WhatsApp.'); return; }
+
+    var stripeLink = sel.options[sel.selectedIndex].getAttribute('data-stripe');
+    var precio = sel.options[sel.selectedIndex].getAttribute('data-precio');
+    var resumen = nombre + ' | ' + tel + ' | private class ' + sel.value + ' person(s) €' + precio;
+    var stripeUrl = stripeLink + '?client_reference_id=' + encodeURIComponent(resumen);
+
+    fetch('https://formspree.io/f/mwvdlgyv', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({ nombre: nombre, telefono: tel, reserva: resumen, tipo: 'privada' })
+    }).catch(function(){});
+
+    window.location.href = stripeUrl;
+  }
+  </script>
+</section>
+
+<footer>
+  <img src="/images/logo.png" width="96" height="96" alt="Viva Community Yoga" loading="lazy" decoding="async"/>
+  <div class="fn">Viva Community Yoga</div>
+  <div class="fd">Private yoga · Wherever you prefer in Dénia</div>
+  <div class="ft">Yoga in Dénia · All year round</div>
+  <a href="https://instagram.com/vivacommunityoga" target="_blank">@vivacommunityoga</a>
+  <div style="margin-top:16px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+    <a href="/en/" style="font-size:14px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:2px;">Group classes</a>
+    <a href="/faq.html" style="font-size:14px;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:2px;">FAQ</a>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/635993658?text=Hi%2C%20I%27m%20interested%20in%20a%20private%20yoga%20class%20in%20D%C3%A9nia."
+   target="_blank"
+   style="position:fixed;bottom:20px;right:20px;width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);z-index:999999;text-decoration:none;-webkit-tap-highlight-color:transparent;"
+>
+  <svg width="34" height="34" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<!-- ===== COOKIE BANNER (EN) ===== -->
+<style>
+  .cookie-banner { display:none; position:fixed; bottom:0; left:0; right:0; z-index:99998; background:#111; border-top:1px solid rgba(196,168,130,0.3); padding:22px 28px; }
+  .cookie-banner-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
+  .cookie-text { flex:1; min-width:240px; font-family:'Cormorant Garamond',Georgia,serif; font-size:17px; font-weight:300; color:rgba(255,255,255,0.8); line-height:1.6; margin:0; }
+  .cookie-text a { color:#3DBBBB; text-decoration:underline; }
+  .cookie-actions { display:flex; gap:10px; flex-wrap:wrap; }
+  .cookie-btn { font-family:'Cormorant Garamond',Georgia,serif; font-size:14px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:11px 20px; border-radius:2px; cursor:pointer; border:none; white-space:nowrap; }
+  .cookie-btn-outline { background:transparent; border:1px solid rgba(255,255,255,0.35); color:#fff; }
+  .cookie-btn-outline:hover { border-color:#3DBBBB; color:#3DBBBB; }
+  .cookie-btn-solid { background:#3DBBBB; color:#fff; }
+  .cookie-btn-solid:hover { background:#2da0a0; }
+
+  .cookie-settings-modal { display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.55); align-items:center; justify-content:center; padding:20px; }
+  .cookie-settings-box { background:#fff; border-radius:6px; max-width:520px; width:100%; padding:36px 32px; max-height:85vh; overflow-y:auto; }
+  .cookie-settings-box h3 { font-family:'Playfair Display',Georgia,serif; font-size:26px; color:#1E4A52; margin-bottom:18px; }
+  .cookie-cat { border-bottom:1px solid rgba(196,168,130,0.25); padding:16px 0; }
+  .cookie-cat:last-of-type { border-bottom:none; }
+  .cookie-cat-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .cookie-cat-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:19px; font-weight:600; color:#1E4A52; }
+  .cookie-cat-desc { font-family:'Cormorant Garamond',Georgia,serif; font-size:16px; font-weight:300; color:#555; line-height:1.5; }
+  .cookie-switch { position:relative; width:44px; height:24px; flex-shrink:0; }
+  .cookie-switch input { opacity:0; width:0; height:0; }
+  .cookie-slider { position:absolute; inset:0; background:#ccc; border-radius:24px; cursor:pointer; transition:0.2s; }
+  .cookie-slider::before { content:''; position:absolute; height:18px; width:18px; left:3px; bottom:3px; background:#fff; border-radius:50%; transition:0.2s; }
+  .cookie-switch input:checked + .cookie-slider { background:#3DBBBB; }
+  .cookie-switch input:checked + .cookie-slider::before { transform:translateX(20px); }
+  .cookie-switch input:disabled + .cookie-slider { background:#3DBBBB; opacity:0.5; cursor:not-allowed; }
+  .cookie-settings-actions { display:flex; gap:10px; margin-top:24px; flex-wrap:wrap; }
+  .cookie-settings-actions .cookie-btn-outline { border-color:rgba(30,74,82,0.3); color:#1E4A52; }
+  .cookie-settings-actions .cookie-btn-outline:hover { border-color:#3DBBBB; color:#3DBBBB; }
+
+  @media (max-width:720px) {
+    .cookie-banner { padding:18px 20px; }
+    .cookie-actions { width:100%; }
+    .cookie-actions .cookie-btn { flex:1; }
+  }
+</style>
+
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-banner-inner">
+    <p class="cookie-text">We use our own cookies and, if you accept them, third-party cookies to improve your experience. You can accept all, reject them, or choose which ones. More information in our <a href="/en/cookies-policy.html">Cookie Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieReject()">Reject</button>
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieShowSettings()">Customise</button>
+      <button class="cookie-btn cookie-btn-solid" onclick="vcyCookieAcceptAll()">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<div id="cookieSettings" class="cookie-settings-modal">
+  <div class="cookie-settings-box">
+    <h3>Cookie preferences</h3>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Necessary</span>
+        <label class="cookie-switch"><input type="checkbox" checked disabled><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Essential for the website to work (for example, remembering your cookie choice). These cannot be switched off.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Analytics</span>
+        <label class="cookie-switch"><input type="checkbox" id="ckAnalytics"><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Help us understand how the site is used so we can improve it. We currently have none active.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Marketing</span>
+        <label class="cookie-switch"><input type="checkbox" id="ckMarketing"><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Used to show relevant advertising on social media. We currently have none active.</p>
+    </div>
+    <div class="cookie-settings-actions">
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieCloseSettings()">Cancel</button>
+      <button class="cookie-btn cookie-btn-solid" onclick="vcyCookieSaveSettings()">Save preferences</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function vcyGetConsent(){ try { return JSON.parse(localStorage.getItem('vcy_cookie_consent')); } catch(e){ return null; } }
+  function vcySetConsent(obj){
+    obj.date = Date.now();
+    localStorage.setItem('vcy_cookie_consent', JSON.stringify(obj));
+    document.getElementById('cookieBanner').style.display = 'none';
+    document.getElementById('cookieSettings').style.display = 'none';
+  }
+  function vcyCookieAcceptAll(){ vcySetConsent({necessary:true, analytics:true, marketing:true}); }
+  function vcyCookieReject(){ vcySetConsent({necessary:true, analytics:false, marketing:false}); }
+  function vcyCookieShowSettings(){
+    var c = vcyGetConsent() || {analytics:false, marketing:false};
+    document.getElementById('ckAnalytics').checked = !!c.analytics;
+    document.getElementById('ckMarketing').checked = !!c.marketing;
+    document.getElementById('cookieSettings').style.display = 'flex';
+  }
+  function vcyCookieCloseSettings(){ document.getElementById('cookieSettings').style.display = 'none'; }
+  function vcyCookieSaveSettings(){
+    vcySetConsent({
+      necessary:true,
+      analytics: document.getElementById('ckAnalytics').checked,
+      marketing: document.getElementById('ckMarketing').checked
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    if(!vcyGetConsent()){ document.getElementById('cookieBanner').style.display = 'block'; }
+  });
+</script>
+<!-- ===== END COOKIE BANNER ===== -->
+
+</body>
+</html>
