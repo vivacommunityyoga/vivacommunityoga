@@ -1,9 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://vivacommunityyoga.com/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/"/>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/yoga-en-la-playa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/yoga-en-la-playa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/beach-yoga.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/yoga-en-la-playa.html"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/en/beach-yoga.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/yoga-en-la-playa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/beach-yoga.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/yoga-en-la-playa.html"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/privadas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/privadas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/private.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/privadas.html"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/en/private.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/privadas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/private.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/privadas.html"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/yoga-for-life/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/yoga-for-life/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/yoga-for-life/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/yoga-for-life/"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/en/yoga-for-life/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/yoga-for-life/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/yoga-for-life/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/yoga-for-life/"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/agenda.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/agenda.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/agenda.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/agenda.html"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/en/agenda.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/agenda.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/agenda.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/agenda.html"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/faq.html"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/faq.html"/>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
