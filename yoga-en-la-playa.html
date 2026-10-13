@@ -256,12 +256,8 @@
           <label for="fecha">¿Qué sábado quieres venir?</label>
           <input type="date" id="fecha" onchange="actualizarHoras()"/>
         </div>
-        <div class="fg">
-          <label for="hora">Horario</label>
-          <select id="hora">
-            <option value="">Primero elige una fecha...</option>
-          </select>
-        </div>
+        <input type="hidden" id="hora" value=""/>
+        <p id="hora-info" style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin:-8px 0 24px;">La clase es de 8:00 a 9:00h.</p>
         <div class="fg">
           <label for="bono">Precio</label>
           <select id="bono">
@@ -304,12 +300,8 @@
           <label for="fecha-bono">¿Qué sábado quieres venir?</label>
           <input type="date" id="fecha-bono" onchange="actualizarHorasBono()"/>
         </div>
-        <div class="fg">
-          <label for="hora-bono">Horario</label>
-          <select id="hora-bono">
-            <option value="">Primero elige una fecha...</option>
-          </select>
-        </div>
+        <input type="hidden" id="hora-bono" value=""/>
+        <p id="hora-bono-info" style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin:-8px 0 24px;">La clase es de 8:00 a 9:00h.</p>
       </div>
       <div id="error-12h-bono" class="error-nota">⚠️ Esta clase empieza en menos de 12 horas. Por favor elige otra fecha o escríbenos directamente por WhatsApp.</div>
 
@@ -387,16 +379,16 @@
     btn.textContent = tipo === 'bono-existente' ? 'Reservar mi plaza →' : 'Pagar y reservar plaza →';
   }
 
-  function actualizarHorarioSelect(fechaVal, horaSelect) {
-    horaSelect.innerHTML = '<option value="">Elige un horario...</option>';
-    if (!fechaVal) return;
+  // Solo hay una clase los sábados (8:00h), así que la hora se asigna sola al elegir la fecha
+  function actualizarHorarioSelect(fechaVal, horaInput) {
+    var info = document.getElementById(horaInput.id + '-info');
+    horaInput.value = '';
+    if (!fechaVal) { info.textContent = 'La clase es de 8:00 a 9:00h.'; return; }
     if (CLASE_DATES.indexOf(fechaVal) > -1) {
-      var opt = document.createElement('option');
-      opt.value = '8:00h';
-      opt.textContent = '🌅 8:00h, clase de sábado';
-      horaSelect.appendChild(opt);
+      horaInput.value = '8:00h';
+      info.textContent = '🌅 Sábado a las 8:00h, clase de una hora.';
     } else {
-      horaSelect.innerHTML = '<option value="">Ese día no hay clase, consulta las fechas disponibles arriba</option>';
+      info.textContent = 'Ese día no hay clase. Elige un sábado del calendario.';
     }
   }
 
@@ -440,7 +432,7 @@
     if (tipo === 'bono-existente') {
       var fechaB = document.getElementById('fecha-bono').value;
       var horaB = document.getElementById('hora-bono').value;
-      if (!fechaB || !horaB || horaB.indexOf('Primero') > -1 || horaB === '') { alert('Por favor elige una fecha y hora válidas.'); return; }
+      if (!fechaB || !horaB || horaB === '') { alert('Por favor elige un sábado con clase.'); return; }
       if (!validar12h(fechaB, horaB)) { document.getElementById('error-12h-bono').style.display = 'block'; return; }
       document.getElementById('error-12h-bono').style.display = 'none';
       var resumenBono = nombre + ' | ' + tel + ' | ' + fechaB + ' ' + horaB + ' | Reserva con bono ya comprado (sin cobro)';
@@ -462,7 +454,7 @@
       var fecha = document.getElementById('fecha').value;
       var hora = document.getElementById('hora').value;
       var bono = document.getElementById('bono').value;
-      if (!fecha || !hora || hora.indexOf('Primero') > -1 || hora === '') { alert('Por favor elige una fecha y hora válidas.'); return; }
+      if (!fecha || !hora || hora === '') { alert('Por favor elige un sábado con clase.'); return; }
       if (!validar12h(fecha, hora)) { document.getElementById('error-12h').style.display = 'block'; return; }
       document.getElementById('error-12h').style.display = 'none';
       var bonoLabel = {'suelta':'Clase suelta 15€','bono3':'Bono 3 clases 40€','bono5':'Bono 5 clases 60€'}[bono];
