@@ -9,7 +9,7 @@ permalink: /yoga-for-life/
 <link rel="apple-touch-icon" href="/images/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yoga For Life | Formación de Yoga en Dénia y Jávea | Viva Community Yoga</title>
-<meta name="description" content="Yoga For Life: formación de 8 meses para llevar el yoga a tu vida, no solo a la esterilla. En Dénia y Jávea, desde octubre 2026. Plazas limitadas.">
+<meta name="description" content="Yoga For Life: formación de 8 meses para llevar el yoga a tu vida, no solo a la esterilla. En Dénia y Jávea, desde octubre 2027. Apúntate a la lista de espera y consigue 200€ de descuento.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -104,6 +104,11 @@ permalink: /yoga-for-life/
   .duda .q { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--td); font-style: italic; margin-bottom: 8px; }
   .duda .r { font-size: 19px; color: #555; }
 
+  /* LISTA DE ESPERA */
+  .espera-box { background: #fff; border: 1px solid rgba(196,168,130,0.3); border-radius: 6px; padding: 28px 24px; max-width: 560px; margin: 28px auto 0; }
+  .espera-box .sib-form, .espera-box #sib-form-container { background: transparent !important; padding: 0 !important; }
+  .espera-box #sib-container { max-width: 100% !important; border: none !important; background: transparent !important; }
+
   footer { background: var(--n); padding: 56px 48px; text-align: center; }
   .fn { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 8px; }
   footer a { font-size: 18px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 2px; }
@@ -152,7 +157,7 @@ permalink: /yoga-for-life/
 <link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/yoga-for-life/">
 <link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/yoga-for-life/">
 <meta property="og:title" content="Yoga For Life | Viva Community Yoga">
-<meta property="og:description" content="El yoga no es el destino, es el camino. Formación de 8 meses entre Dénia y Jávea. Primera edición, precio fundadoras.">
+<meta property="og:description" content="El yoga no es el destino, es el camino. Formación de 8 meses entre Dénia y Jávea. Edición 2027: apúntate a la lista de espera.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vivacommunityyoga.com/yoga-for-life/">
 <meta property="og:locale" content="es_ES">
@@ -168,20 +173,54 @@ permalink: /yoga-for-life/
   "hasCourseInstance": {
     "@type": "CourseInstance",
     "courseMode": "blended",
-    "startDate": "2026-10-10",
-    "endDate": "2027-05-08",
+    "startDate": "2027-10-09",
     "instructor": [ { "@type": "Person", "name": "Nati", "url": "https://natideprati.com" }, { "@type": "Person", "name": "Naylín", "url": "https://naylinnunez.com" } ],
     "location": { "@type": "Place", "name": "Sala de Yoga de Nati", "address": { "@type": "PostalAddress", "streetAddress": "Calle Barcelona 15", "addressLocality": "Xàbia / Jávea", "addressRegion": "Alicante", "addressCountry": "ES" } }
   },
   "offers": {
     "@type": "Offer",
-    "price": "1200",
+    "price": "1888",
     "priceCurrency": "EUR",
-    "availability": "https://schema.org/LimitedAvailability",
+    "availability": "https://schema.org/PreOrder",
     "url": "https://vivacommunityyoga.com/yoga-for-life/"
   }
 }
 </script>
+<!-- Brevo: estilos del formulario -->
+<style>
+  :where(.sib-form-message-panel) { display: none; }
+  :where(.sib-form-message-panel .sib-notification__icon) { width: 20px; height: 20px; }
+</style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<style>
+  /* Formulario Brevo adaptado a VCY */
+  .espera-box .sib-form { padding: 0 !important; font-family: 'Cormorant Garamond', Georgia, serif; }
+  .espera-box .sib-form-container, .espera-box #sib-container { padding: 0 !important; max-width: 100% !important; }
+  .espera-box #sib-container .entry__label { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 700; color: var(--td); text-align: left; letter-spacing: 0.5px; }
+  .espera-box #sib-container .entry__label::after { color: var(--t); }
+  .espera-box #sib-container .input { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; color: var(--tx); border: 1px solid rgba(196,168,130,0.5); border-radius: 2px; padding: 12px 14px; height: auto; background: var(--cr); }
+  .espera-box #sib-container .input:focus { border-color: var(--t); outline: none; box-shadow: 0 0 0 3px rgba(61,187,187,0.15); }
+  .espera-box #sib-container input::placeholder { font-family: 'Cormorant Garamond', Georgia, serif; color: #aaa; }
+  .espera-box .optin-text, .espera-box .optin-text p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; color: var(--tx); text-align: left; }
+  .espera-box #sib-container a { color: var(--td); font-weight: 600; text-decoration: underline; }
+  .espera-box .checkbox_tick_positive { border-color: var(--t) !important; }
+  .espera-box .sib-form-block__button { width: 100%; justify-content: center; background: var(--t); color: #fff; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 18px 24px; border: none; border-radius: 2px; cursor: pointer; transition: background 0.2s; }
+  .espera-box .sib-form-block__button:hover { background: var(--td); }
+  .espera-box .espera-nota p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-style: italic; color: var(--ts); text-align: center; }
+  .espera-box .sib-form-message-panel { margin: 0 auto 16px; }
+  .espera-box .sib-hide-loader-icon { display: none !important; }
+  .espera-box .progress-indicator__icon { width: 18px; height: 18px; fill: #fff; margin-right: 8px; animation: vcyspin 1s linear infinite; }
+  @keyframes vcyspin { to { transform: rotate(360deg); } }
+  .espera-box .sib-form-block__button { display: flex; align-items: center; }
+  .espera-box #sib-container .form__label-row { display: flex; flex-direction: column; align-items: stretch; }
+  .espera-box #sib-container .entry__field { width: 100%; }
+  .espera-box #sib-container .input { width: 100%; display: block; margin-top: 6px; }
+  .espera-box .entry__choice label { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+  .espera-box .entry__choice input[type=checkbox] { width: 18px; height: 18px; margin-top: 5px; flex-shrink: 0; accent-color: var(--t); }
+  .espera-box .entry__error:empty { display: none; }
+  .espera-box .sib-form-block, .espera-box .sib-input { text-align: left; }
+  .espera-box .input--hidden { display: none !important; }
+</style>
 </head>
 <body>
 
@@ -225,14 +264,14 @@ permalink: /yoga-for-life/
   <span class="ey">Yoga For Life</span>
   <h1>El yoga no es el destino.<br>Es el camino.</h1>
   <p class="sub">La formación para aprender a utilizar el yoga en tu vida, no solamente practicarlo sobre una esterilla.</p>
-  <div class="badge-abierta">🧘‍♀️ La primera edición de YFL está abierta</div>
+  <div class="badge-abierta">🧘‍♀️ Edición 2027 · Empezamos el 9 de octubre de 2027</div>
 
   <div class="precio-box">
-    <span class="ey">Fundadoras</span>
-    <div class="precio-num">1.200€</div>
-    <div class="precio-opciones">1 pago · o 3 pagos de 420€ · o 8 pagos de 165€</div>
-    <a href="#precios" class="btn">Ver formas de pago</a>
-    <p class="precio-nota">El precio de fundadoras estará disponible únicamente para esta primera edición.<br>Plazas limitadas.</p>
+    <span class="ey">Lista de espera</span>
+    <div class="precio-num">−200€</div>
+    <div class="precio-opciones">Apúntate a la lista de espera y recibe un cupón de 200€ de descuento para tu inscripción.</div>
+    <a href="#lista-espera" class="btn">Quiero mi cupón</a>
+    <p class="precio-nota">Las inscripciones abren el 20 de septiembre de 2027 a las 7:07 h, primero para la lista de espera.<br>Plazas limitadas.</p>
   </div>
 </section>
 
@@ -343,42 +382,42 @@ permalink: /yoga-for-life/
     <div class="line"></div>
 
     <div class="modulo">
-      <div class="mod-num">Módulo 1 · 10 de octubre</div>
+      <div class="mod-num">Módulo 1 · 9 de octubre de 2027</div>
       <h3>¿Qué quiero realmente?</h3>
       <p>Investigar deseo, intención y condicionamiento, para distinguir entre <strong>lo que quiero, lo que creo que debería querer</strong> y lo que realmente estoy eligiendo.</p>
     </div>
     <div class="modulo">
-      <div class="mod-num">Módulo 2 · 7 de noviembre</div>
+      <div class="mod-num">Módulo 2</div>
       <h3>¿Qué hay en mi mente?</h3>
       <p>Investigar pensamientos, atención, identificación, juicios e interpretaciones, para empezar a distinguir entre <strong>lo que ocurre y lo que mi mente cuenta</strong> sobre lo que ocurre.</p>
     </div>
     <div class="modulo">
-      <div class="mod-num">Módulo 3 · 12 de diciembre</div>
+      <div class="mod-num">Módulo 3</div>
       <h3>¿Qué palabras estoy utilizando y qué estoy creando con ellas?</h3>
       <p>Investigar la relación entre pensamiento, palabra y acción, para observar cómo nuestra manera de nombrar la realidad influye en la experiencia que construimos.</p>
     </div>
     <div class="modulo">
-      <div class="mod-num">Módulo 4 · Sábado, 23 de enero</div>
+      <div class="mod-num">Módulo 4</div>
       <h3>¿Qué siento y qué hago con lo que siento?</h3>
       <p>Investigar sensaciones, emociones, impulsos, resistencia y reacción, para descubrir que <strong>sentir algo no significa necesariamente tener que actuar desde ello.</strong></p>
     </div>
     <div class="modulo">
-      <div class="mod-num">Módulo 5 · Sábado, 13 de febrero</div>
+      <div class="mod-num">Módulo 5</div>
       <h3>¿Cómo me relaciono conmigo y con los demás?</h3>
       <p>Investigar los Yamas y Niyamas a través de nuestras relaciones reales, para empezar a reconocer nuestros propios patrones allí donde antes solamente veíamos los de los demás.</p>
     </div>
     <div class="modulo">
-      <div class="mod-num">Módulo 6 · Sábado, 20 de marzo</div>
+      <div class="mod-num">Módulo 6</div>
       <h3>¿Qué hago con el conflicto?</h3>
       <p>Qué ocurrió, qué interpreté, qué sentí, qué hice, qué produjo mi acción. Para convertir el conflicto en un lugar de observación.</p>
     </div>
     <div class="modulo">
-      <div class="mod-num">Módulo 7 · Sábado, 10 de abril</div>
+      <div class="mod-num">Módulo 7</div>
       <h3>¿Con qué energía vivo?</h3>
       <p>Investigar Prana, los Gunas y nuestra relación con el esfuerzo, el descanso, la atención y la energía, para observar <strong>qué me nutre, qué me drena</strong> y dónde estoy poniendo mi energía.</p>
     </div>
     <div class="modulo">
-      <div class="mod-num">Módulo 8 · Sábado, 8 de mayo</div>
+      <div class="mod-num">Módulo 8</div>
       <h3>¿Qué hice en lo que hice? ¿Quién soy?</h3>
       <p>Integramos todo el recorrido: qué queríamos, qué pensábamos, qué decíamos, qué sentíamos, cómo nos relacionábamos, cómo respondíamos al conflicto, cómo utilizábamos nuestra energía.</p>
     </div>
@@ -431,10 +470,10 @@ permalink: /yoga-for-life/
 <section style="background:var(--cr);">
   <div class="container">
     <span class="ey">Una cosa importante</span>
-    <h2 class="h2">Esta es la primera edición de Yoga For Life.</h2>
+    <h2 class="h2">La primera edición de Yoga For Life está en marcha.</h2>
     <div class="line"></div>
-    <p class="body center">No tenemos una pared llena de testimonios. Y no vamos a inventarlos. No podemos decirte todavía "mira lo que YFL ha conseguido para estas 200 personas", porque esas personas todavía no existen.</p>
-    <p class="body center" style="margin-top:16px;">Lo que sí podemos enseñarte es exactamente lo que hemos construido: el método, las preguntas, la estructura, las prácticas, el tiempo que vamos a dedicar, la manera en la que trabajamos, y el compromiso que estamos poniendo en esta primera edición. Las primeras personas que entren serán las primeras en recorrer este camino con nosotras. Y eso tiene un valor especial.</p>
+    <p class="body center">No tenemos una pared llena de testimonios. Y no vamos a inventarlos. Ahora mismo hay un primer grupo recorriendo YFL con nosotras, y cuando abramos inscripciones para 2027 te contaremos, con sus propias palabras, lo que están viviendo.</p>
+    <p class="body center" style="margin-top:16px;">Lo que sí podemos enseñarte es exactamente lo que hemos construido: el método, las preguntas, la estructura, las prácticas, el tiempo que vamos a dedicar, la manera en la que trabajamos, y todo lo que estamos aprendiendo con el primer grupo para que la edición 2027 sea todavía mejor.</p>
   </div>
 </section>
 
@@ -470,7 +509,7 @@ permalink: /yoga-for-life/
 <!-- PRECIO -->
 <section style="background:var(--td);" id="precios">
   <div class="container center">
-    <span class="ey" style="color:rgba(255,255,255,0.4);">Pero esta primera edición no cuesta 4.500€</span>
+    <span class="ey" style="color:rgba(255,255,255,0.4);">Pero YFL no cuesta 4.500€</span>
     <h2 class="h2" style="color:#fff;">Formas de pago</h2>
     <div class="line" style="background:rgba(255,255,255,0.2);"></div>
 
@@ -478,51 +517,157 @@ permalink: /yoga-for-life/
       <!-- 3 CUOTAS -->
       <div class="precio-card">
         <div class="pc-title">3 Cuotas</div>
-        <div class="pc-num">420€</div>
+        <div class="pc-num">660€</div>
         <div class="pc-sub">Valor por cuota</div>
         <ul class="pc-check">
-          <li>3 pagos mensuales, cada uno de 420€ (total 1.260€)</li>
+          <li>3 pagos mensuales, cada uno de 660€ (total 1.980€)</li>
           <li>Con tarjeta, desde cualquier parte</li>
           <li>Un pago cada 30 días</li>
-          <li><em>El precio subirá para la edición 2027.</em></li>
+          <li><em>200€ menos con tu cupón de la lista de espera.</em></li>
         </ul>
-        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%203%20cuotas%20de%20420%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+        <a href="#lista-espera" class="btn pc-btn">Lista de espera</a>
       </div>
 
       <!-- 1 PAGO (destacado) -->
       <div class="precio-card feat">
         <div class="pc-title">1 Pago con Tarjeta</div>
-        <div class="pc-num">1.200€</div>
-        <div class="pc-sub">Formación completa, primera edición</div>
+        <div class="pc-num">1.888€</div>
+        <div class="pc-sub">Formación completa · edición 2027</div>
         <ul class="pc-check">
-          <li><em>¡Ahorro de 120€!</em></li>
+          <li><em>¡Ahorro de 92€ frente a 3 cuotas!</em></li>
           <li>Con tarjetas de crédito, débito o PayPal, desde cualquier parte</li>
           <li>Tu plaza queda confirmada al momento</li>
-          <li><em>El precio subirá para la edición 2027.</em></li>
+          <li><em>Con tu cupón de la lista de espera: 1.688€.</em></li>
         </ul>
-        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%20el%20pago%20%C3%BAnico%20de%201.200%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+        <a href="#lista-espera" class="btn pc-btn">Lista de espera</a>
       </div>
 
       <!-- 8 CUOTAS -->
       <div class="precio-card">
         <div class="pc-title">8 Cuotas</div>
-        <div class="pc-num">165€</div>
+        <div class="pc-num">260€</div>
         <div class="pc-sub">Valor por cuota</div>
         <ul class="pc-check">
-          <li>8 pagos mensuales, cada uno de 165€ (total 1.320€)</li>
+          <li>8 pagos mensuales, cada uno de 260€ (total 2.080€)</li>
           <li>Con tarjeta, desde cualquier parte</li>
           <li>Un pago cada 30 días</li>
-          <li><em>El precio subirá para la edición 2027.</em></li>
+          <li><em>200€ menos con tu cupón de la lista de espera.</em></li>
         </ul>
-        <a href="https://wa.me/34635993658?text=Hola%2C%20quiero%20formar%20parte%20de%20Yoga%20For%20Life%20con%208%20cuotas%20de%20165%E2%82%AC." target="_blank" class="btn pc-btn">Quiero mi plaza</a>
+        <a href="#lista-espera" class="btn pc-btn">Lista de espera</a>
       </div>
     </div>
 
-    <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:28px;">¿Prefieres pagar por transferencia o tienes dudas? <a href="https://wa.me/34635993658?text=Hola%2C%20tengo%20una%20duda%20sobre%20cómo%20apuntarme%20a%20Yoga%20For%20Life." style="color:#3DBBBB;font-weight:600;">Escríbenos por WhatsApp</a>.</p>
+    <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:28px;">¿Tienes dudas? <a href="https://wa.me/34635993658?text=Hola%2C%20tengo%20una%20duda%20sobre%20Yoga%20For%20Life%202027." style="color:#3DBBBB;font-weight:600;">Escríbenos por WhatsApp</a>.</p>
 
     <div style="margin-top:36px;">
-      <p class="body" style="color:rgba(255,255,255,0.75);">Porque queremos que las primeras personas que entren formen parte de esta primera edición. Vais a recorrer YFL con nosotras, y YFL también va a crecer a partir de lo que descubramos juntos. Por eso esta condición no volverá a existir exactamente igual.</p>
-      <p class="body" style="margin-top:16px;font-style:italic;color:#3DBBBB;">Después de las fundadoras: 1.800€.</p>
+      <p class="body" style="color:rgba(255,255,255,0.75);">Las inscripciones abren el <strong style="color:#fff;">lunes 20 de septiembre de 2027 a las 7:07 h</strong>, primero para las personas de la lista de espera. Su cupón de 200€ es válido hasta el 4 de octubre.</p>
+      <p class="body" style="margin-top:16px;font-style:italic;color:#3DBBBB;">Plazas limitadas: cuando se llenan, se cierran hasta la siguiente edición.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LISTA DE ESPERA -->
+<section style="background:var(--cr);" id="lista-espera">
+  <div class="container center">
+    <span class="ey">Lista de espera · Edición 2027</span>
+    <h2 class="h2">Apúntate y consigue 200€ de descuento.</h2>
+    <div class="line"></div>
+    <p class="body center">Las personas de la lista de espera reciben un <strong style="color:var(--td);">cupón de 200€</strong> y acceso a las inscripciones antes que nadie, el 20 de septiembre de 2027 a las 7:07 h.</p>
+    <div class="espera-box">
+      <!-- Begin Brevo Form -->
+<div class="sib-form" style="text-align: center; background-color: transparent;">
+  <div id="sib-form-container" class="sib-form-container">
+    <div id="error-message" class="sib-form-message-panel" style="font-family:'Cormorant Garamond', Georgia, serif; font-size:18px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px; max-width:540px;">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">No hemos podido validar tu suscripción.</span>
+      </div>
+    </div>
+    <div></div>
+    <div id="success-message" class="sib-form-message-panel" style="font-family:'Cormorant Garamond', Georgia, serif; font-size:18px; text-align:left; color:#085229; background-color:#e7faf0; border-color:#13ce66; border-radius:3px; max-width:540px;">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">¡Listo! Revisa tu email para confirmar.</span>
+      </div>
+    </div>
+    <div></div>
+    <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; text-align:center; background-color:transparent; border:none; direction:ltr">
+      <form id="sib-form" method="POST" action="https://035e9ae1.sibforms.com/serve/MUIFAMNM4F_x3FrEh9nhofqSfHYsxnHYy4BOZI5enCACpe7LOjU7AZorxSd-4z04OLR33XVR5kkMTaQlf2RVJLeFF9Z21x-kgmuxKXNYGShmsugMvW_bms-i-P8MYNrqMTjidvdXbZ5d6bn0eThpVbk_F6hNXxX-JPXmUFzBZ6w-mjSXeE-2ca9Wkh1SzFMmygwPTg9JUgaLbPGTGg==" data-type="subscription">
+
+        <div style="padding: 8px 0;">
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="entry__label" for="NOMBRE" data-required="*">Nombre</label>
+                <div class="entry__field">
+                  <input class="input " maxlength="200" type="text" id="NOMBRE" name="NOMBRE" autocomplete="given-name" placeholder="Tu nombre" data-required="true" required />
+                </div>
+              </div>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 8px 0;">
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="entry__label" for="EMAIL" data-required="*">Email</label>
+                <div class="entry__field">
+                  <input class="input " type="email" id="EMAIL" name="EMAIL" autocomplete="email" value="" placeholder="tu@email.com" data-required="true" required />
+                </div>
+              </div>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 8px 0;">
+          <div class="sib-optin sib-form-block" data-required="true">
+            <div class="form__entry entry_mcq">
+              <div class="form__label-row ">
+                <div class="entry__choice">
+                  <label>
+                    <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" required />
+                    <span class="checkbox checkbox_tick_positive"></span><span class="optin-text"><p>He leído y acepto la <a target="_blank" href="https://vivacommunityyoga.com/politica-de-privacidad.html" rel="nofollow noopener">política de privacidad</a></p><span data-required="*" style="display: inline;" class="entry__label entry__label_optin"></span></span>
+                  </label>
+                </div>
+              </div>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 8px 0;">
+          <div class="sib-form-block">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+              </svg>
+              Desbloquear cupón de 200€
+            </button>
+          </div>
+        </div>
+
+        <div style="padding: 4px 0 0;">
+          <div class="sib-form-block">
+            <div class="sib-text-form-block espera-nota">
+              <p>🔒 Tus datos están seguros y nunca serán cedidos a terceros.</p>
+            </div>
+          </div>
+        </div>
+
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="es">
+      </form>
+    </div>
+  </div>
+</div>
+      <!-- End Brevo Form -->
     </div>
   </div>
 </section>
@@ -598,10 +743,10 @@ permalink: /yoga-for-life/
     <p style="font-family:'Playfair Display',serif;font-size:24px;color:rgba(255,255,255,0.6);margin-bottom:32px;">El yoga no es el destino. Es el camino.</p>
 
     <div class="precio-box">
-      <span class="ey">Primera edición · Fundadoras</span>
-      <div class="precio-num">1.200€</div>
-      <div class="precio-opciones">1 pago de 1.200€ · 3 pagos de 420€ · 8 pagos de 165€</div>
-      <a href="#precios" class="btn">Ver formas de pago</a>
+      <span class="ey">Edición 2027 · Lista de espera</span>
+      <div class="precio-num">−200€</div>
+      <div class="precio-opciones">1 pago de 1.888€ · 3 pagos de 660€ · 8 pagos de 260€<br>200€ menos con el cupón de la lista de espera</div>
+      <a href="#lista-espera" class="btn">Quiero mi cupón</a>
       <p class="precio-nota">Plazas limitadas.</p>
     </div>
   </div>
@@ -727,6 +872,21 @@ permalink: /yoga-for-life/
   });
 </script>
 <!-- ===== FIN COOKIE BANNER ===== -->
+
+<!-- Brevo: scripts del formulario -->
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Elige un código de país';
+  window.LOCALE = 'es';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "La información que has proporcionado no es válida. Comprueba el formato del campo e inténtalo de nuevo.";
+  window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío.";
+  window.GENERIC_INVALID_MESSAGE = "La información que has proporcionado no es válida. Comprueba el formato del campo e inténtalo de nuevo.";
+  window.INVALID_NUMBER = "La información que has proporcionado no es válida. Comprueba el formato del campo e inténtalo de nuevo.";
+  window.INVALID_DATE = "Introduce una fecha válida";
+  window.REQUIRED_MULTISELECT_MESSAGE = 'Selecciona al menos una opción';
+  window.translation = { common: { selectedList: '{quantity} lista seleccionada', selectedLists: '{quantity} listas seleccionadas', selectedOption: '{quantity} seleccionado', selectedOptions: '{quantity} seleccionados' } };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 </body>
 </html>
