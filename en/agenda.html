@@ -96,13 +96,90 @@
     .ev-top { flex-direction: column; align-items: flex-start; }
     .yfl-center { padding: 36px 24px; }
   }
+
+  /* NAV */
+  .navbar { position: static; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; background: var(--td); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 1px; white-space: nowrap; }
+  .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+  .nav-links a { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.85); text-decoration: none; letter-spacing: 0.5px; white-space: nowrap; transition: color 0.2s; }
+  .nav-links a:hover { color: #3DBBBB; }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+  .nav-lang a { font-size: 14px; letter-spacing: 1px; text-decoration: none; font-weight: 400; }
+  .nav-lang a.on { color: #3DBBBB; font-weight: 700; }
+  .nav-lang a.off { color: rgba(255,255,255,0.5); }
+  .nav-book { background: #3DBBBB; color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 10px 20px; border-radius: 2px; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+  .nav-book:hover { background: #2da0a0; }
+  .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 30; }
+  .nav-burger span { width: 24px; height: 2px; background: #fff; display: block; transition: 0.2s; }
+  .nav-mobile { display: none; }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .navbar .nav-right > .nav-lang, .navbar .nav-right > .nav-book { display: none; }
+    .nav-burger { display: flex; }
+    .navbar { padding: 16px 20px; }
+    .nav-logo { font-size: 17px; }
+    .nav-mobile { display: block; position: fixed; top: 0; right: 0; height: 100vh; width: min(78vw, 320px); background: var(--td); z-index: 25; padding: 90px 32px 32px; transform: translateX(100%); transition: transform 0.25s ease; box-shadow: -8px 0 30px rgba(0,0,0,0.3); }
+    .nav-mobile.open { transform: translateX(0); }
+    .nav-mobile a { display: block; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #fff; text-decoration: none; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .nav-mobile .nav-book { display: inline-block; margin-top: 24px; }
+    .nav-mobile .nav-lang { margin-top: 20px; font-size: 16px; }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 22; }
+    .nav-overlay.open { display: block; }
+  }
+
+  .evento.pasado { opacity: 0.45; }
+  .evento.pasado .ev-cta { pointer-events: none; text-decoration: none; }
 </style>
 <meta name="google-site-verification" content="g1k3jGIfjvrv2o0xOlAYyPJcsqfuTXhWI1szzVGploQ">
 <link rel="canonical" href="https://vivacommunityyoga.com/en/agenda.html">
 <link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/agenda.html">
 <link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/agenda.html">
+<meta property="og:title" content="Autumn 2026 Calendar | Viva Community Yoga">
+<meta property="og:description" content="All the classes and Yoga For Life meetings this autumn in Dénia, month by month, with direct booking.">
+<meta property="og:url" content="https://vivacommunityyoga.com/en/agenda.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Viva Community Yoga">
+<meta property="og:image" content="https://vivacommunityyoga.com/images/hero-bg.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://vivacommunityyoga.com/images/hero-bg.jpeg">
 </head>
 <body>
+
+<nav class="navbar">
+  <a href="/en/" class="nav-logo">Viva Community Yoga</a>
+  <ul class="nav-links">
+    <li><a href="/en/beach-yoga.html">Beach yoga</a></li>
+    <li><a href="/en/private.html">Private classes</a></li>
+    <li><a href="/en/yoga-for-life/">Yoga For Life</a></li>
+    <li><a href="/en/agenda.html">Calendar</a></li>
+    <li><a href="/en/faq.html">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-lang"><a href="/agenda.html" class="off">ES</a> · <a href="/en/agenda.html" class="on">EN</a></span>
+    <a href="/en/beach-yoga.html#reserva" class="nav-book">Book now</a>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+<div class="nav-mobile" id="navMobile">
+  <a href="/en/beach-yoga.html">Beach yoga</a>
+  <a href="/en/private.html">Private classes</a>
+  <a href="/en/yoga-for-life/">Yoga For Life</a>
+  <a href="/en/agenda.html">Calendar</a>
+  <a href="/en/faq.html">FAQ</a>
+  <span class="nav-lang"><a href="/agenda.html" class="off">ES</a> · <a href="/en/agenda.html" class="on">EN</a></span>
+  <a href="/en/beach-yoga.html#reserva" class="nav-book">Book now</a>
+</div>
+<script>
+  function toggleMenu() {
+    document.getElementById('navMobile').classList.toggle('open');
+    document.getElementById('navOverlay').classList.toggle('open');
+  }
+</script>
 
 <section class="mini-hero">
   <a href="/en/" class="back">← Viva Community Yoga</a>
@@ -291,6 +368,7 @@
     &nbsp;·&nbsp;
     <a href="/en/">Back to home</a>
   </div>
+  <div style="margin-top:14px;"><a href="/en/legal-notice.html" style="font-size:13px;">Legal notice</a> &nbsp;·&nbsp; <a href="/en/privacy-policy.html" style="font-size:13px;">Privacy policy</a> &nbsp;·&nbsp; <a href="/en/cookies-policy.html" style="font-size:13px;">Cookie policy</a></div>
 </footer>
 
 <!-- ===== COOKIE BANNER (EN) ===== -->
@@ -404,5 +482,15 @@
 </script>
 <!-- ===== END COOKIE BANNER ===== -->
 
+<script>
+  (function(){
+    var hoy=new Date(); hoy.setHours(0,0,0,0);
+    document.querySelectorAll('.evento a.ev-cta[href*="fecha="]').forEach(function(a){
+      var m=a.getAttribute('href').match(/fecha=(\d{4})-(\d{2})-(\d{2})/); if(!m) return;
+      var d=new Date(+m[1],+m[2]-1,+m[3]);
+      if(d<hoy){ var ev=a.closest('.evento'); if(ev) ev.classList.add('pasado'); a.textContent='Past'; a.removeAttribute('href'); }
+    });
+  })();
+</script>
 </body>
 </html>
