@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /gracias.html
+Disallow: /gracias-lista-espera.html
+Disallow: /confirmado-lista-espera.html
+Disallow: /en/thank-you-waiting-list.html
+Disallow: /en/confirmed-waiting-list.html
+
+Sitemap: https://vivacommunityyoga.com/sitemap.xml

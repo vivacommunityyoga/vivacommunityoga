@@ -109,6 +109,37 @@
     .galeria { grid-template-columns: 1fr; }
     .form-wrap { padding: 28px 22px; }
   }
+
+  /* NAV */
+  .navbar { position: static; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; background: var(--td); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 1px; white-space: nowrap; }
+  .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+  .nav-links a { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.85); text-decoration: none; letter-spacing: 0.5px; white-space: nowrap; transition: color 0.2s; }
+  .nav-links a:hover { color: #3DBBBB; }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+  .nav-lang a { font-size: 14px; letter-spacing: 1px; text-decoration: none; font-weight: 400; }
+  .nav-lang a.on { color: #3DBBBB; font-weight: 700; }
+  .nav-lang a.off { color: rgba(255,255,255,0.5); }
+  .nav-book { background: #3DBBBB; color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 10px 20px; border-radius: 2px; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+  .nav-book:hover { background: #2da0a0; }
+  .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 30; }
+  .nav-burger span { width: 24px; height: 2px; background: #fff; display: block; transition: 0.2s; }
+  .nav-mobile { display: none; }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .navbar .nav-right > .nav-lang, .navbar .nav-right > .nav-book { display: none; }
+    .nav-burger { display: flex; }
+    .navbar { padding: 16px 20px; }
+    .nav-logo { font-size: 17px; }
+    .nav-mobile { display: block; position: fixed; top: 0; right: 0; height: 100vh; width: min(78vw, 320px); background: var(--td); z-index: 25; padding: 90px 32px 32px; transform: translateX(100%); transition: transform 0.25s ease; box-shadow: -8px 0 30px rgba(0,0,0,0.3); }
+    .nav-mobile.open { transform: translateX(0); }
+    .nav-mobile a { display: block; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #fff; text-decoration: none; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .nav-mobile .nav-book { display: inline-block; margin-top: 24px; }
+    .nav-mobile .nav-lang { margin-top: 20px; font-size: 16px; }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 22; }
+    .nav-overlay.open { display: block; }
+  }
 </style>
 <meta name="google-site-verification" content="g1k3jGIfjvrv2o0xOlAYyPJcsqfuTXhWI1szzVGploQ">
 <link rel="canonical" href="https://vivacommunityyoga.com/yoga-en-la-playa.html">
@@ -126,6 +157,7 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://vivacommunityyoga.com/#business",
   "name": "Viva Community Yoga",
   "description": "Yoga en la playa en Dénia, en Los Baños Sunshine. Clase semanal de sábado todo el año, más un horario fijo de verano.",
   "url": "https://vivacommunityyoga.com/yoga-en-la-playa.html",
@@ -143,8 +175,45 @@
 }
 </script>
 
+<meta property="og:image" content="https://vivacommunityyoga.com/images/losbanos-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://vivacommunityyoga.com/images/losbanos-1.jpg">
 </head>
 <body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">Viva Community Yoga</a>
+  <ul class="nav-links">
+    <li><a href="/yoga-en-la-playa.html">Yoga en la playa</a></li>
+    <li><a href="/privadas.html">Clases privadas</a></li>
+    <li><a href="/yoga-for-life/">Yoga For Life</a></li>
+    <li><a href="/agenda.html">Calendario</a></li>
+    <li><a href="/faq.html">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-lang"><a href="/yoga-en-la-playa.html" class="on">ES</a> · <a href="/en/beach-yoga.html" class="off">EN</a></span>
+    <a href="/yoga-en-la-playa.html#reserva" class="nav-book">Reservar</a>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+<div class="nav-mobile" id="navMobile">
+  <a href="/yoga-en-la-playa.html">Yoga en la playa</a>
+  <a href="/privadas.html">Clases privadas</a>
+  <a href="/yoga-for-life/">Yoga For Life</a>
+  <a href="/agenda.html">Calendario</a>
+  <a href="/faq.html">FAQ</a>
+  <span class="nav-lang"><a href="/yoga-en-la-playa.html" class="on">ES</a> · <a href="/en/beach-yoga.html" class="off">EN</a></span>
+  <a href="/yoga-en-la-playa.html#reserva" class="nav-book">Reservar</a>
+</div>
+<script>
+  function toggleMenu() {
+    document.getElementById('navMobile').classList.toggle('open');
+    document.getElementById('navOverlay').classList.toggle('open');
+  }
+</script>
 
 <!-- MINI HERO -->
 <section class="mini-hero">
@@ -345,6 +414,7 @@
     &nbsp;·&nbsp;
     <a href="/">Volver al inicio</a>
   </div>
+  <div style="margin-top:14px;"><a href="/aviso-legal.html" style="font-size:13px;">Aviso legal</a> &nbsp;·&nbsp; <a href="/politica-de-privacidad.html" style="font-size:13px;">Política de privacidad</a> &nbsp;·&nbsp; <a href="/politica-de-cookies.html" style="font-size:13px;">Política de cookies</a></div>
 </footer>
 
 <!-- WhatsApp flotante -->
@@ -505,5 +575,115 @@
     }
   })();
 </script>
+<!-- ===== COOKIE BANNER (ES) ===== -->
+<style>
+  .cookie-banner { display:none; position:fixed; bottom:0; left:0; right:0; z-index:99998; background:#111; border-top:1px solid rgba(196,168,130,0.3); padding:22px 28px; }
+  .cookie-banner-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
+  .cookie-text { flex:1; min-width:240px; font-family:'Cormorant Garamond',Georgia,serif; font-size:17px; font-weight:300; color:rgba(255,255,255,0.8); line-height:1.6; margin:0; }
+  .cookie-text a { color:#3DBBBB; text-decoration:underline; }
+  .cookie-actions { display:flex; gap:10px; flex-wrap:wrap; }
+  .cookie-btn { font-family:'Cormorant Garamond',Georgia,serif; font-size:14px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:11px 20px; border-radius:2px; cursor:pointer; border:none; white-space:nowrap; }
+  .cookie-btn-outline { background:transparent; border:1px solid rgba(255,255,255,0.35); color:#fff; }
+  .cookie-btn-outline:hover { border-color:#3DBBBB; color:#3DBBBB; }
+  .cookie-btn-solid { background:#3DBBBB; color:#fff; }
+  .cookie-btn-solid:hover { background:#2da0a0; }
+
+  .cookie-settings-modal { display:none; position:fixed; inset:0; z-index:99999; background:rgba(0,0,0,0.55); align-items:center; justify-content:center; padding:20px; }
+  .cookie-settings-box { background:#fff; border-radius:6px; max-width:520px; width:100%; padding:36px 32px; max-height:85vh; overflow-y:auto; }
+  .cookie-settings-box h3 { font-family:'Playfair Display',Georgia,serif; font-size:26px; color:#1E4A52; margin-bottom:18px; }
+  .cookie-cat { border-bottom:1px solid rgba(196,168,130,0.25); padding:16px 0; }
+  .cookie-cat:last-of-type { border-bottom:none; }
+  .cookie-cat-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .cookie-cat-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:19px; font-weight:600; color:#1E4A52; }
+  .cookie-cat-desc { font-family:'Cormorant Garamond',Georgia,serif; font-size:16px; font-weight:300; color:#555; line-height:1.5; }
+  .cookie-switch { position:relative; width:44px; height:24px; flex-shrink:0; }
+  .cookie-switch input { opacity:0; width:0; height:0; }
+  .cookie-slider { position:absolute; inset:0; background:#ccc; border-radius:24px; cursor:pointer; transition:0.2s; }
+  .cookie-slider::before { content:''; position:absolute; height:18px; width:18px; left:3px; bottom:3px; background:#fff; border-radius:50%; transition:0.2s; }
+  .cookie-switch input:checked + .cookie-slider { background:#3DBBBB; }
+  .cookie-switch input:checked + .cookie-slider::before { transform:translateX(20px); }
+  .cookie-switch input:disabled + .cookie-slider { background:#3DBBBB; opacity:0.5; cursor:not-allowed; }
+  .cookie-settings-actions { display:flex; gap:10px; margin-top:24px; flex-wrap:wrap; }
+  .cookie-settings-actions .cookie-btn-outline { border-color:rgba(30,74,82,0.3); color:#1E4A52; }
+  .cookie-settings-actions .cookie-btn-outline:hover { border-color:#3DBBBB; color:#3DBBBB; }
+
+  @media (max-width:720px) {
+    .cookie-banner { padding:18px 20px; }
+    .cookie-actions { width:100%; }
+    .cookie-actions .cookie-btn { flex:1; }
+  }
+</style>
+
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-banner-inner">
+    <p class="cookie-text">Usamos cookies propias y, si las aceptas, de terceros para mejorar tu experiencia. Puedes aceptarlas todas, rechazarlas, o elegir cuáles. Más información en nuestra <a href="/politica-de-cookies.html">Política de Cookies</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieReject()">Rechazar</button>
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieShowSettings()">Personalizar</button>
+      <button class="cookie-btn cookie-btn-solid" onclick="vcyCookieAcceptAll()">Aceptar todas</button>
+    </div>
+  </div>
+</div>
+
+<div id="cookieSettings" class="cookie-settings-modal">
+  <div class="cookie-settings-box">
+    <h3>Preferencias de cookies</h3>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Necesarias</span>
+        <label class="cookie-switch"><input type="checkbox" checked disabled><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Imprescindibles para que la web funcione (por ejemplo, recordar tu elección de cookies). No se pueden desactivar.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Analíticas</span>
+        <label class="cookie-switch"><input type="checkbox" id="ckAnalytics"><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Nos ayudan a entender cómo se usa la web para mejorarla. Actualmente no tenemos ninguna activa.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat-top">
+        <span class="cookie-cat-name">Marketing</span>
+        <label class="cookie-switch"><input type="checkbox" id="ckMarketing"><span class="cookie-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">Para mostrar publicidad relevante en redes sociales. Actualmente no tenemos ninguna activa.</p>
+    </div>
+    <div class="cookie-settings-actions">
+      <button class="cookie-btn cookie-btn-outline" onclick="vcyCookieCloseSettings()">Cancelar</button>
+      <button class="cookie-btn cookie-btn-solid" onclick="vcyCookieSaveSettings()">Guardar preferencias</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function vcyGetConsent(){ try { return JSON.parse(localStorage.getItem('vcy_cookie_consent')); } catch(e){ return null; } }
+  function vcySetConsent(obj){
+    obj.date = Date.now();
+    localStorage.setItem('vcy_cookie_consent', JSON.stringify(obj));
+    document.getElementById('cookieBanner').style.display = 'none';
+    document.getElementById('cookieSettings').style.display = 'none';
+  }
+  function vcyCookieAcceptAll(){ vcySetConsent({necessary:true, analytics:true, marketing:true}); }
+  function vcyCookieReject(){ vcySetConsent({necessary:true, analytics:false, marketing:false}); }
+  function vcyCookieShowSettings(){
+    var c = vcyGetConsent() || {analytics:false, marketing:false};
+    document.getElementById('ckAnalytics').checked = !!c.analytics;
+    document.getElementById('ckMarketing').checked = !!c.marketing;
+    document.getElementById('cookieSettings').style.display = 'flex';
+  }
+  function vcyCookieCloseSettings(){ document.getElementById('cookieSettings').style.display = 'none'; }
+  function vcyCookieSaveSettings(){
+    vcySetConsent({
+      necessary:true,
+      analytics: document.getElementById('ckAnalytics').checked,
+      marketing: document.getElementById('ckMarketing').checked
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    if(!vcyGetConsent()){ document.getElementById('cookieBanner').style.display = 'block'; }
+  });
+</script>
+<!-- ===== FIN COOKIE BANNER ===== -->
 </body>
 </html>

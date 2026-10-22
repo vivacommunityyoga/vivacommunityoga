@@ -9,7 +9,7 @@ permalink: /yoga-for-life/
 <link rel="apple-touch-icon" href="/images/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yoga For Life | Formación de Yoga en Dénia y Jávea | Viva Community Yoga</title>
-<meta name="description" content="Yoga For Life: formación de 8 meses para llevar el yoga a tu vida, no solo a la esterilla. En Dénia y Jávea, desde octubre 2027. Apúntate a la lista de espera y consigue 200€ de descuento.">
+<meta name="description" content="Yoga For Life: formación de 8 meses para llevar el yoga a tu vida. Dénia y Jávea, desde octubre de 2027. Lista de espera con 200€ de descuento.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -231,8 +231,45 @@ permalink: /yoga-for-life/
   .espera-box .sib-form-block, .espera-box .sib-input { text-align: left; }
   .espera-box .input--hidden { display: none !important; }
 </style>
+<meta property="og:image" content="https://vivacommunityyoga.com/images/yfl/practica.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://vivacommunityyoga.com/images/yfl/practica.webp">
 </head>
 <body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">Viva Community Yoga</a>
+  <ul class="nav-links">
+    <li><a href="/yoga-en-la-playa.html">Yoga en la playa</a></li>
+    <li><a href="/privadas.html">Clases privadas</a></li>
+    <li><a href="/yoga-for-life/">Yoga For Life</a></li>
+    <li><a href="/agenda.html">Calendario</a></li>
+    <li><a href="/faq.html">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-lang"><a href="/yoga-for-life/" class="on">ES</a> · <a href="/en/yoga-for-life/" class="off">EN</a></span>
+    <a href="/yoga-en-la-playa.html#reserva" class="nav-book">Reservar</a>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+<div class="nav-mobile" id="navMobile">
+  <a href="/yoga-en-la-playa.html">Yoga en la playa</a>
+  <a href="/privadas.html">Clases privadas</a>
+  <a href="/yoga-for-life/">Yoga For Life</a>
+  <a href="/agenda.html">Calendario</a>
+  <a href="/faq.html">FAQ</a>
+  <span class="nav-lang"><a href="/yoga-for-life/" class="on">ES</a> · <a href="/en/yoga-for-life/" class="off">EN</a></span>
+  <a href="/yoga-en-la-playa.html#reserva" class="nav-book">Reservar</a>
+</div>
+<script>
+  function toggleMenu() {
+    document.getElementById('navMobile').classList.toggle('open');
+    document.getElementById('navOverlay').classList.toggle('open');
+  }
+</script>
 
 <!-- HERO -->
 <section class="hero">
@@ -761,6 +798,7 @@ permalink: /yoga-for-life/
     &nbsp;·&nbsp;
     <a href="/">Volver al inicio</a>
   </div>
+  <div style="margin-top:10px;"><a href="/aviso-legal.html" style="font-size:13px;">Aviso legal</a></div>
 </footer>
 
 <!-- ===== COOKIE BANNER (ES) ===== -->
