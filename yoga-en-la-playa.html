@@ -229,7 +229,7 @@
     <span class="temp-badge ahora">Temporada actual</span>
     <h2 class="h2">Otoño en Los Baños Sunshine, Dénia.</h2>
     <div class="line" style="margin-left:auto;margin-right:auto;"></div>
-    <p class="body">Del 19 de septiembre al 19 de diciembre, cada sábado a las 8:00h: una clase de una hora para volver al cuerpo, respirar y practicar. Todos los niveles, sin experiencia previa. Las clases son en español e inglés. <a href="/agenda.html" style="color:#3DBBBB;">Ver el calendario completo de otoño →</a></p>
+    <p class="body">Del 19 de septiembre al 19 de diciembre, cada sábado a las 8:30h: una clase de una hora para volver al cuerpo, respirar y practicar. Todos los niveles, sin experiencia previa. Las clases son en español e inglés. <a href="/agenda.html" style="color:#3DBBBB;">Ver el calendario completo de otoño →</a></p>
 
 
     <div class="priv-box">
@@ -327,7 +327,7 @@
           <input type="date" id="fecha" onchange="actualizarHoras()"/>
         </div>
         <input type="hidden" id="hora" value=""/>
-        <p id="hora-info" style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin:-8px 0 24px;">La clase es de 8:00 a 9:00h.</p>
+        <p id="hora-info" style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin:-8px 0 24px;">La clase es de 8:30 a 9:30h.</p>
         <div class="fg">
           <label for="bono">Precio</label>
           <select id="bono">
@@ -371,7 +371,7 @@
           <input type="date" id="fecha-bono" onchange="actualizarHorasBono()"/>
         </div>
         <input type="hidden" id="hora-bono" value=""/>
-        <p id="hora-bono-info" style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin:-8px 0 24px;">La clase es de 8:00 a 9:00h.</p>
+        <p id="hora-bono-info" style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin:-8px 0 24px;">La clase es de 8:30 a 9:30h.</p>
       </div>
       <div id="error-12h-bono" class="error-nota">⚠️ Esta clase empieza en menos de 12 horas. Por favor elige otra fecha o escríbenos directamente por WhatsApp.</div>
 
@@ -450,14 +450,14 @@
     btn.textContent = tipo === 'bono-existente' ? 'Reservar mi plaza →' : 'Pagar y reservar plaza →';
   }
 
-  // Solo hay una clase los sábados (8:00h), así que la hora se asigna sola al elegir la fecha
+  // Solo hay una clase los sábados (8:30h), así que la hora se asigna sola al elegir la fecha
   function actualizarHorarioSelect(fechaVal, horaInput) {
     var info = document.getElementById(horaInput.id + '-info');
     horaInput.value = '';
-    if (!fechaVal) { info.textContent = 'La clase es de 8:00 a 9:00h.'; return; }
+    if (!fechaVal) { info.textContent = 'La clase es de 8:30 a 9:30h.'; return; }
     if (CLASE_DATES.indexOf(fechaVal) > -1) {
-      horaInput.value = '8:00h';
-      info.textContent = '🌅 Sábado a las 8:00h, clase de una hora.';
+      horaInput.value = '8:30h';
+      info.textContent = '🌅 Sábado a las 8:30h, clase de una hora.';
     } else {
       info.textContent = 'Ese día no hay clase. Elige un sábado del calendario.';
     }
