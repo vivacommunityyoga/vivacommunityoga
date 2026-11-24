@@ -450,7 +450,10 @@
     var info = document.getElementById(horaInput.id + '-info');
     horaInput.value = '';
     if (!fechaVal) { info.textContent = 'Class runs from 8:30 to 9:30am.'; return; }
-    if (CLASE_DATES.indexOf(fechaVal) > -1) {
+    if (fechaVal === '2026-11-28') {
+      horaInput.value = '10:30h';
+      info.textContent = '🌊 Saturday 28 Nov: class at 10:30am on Els Molins beach (not at Los Baños Sunshine that day).';
+    } else if (CLASE_DATES.indexOf(fechaVal) > -1) {
       horaInput.value = '8:30h';
       info.textContent = '🌅 Saturday at 8:30am, one-hour class.';
     } else {
