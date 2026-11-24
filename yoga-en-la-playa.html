@@ -450,7 +450,10 @@
     var info = document.getElementById(horaInput.id + '-info');
     horaInput.value = '';
     if (!fechaVal) { info.textContent = 'La clase es de 8:30 a 9:30h.'; return; }
-    if (CLASE_DATES.indexOf(fechaVal) > -1) {
+    if (fechaVal === '2026-11-28') {
+      horaInput.value = '10:30h';
+      info.textContent = '🌊 Sábado 28 nov: clase a las 10:30h en la playa de Els Molins (ese día no es en Los Baños Sunshine).';
+    } else if (CLASE_DATES.indexOf(fechaVal) > -1) {
       horaInput.value = '8:30h';
       info.textContent = '🌅 Sábado a las 8:30h, clase de una hora.';
     } else {
