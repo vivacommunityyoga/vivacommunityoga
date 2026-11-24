@@ -6,7 +6,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/"/>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/"/>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -24,7 +24,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/yoga-en-la-playa.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/beach-yoga.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/yoga-en-la-playa.html"/>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,7 +33,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/yoga-en-la-playa.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/beach-yoga.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/yoga-en-la-playa.html"/>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -78,7 +78,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/agenda.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/agenda.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/agenda.html"/>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -87,7 +87,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/agenda.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/agenda.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/agenda.html"/>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -105,8 +105,26 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/faq.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/faq.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/faq.html"/>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/donde-hacer-yoga-en-denia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/donde-hacer-yoga-en-denia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/where-to-do-yoga-in-denia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/donde-hacer-yoga-en-denia.html"/>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vivacommunityyoga.com/en/where-to-do-yoga-in-denia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivacommunityyoga.com/donde-hacer-yoga-en-denia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivacommunityyoga.com/en/where-to-do-yoga-in-denia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vivacommunityyoga.com/donde-hacer-yoga-en-denia.html"/>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
